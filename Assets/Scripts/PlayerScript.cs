@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D magpie;
-    private float moveSpeed = 3f;
+    public float moveSpeed = 3f;
 
     void Start()
     {
