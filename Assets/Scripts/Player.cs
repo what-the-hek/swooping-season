@@ -11,39 +11,44 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        // variable for player movement
+        Vector3 newPosition = transform.position;
 
+        // keyboard input for player movement
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             Debug.Log("Left");
-            transform.position += new Vector3 (-1, 0, 0);
-            // CheckMovement("Left");
-            // animator.SetTrigger("LeftMove");
+            newPosition += new Vector3(-1, 0, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             Debug.Log("Right");
-            transform.position += new Vector3 (1, 0, 0);
-            // CheckMovement("Right");
-            // animator.SetTrigger("RightMove");
+            newPosition += new Vector3(1, 0, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             Debug.Log("Up");
-            transform.position += new Vector3 (0, 1, 0);
-            // CheckMovement("Up");
-            // animator.SetTrigger("ButtWiggle");
+            newPosition += new Vector3(0, 1, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             Debug.Log("Down");
-            transform.position += new Vector3 (0, -1, 0);
-            // CheckMovement("Down");
-            // animator.SetTrigger("SassyLegs");
+            newPosition += new Vector3(0, -1, 0);
         }
 
+        // get screen bounds in world units
+        Vector3 lowerLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
+        Vector3 upperRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+
+        // 'clamp' new position to stay within screen bounds
+        newPosition.x = Mathf.Clamp(newPosition.x, lowerLeft.x, upperRight.x);
+        newPosition.y = Mathf.Clamp(newPosition.y, lowerLeft.y, upperRight.y);
+
+        // update player position
+        transform.position = newPosition;
     }
 
 }
