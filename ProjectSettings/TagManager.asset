@@ -6,6 +6,7 @@ TagManager:
   tags:
   - commonNPC
   - uncommonNPC
+  - obstacle
   layers:
   - Default
   - TransparentFX
