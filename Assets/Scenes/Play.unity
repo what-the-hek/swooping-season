@@ -165,7 +165,7 @@ MonoBehaviour:
   - 6
   - 7
   - 8
-  fixedYPosition: 6
+  fixedYPosition: 9
   prefabs:
   - {fileID: 5489626404720771813, guid: b44616bcc3302174593b68ec85c15d93, type: 3}
   - {fileID: 1984686997501948524, guid: 04d820496626b1944bcb38e79ffead32, type: 3}
@@ -524,9 +524,10 @@ MonoBehaviour:
   - 4.5
   - 5.5
   - 6.5
-  fixedYPosition: 5
+  fixedYPosition: 9
   prefabs:
   - {fileID: 9179245836128084373, guid: afc40209c61a1534793257f4bfb65d6d, type: 3}
+  - {fileID: 9150967141007827281, guid: d0c64e5163591db4682fbe117c8c1c03, type: 3}
 --- !u!1 &2056101218
 GameObject:
   m_ObjectHideFlags: 0
