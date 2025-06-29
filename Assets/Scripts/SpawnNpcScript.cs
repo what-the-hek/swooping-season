@@ -12,7 +12,7 @@ public class SpawnNpcScript : MonoBehaviour
     // create an array of random spawn points **TODO see if I can randomly generate interval based on given range -8 - 8
     public float[] spawnXPositions;
     // int index = Random.Range(0, spawnXPositions.Length);
-    public float fixedYPosition = -5f;
+    public float fixedYPosition = 5f;
 
     // create an array of random prefabs to spawn
     public GameObject[] prefabs;
