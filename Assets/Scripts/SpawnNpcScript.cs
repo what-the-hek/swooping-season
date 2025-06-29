@@ -4,12 +4,12 @@ using UnityEngine;
 public class SpawnNpcScript : MonoBehaviour
 {
 
-    // spawn a common npc at random intervals between x - y
-    public float spawnCommonInterval = 4f;
-    // spawn an uncommon npc at random intervals between x - y
-    // public float spawnUncommonNpcInterval = 2f;
+    // spawn a common npc at random intervals **TODO add random interval
+    public float spawnCommonNpcInterval = 4f;
+    // spawn an uncommon npc at random intervals **TODO add random interval
+    // public float spawnUncommonNpcInterval = 6f;
 
-    // create an array of random spawn points
+    // create an array of random spawn points **TODO see if I can randomly generate interval based on given range -8 - 8
     public float[] spawnXPositions;
     // int index = Random.Range(0, spawnXPositions.Length);
     public float fixedYPosition = -5f;
@@ -22,8 +22,6 @@ public class SpawnNpcScript : MonoBehaviour
     {
         // start a coroutine and spawn prefabs
         StartCoroutine(SpawnPrefab());
-        Debug.Log("spawn start");
-
     }
 
     // part of the coroutine to respawn a prefab at random intervals depending on tag
@@ -31,23 +29,29 @@ public class SpawnNpcScript : MonoBehaviour
     {
         while (true)
         {
-            // float[] spawnXPositions = new float[] { -3f, 0f, 3f };
+            // create the prefab at a random spawn point
             int index = Random.Range(0, spawnXPositions.Length);
-            Debug.Log("spawn update: " + index);
-
             Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
 
-            // create the prefab at a random spawn point
-            // GameObject newPrefab = Instantiate(prefabs[randomPrefabIndex], spawnPoints[randomSpawnIndex].position, Quaternion.identity);
+            // select a random prefab from prefab index range
             int prefabIndex = Random.Range(0, prefabs.Length);
             Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
 
             // wait for the next spawn interval
-            yield return new WaitForSeconds(spawnCommonInterval);
+            yield return new WaitForSeconds(spawnCommonNpcInterval);
+
+            // if (other.CompareTag("commonNPC"))
+            // {
+            //     yield return new WaitForSeconds(spawnCommonNpcInterval);
+            // }
+            // if (other.CompareTag("uncommonNPC"))
+            // {
+            //     yield return new WaitForSeconds(spawnUncommonNpcInterval);
+            // }
         }
     }
 
-    // create a list of npc tags for different sprites to spawn
+    // create a list of npc tags for different sprites to spawn, with their own random timings
     // private string GetRandomNpcTag()
     // {
     //     string[] npcTags = { "common", "uncommon" };

@@ -175,4 +175,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f53b55df30a59f45b8ac26a518f432a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commonNpcMovementSpeed: 3
+  commonNpcMovementSpeed: 1.5
+  uncommonNpcMovementSpeed: 2.5
