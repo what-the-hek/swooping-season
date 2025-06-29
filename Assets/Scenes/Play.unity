@@ -149,10 +149,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnCommonInterval: 2
-  commonNpcMovementSpeed: 4
+  spawnXPositions:
+  - -7
+  - -6
+  - -5
+  - -4
+  - -3
+  - -2
+  - -1
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 6
+  - 7
+  - 8
   fixedYPosition: 6
   prefabs:
   - {fileID: 5489626404720771813, guid: b44616bcc3302174593b68ec85c15d93, type: 3}
+  - {fileID: 1984686997501948524, guid: 04d820496626b1944bcb38e79ffead32, type: 3}
 --- !u!4 &518179368
 Transform:
   m_ObjectHideFlags: 0

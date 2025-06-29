@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 923242998611981497}
   - component: {fileID: 5727150479035276832}
   - component: {fileID: 6513063308770733211}
-  - component: {fileID: 5648140170093319293}
+  - component: {fileID: -1272582132052007666}
   m_Layer: 0
   m_Name: uncommonNPC
   m_TagString: Untagged
@@ -163,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5648140170093319293
+--- !u!114 &-1272582132052007666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1984686997501948524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eebacdfc005ae0c43a0cac1ffbbc7709, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f53b55df30a59f45b8ac26a518f432a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   commonNpcMovementSpeed: 3

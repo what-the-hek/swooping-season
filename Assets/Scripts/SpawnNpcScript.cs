@@ -10,7 +10,7 @@ public class SpawnNpcScript : MonoBehaviour
     // public float spawnUncommonNpcInterval = 2f;
 
     // create an array of random spawn points
-    // public float[] spawnXPositions = { -3f, 0f, 3f };
+    public float[] spawnXPositions;
     // int index = Random.Range(0, spawnXPositions.Length);
     public float fixedYPosition = -5f;
 
@@ -31,7 +31,7 @@ public class SpawnNpcScript : MonoBehaviour
     {
         while (true)
         {
-            float[] spawnXPositions = new float[] { -3f, 0f, 3f };
+            // float[] spawnXPositions = new float[] { -3f, 0f, 3f };
             int index = Random.Range(0, spawnXPositions.Length);
             Debug.Log("spawn update: " + index);
 

@@ -12,5 +12,11 @@ public class MoveNpcScript : MonoBehaviour
     {
         // move prefab down the screen
         transform.position += Vector3.down * commonNpcMovementSpeed * Time.deltaTime;
+
+        // once the prefab is off the screen, destroy it
+        if (transform.position.y <= -19)
+        {
+            Destroy(gameObject);
+        }
     }
 }
