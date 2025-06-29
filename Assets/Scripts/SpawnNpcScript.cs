@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SpawnNpcScript : MonoBehaviour
@@ -13,14 +14,44 @@ public class SpawnNpcScript : MonoBehaviour
     // uncommon npc movement speed
     // public float uncommonNpcMovementSpeed = 2f;
 
+    // create an array of random spawn points
+    public float[] spawnXPositions = { -3f, 0f, 3f };
+    // int index = Random.Range(0, spawnXPositions.Length);
+    public float fixedYPosition = -5f;
 
-    // void Start()
+
+    // create an array of random prefabs to spawn
+    public GameObject[] prefabs;
+
+
+    void Start()
+    {
+        // start a coroutine and spawn prefabs
+        StartCoroutine(SpawnPrefab());
+    }
+
+    // part of the coroutine to respawn a prefab at random intervals depending on tag
+    IEnumerator SpawnPrefab()
+    {
+        while (true)
+        {
+            // float[] spawnXPositions = new float[] { -3f, 0f, 3f };
+            int index = Random.Range(0, spawnXPositions.Length);
+            Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
+            transform.position += Vector3.down * commonNpcMovementSpeed * Time.deltaTime;
+        }
+    }
+    // void Update()
     // {
-        
+    //     transform.position += Vector3.down * commonNpcMovementSpeed * Time.deltaTime;
     // }
 
-    void Update()
-    {
-        transform.position += Vector3.down * commonNpcMovementSpeed * Time.deltaTime;
-    }
+    // create a list of npc tags for different sprites to spawn
+    // private string GetRandomNpcTag()
+    // {
+    //     string[] npcTags = { "common", "uncommon" };
+    //     int index = Random.Range(0, npcTags.Length);
+    //     return npcTags[index];
+    // }
+
 }
