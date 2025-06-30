@@ -19,8 +19,8 @@ public class BackgroundScroll : MonoBehaviour
             Instantiate(backgroundPrefab, newPosition, Quaternion.identity);
             hasSpawned = true;
         }
-        // // once the top of the current background is off the screen, destroy the background object
-        if (transform.position.y <= -19)
+        // once the top of the current background is off the screen, destroy the background object
+        if (transform.position.y <= -30)
         {
             Destroy(gameObject);
         }
