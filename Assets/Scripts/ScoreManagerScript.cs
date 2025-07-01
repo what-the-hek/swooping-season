@@ -4,6 +4,7 @@ using TMPro;
 public class CollisionDetectionScript : MonoBehaviour
 {
     public globalVariables globalVariables;
+    public LevelManagerScript levelManager;
     public TextMeshProUGUI totalScore;
     public TextMeshProUGUI healthScore;
 
@@ -46,11 +47,17 @@ public class CollisionDetectionScript : MonoBehaviour
             Debug.Log("total HEALTH score: " + globalVariables.healthScore);
         }
 
-        if (globalVariables.healthScore == 0)
+        // TODO move this somewhere else
+        if (globalVariables.totalScore >= 10)
         {
-            Debug.Log("YOU LOSE");
-            Debug.Log("FINAL SCORE: " + globalVariables.totalScore);
+            levelManager.LevelUp();
         }
+
+        if (globalVariables.healthScore == 0)
+            {
+                Debug.Log("YOU LOSE");
+                Debug.Log("FINAL SCORE: " + globalVariables.totalScore);
+            }
 
         // add points back to health score 
         if (other.CompareTag("boost"))
