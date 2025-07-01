@@ -68,3 +68,6 @@ crashlytics-build.properties
 
 # Assets purchased
 /Assets/Purchased Assets/*
+
+# textmeshpro extras
+*/TextMesh Pro/Examples & Extras* 

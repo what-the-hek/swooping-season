@@ -1,8 +1,14 @@
 using UnityEngine;
+using TMPro;
 
 public class CollisionDetectionScript : MonoBehaviour
 {
     public globalVariables globalVariables;
+    public TextMeshProUGUI totalScore;
+    public TextMeshProUGUI healthScore;
+
+
+    // TODO probably split the collision detection from the scoring 
 
     // player collides with a trigger collider
     private void OnTriggerEnter2D(Collider2D other)
@@ -12,6 +18,7 @@ public class CollisionDetectionScript : MonoBehaviour
         {
             // TODO only score once, no repeated hits
             globalVariables.totalScore += 1;
+            totalScore.text = $"{globalVariables.totalScore}";
             Debug.Log("hit common trigger: " + other.name);
             Debug.Log("total score: " + globalVariables.totalScore);
         }
@@ -19,6 +26,7 @@ public class CollisionDetectionScript : MonoBehaviour
         {
             // TODO only score once, no repeated hits
             globalVariables.totalScore += 2;
+            totalScore.text = $"{globalVariables.totalScore}";
             Debug.Log("hit uncommon trigger: " + other.name);
             Debug.Log("total score: " + globalVariables.totalScore);
         }
@@ -33,6 +41,7 @@ public class CollisionDetectionScript : MonoBehaviour
         {
             // TODO only score once, no repeated hits
             globalVariables.healthScore -= 1;
+            healthScore.text = $"{globalVariables.healthScore}";
             Debug.Log("hit obstacle: " + other.name);
             Debug.Log("total HEALTH score: " + globalVariables.healthScore);
         }
@@ -49,6 +58,7 @@ public class CollisionDetectionScript : MonoBehaviour
             if (globalVariables.healthScore < 5)
             {
                 globalVariables.healthScore += 1;
+                healthScore.text = $"{globalVariables.healthScore}";
                 Debug.Log("hit boost: " + other.name);
                 Debug.Log("total HEALTH score: " + globalVariables.healthScore);
             }
