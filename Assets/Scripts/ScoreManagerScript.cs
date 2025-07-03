@@ -19,7 +19,7 @@ public class CollisionDetectionScript : MonoBehaviour
         {
             // TODO only score once, no repeated hits
             globalVariables.totalScore += 1;
-            totalScore.text = $"{globalVariables.totalScore}";
+            totalScore.text = $"score: {globalVariables.totalScore}";
             // Debug.Log("hit common trigger: " + other.name);
             // Debug.Log("total score: " + globalVariables.totalScore);
         }
@@ -27,7 +27,7 @@ public class CollisionDetectionScript : MonoBehaviour
         {
             // TODO only score once, no repeated hits
             globalVariables.totalScore += 2;
-            totalScore.text = $"{globalVariables.totalScore}";
+            totalScore.text = $"score: {globalVariables.totalScore}";
             // Debug.Log("hit uncommon trigger: " + other.name);
             // Debug.Log("total score: " + globalVariables.totalScore);
         }
@@ -42,7 +42,7 @@ public class CollisionDetectionScript : MonoBehaviour
         {
             // TODO only score once, no repeated hits
             globalVariables.healthScore -= 1;
-            healthScore.text = $"{globalVariables.healthScore}";
+            healthScore.text = $"health: {globalVariables.healthScore}";
             // Debug.Log("hit obstacle: " + other.name);
             // Debug.Log("total HEALTH score: " + globalVariables.healthScore);
         }
@@ -65,7 +65,7 @@ public class CollisionDetectionScript : MonoBehaviour
             if (globalVariables.healthScore < 5)
             {
                 globalVariables.healthScore += 1;
-                healthScore.text = $"{globalVariables.healthScore}";
+                healthScore.text = $"health: {globalVariables.healthScore}";
                 // Debug.Log("hit boost: " + other.name);
                 // Debug.Log("total HEALTH score: " + globalVariables.healthScore);
             }
