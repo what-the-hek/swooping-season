@@ -15,7 +15,7 @@ public class LevelManagerScript : MonoBehaviour
         if (globalVariables.totalScore >= 10)
         {
             Debug.Log("total score greater than 10: " + globalVariables.totalScore);
-            globalVariables.backgroundScrollSpeed += 1f;
+            globalVariables.backgroundScrollSpeed += globalVariables.increaseScrollSpeed;
             Debug.Log("background Scroll Speed: " + globalVariables.backgroundScrollSpeed);
             globalVariables.currentLevel++;
             Debug.Log("current level: " + globalVariables.currentLevel);

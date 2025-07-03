@@ -3,14 +3,14 @@ using UnityEngine;
 public class BackgroundScroll : MonoBehaviour
 {
 
+    public globalVariables globalVariables;
     public GameObject backgroundPrefab;
-    public float scrollSpeed = 2f;
     private bool hasSpawned = false;
 
     void Update()
     {
         // scroll down background
-        transform.Translate(Vector2.down * scrollSpeed * Time.deltaTime);
+        transform.Translate(Vector2.down * globalVariables.backgroundScrollSpeed * Time.deltaTime);
         // spawn the next background when current reaches border limit
         if (!hasSpawned && transform.position.y <= -5)
         {

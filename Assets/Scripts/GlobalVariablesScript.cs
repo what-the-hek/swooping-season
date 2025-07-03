@@ -14,8 +14,10 @@ public class globalVariables
     public static int currentLevel = 0;
     public static int[] scoreMilestones;
 
+    public static float increaseScrollSpeed = 0.5f;
+
     // timing variables for increasing difficulty with level manager
-    public static float backgroundScrollSpeed;
+    public static float backgroundScrollSpeed = 1f;
     // these movement speeds should always match the background speed
     public static float commonObjectMovementSpeed;
     public static float uncommonObjectMovementSpeed;
