@@ -20,10 +20,10 @@ public class globalVariables
     // timing variables for increasing difficulty with level manager
     public static float backgroundScrollSpeed = 1f;
     // these movement speeds should always match the background speed
-    public static float commonObjectMovementSpeed;
-    public static float uncommonObjectMovementSpeed;
-    public static float commonBoostMovementSpeed;
-    public static float uncommonBoostMovementSpeed;
+    public static float commonObstacleMovementSpeed = 1f;
+    public static float uncommonObstacleMovementSpeed = 1f;
+    public static float commonBoostMovementSpeed = 1f;
+    public static float uncommonBoostMovementSpeed = 1f;
     // other movement speeds
     public static float commonNpcMovementSpeed;
     public static float uncommonNpcMovementSpeed;

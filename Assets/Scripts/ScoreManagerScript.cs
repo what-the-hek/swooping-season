@@ -20,16 +20,16 @@ public class CollisionDetectionScript : MonoBehaviour
             // TODO only score once, no repeated hits
             globalVariables.totalScore += 1;
             totalScore.text = $"{globalVariables.totalScore}";
-            Debug.Log("hit common trigger: " + other.name);
-            Debug.Log("total score: " + globalVariables.totalScore);
+            // Debug.Log("hit common trigger: " + other.name);
+            // Debug.Log("total score: " + globalVariables.totalScore);
         }
         else if (other.CompareTag("uncommonNPC"))
         {
             // TODO only score once, no repeated hits
             globalVariables.totalScore += 2;
             totalScore.text = $"{globalVariables.totalScore}";
-            Debug.Log("hit uncommon trigger: " + other.name);
-            Debug.Log("total score: " + globalVariables.totalScore);
+            // Debug.Log("hit uncommon trigger: " + other.name);
+            // Debug.Log("total score: " + globalVariables.totalScore);
         }
         // else
         // {
@@ -43,8 +43,8 @@ public class CollisionDetectionScript : MonoBehaviour
             // TODO only score once, no repeated hits
             globalVariables.healthScore -= 1;
             healthScore.text = $"{globalVariables.healthScore}";
-            Debug.Log("hit obstacle: " + other.name);
-            Debug.Log("total HEALTH score: " + globalVariables.healthScore);
+            // Debug.Log("hit obstacle: " + other.name);
+            // Debug.Log("total HEALTH score: " + globalVariables.healthScore);
         }
 
         // TODO move this somewhere else
@@ -66,8 +66,8 @@ public class CollisionDetectionScript : MonoBehaviour
             {
                 globalVariables.healthScore += 1;
                 healthScore.text = $"{globalVariables.healthScore}";
-                Debug.Log("hit boost: " + other.name);
-                Debug.Log("total HEALTH score: " + globalVariables.healthScore);
+                // Debug.Log("hit boost: " + other.name);
+                // Debug.Log("total HEALTH score: " + globalVariables.healthScore);
             }
             else
             {
