@@ -7,6 +7,7 @@ public class globalVariables
     public static int healthScore = 5;
     public static int highScore;
     public static int highLevel;
+    public static int returnToStartTimer = 6;
 
     // track the number of objects currently on screen, for reducing the number of rare items
     public static int commonBoostAvailable;

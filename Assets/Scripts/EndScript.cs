@@ -1,15 +1,36 @@
 using UnityEngine;
+using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 
 public class EndScript : MonoBehaviour
 {
     public globalVariables globalVariables;
+    public TextMeshProUGUI gameOver;
+    public string sceneName = "";
 
     public void EndGame()
     {
+        if (globalVariables.totalScore > globalVariables.highScore)
+        {
+            globalVariables.highScore = globalVariables.totalScore;
+        }
+        if (globalVariables.currentLevel > globalVariables.highLevel)
+        {
+            globalVariables.highLevel = globalVariables.currentLevel;
+        }
         Debug.Log("YOU LOSE");
         Debug.Log("FINAL SCORE: " + globalVariables.totalScore);
         globalVariables.playerMovementSpeed = 0f;
+        gameOver.text = $"game over";
+        StartCoroutine(returnToStart());
+    }
+
+    IEnumerator returnToStart()
+    {
+        yield return new WaitForSeconds(globalVariables.returnToStartTimer);
+        SceneManager.LoadScene(sceneName);
     }
 }
