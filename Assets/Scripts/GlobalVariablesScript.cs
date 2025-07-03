@@ -25,8 +25,8 @@ public class globalVariables
     public static float commonBoostMovementSpeed = 1f;
     public static float uncommonBoostMovementSpeed = 1f;
     // other movement speeds
-    public static float commonNpcMovementSpeed;
-    public static float uncommonNpcMovementSpeed;
+    public static float commonNpcMovementSpeed = 0.5f;
+    public static float uncommonNpcMovementSpeed = 1.5f;
     // spawn intervals
     public static float commonNpcSpawnInterval;
     public static float uncommonNpcSpawnInterval;

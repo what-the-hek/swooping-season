@@ -12,6 +12,8 @@ public class LevelManagerScript : MonoBehaviour
             globalVariables.backgroundScrollSpeed += globalVariables.increaseScrollSpeed;
             globalVariables.commonObstacleMovementSpeed += globalVariables.increaseScrollSpeed;
             globalVariables.commonBoostMovementSpeed += globalVariables.increaseScrollSpeed;
+            globalVariables.commonNpcMovementSpeed += globalVariables.increaseScrollSpeed;
+            globalVariables.uncommonNpcMovementSpeed += globalVariables.increaseScrollSpeed;
             // Debug.Log("background Scroll Speed: " + globalVariables.backgroundScrollSpeed);
 
             globalVariables.currentLevel++;
