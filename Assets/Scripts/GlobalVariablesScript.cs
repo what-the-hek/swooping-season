@@ -5,6 +5,8 @@ public class globalVariables
     // scores
     public static int totalScore;
     public static int healthScore = 5;
+    public static int highScore;
+    public static int highLevel;
 
     // track the number of objects currently on screen, for reducing the number of rare items
     public static int commonBoostAvailable;
@@ -25,6 +27,7 @@ public class globalVariables
     public static float commonBoostMovementSpeed = 1f;
     public static float uncommonBoostMovementSpeed = 1f;
     // other movement speeds
+    public static float playerMovementSpeed = 3f;
     public static float commonNpcMovementSpeed = 0.5f;
     public static float uncommonNpcMovementSpeed = 1.5f;
     // spawn intervals

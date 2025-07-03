@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D magpie;
-    public float moveSpeed = 3f;
+    public globalVariables globalVariables;
 
     void Start()
     {
@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
         direction.Normalize();
 
         // update player movement
-        Vector3 newPosition = transform.position + direction * moveSpeed * Time.deltaTime;
+        Vector3 newPosition = transform.position + direction * globalVariables.playerMovementSpeed * Time.deltaTime;
 
         // get screen bounds in world units
         Vector3 lowerLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
