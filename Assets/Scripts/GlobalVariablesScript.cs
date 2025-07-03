@@ -12,9 +12,10 @@ public class globalVariables
 
     // level tracking
     public static int currentLevel = 0;
-    public static int[] scoreMilestones;
+    public static int scoreMilestone = 10;
+    public static int increaseMilstone = 10;
 
-    public static float increaseScrollSpeed = 0.5f;
+    public static float increaseScrollSpeed = 1f;
 
     // timing variables for increasing difficulty with level manager
     public static float backgroundScrollSpeed = 1f;
