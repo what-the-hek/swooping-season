@@ -7,11 +7,21 @@ public class LevelManagerScript : MonoBehaviour
     {
         Debug.Log("total score: " + globalVariables.totalScore + "greater than milestone: " + globalVariables.scoreMilestone);
 
+        globalVariables.playerMovementSpeed += globalVariables.increasePlayerMovementSpeed;
+
         globalVariables.backgroundScrollSpeed += globalVariables.increaseScrollSpeed;
         globalVariables.commonObstacleMovementSpeed += globalVariables.increaseScrollSpeed;
         globalVariables.commonBoostMovementSpeed += globalVariables.increaseScrollSpeed;
         globalVariables.commonNpcMovementSpeed += globalVariables.increaseScrollSpeed;
         globalVariables.uncommonNpcMovementSpeed += globalVariables.increaseScrollSpeed;
+
+        globalVariables.commonNpcSpawnInterval += globalVariables.increaseSpawnSpeed;
+        globalVariables.uncommonNpcSpawnInterval += globalVariables.increaseSpawnSpeed;
+        globalVariables.commonObstacleSpawnInterval += globalVariables.increaseSpawnSpeed;
+        globalVariables.uncommonObstacleSpawnInterval += globalVariables.increaseSpawnSpeed;
+        // globalVariables.commonBoostSpawnInterval += globalVariables.increaseSpawnSpeed;
+        // globalVariables.uncommonBoostSpawnInterval += globalVariables.increaseSpawnSpeed;
+
         // Debug.Log("background Scroll Speed: " + globalVariables.backgroundScrollSpeed);
 
         globalVariables.currentLevel++;

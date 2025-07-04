@@ -28,7 +28,6 @@ public class StartScript : MonoBehaviour
 		highLevel.text = $"high level: {globalVariables.highLevel}";
 
 		// RESET ALL MOVEMENT SPEEDS & MILESTONES
-		// if (globalVariables.)
 		ResetVariables();
 	}
 
@@ -48,8 +47,10 @@ public class StartScript : MonoBehaviour
 	{
 		globalVariables.totalScore = globalVariables.resetTotalScore;
 		globalVariables.healthScore = globalVariables.resetHealthScore;
+
 		globalVariables.currentLevel = globalVariables.resetCurrentLevel;
 		globalVariables.scoreMilestone = globalVariables.resetScoreMilestone;
+
 		globalVariables.backgroundScrollSpeed = globalVariables.resetBackgroundScrollSpeed;
 		globalVariables.commonObstacleMovementSpeed = globalVariables.resetCommonObstacleMovementSpeed;
 		globalVariables.uncommonObstacleMovementSpeed = globalVariables.resetUncommonObstacleMovementSpeed;
@@ -59,5 +60,11 @@ public class StartScript : MonoBehaviour
 		globalVariables.commonNpcMovementSpeed = globalVariables.resetCommonNpcMovementSpeed;
 		globalVariables.uncommonNpcMovementSpeed = globalVariables.resetUncommonNpcMovementSpeed;
 
+		globalVariables.commonNpcSpawnInterval = globalVariables.resetCommonNpcSpawnInterval;
+		globalVariables.uncommonNpcSpawnInterval = globalVariables.resetUncommonNpcSpawnInterval;
+		globalVariables.commonObstacleSpawnInterval = globalVariables.resetCommonObstacleSpawnInterval;
+		globalVariables.uncommonObstacleSpawnInterval = globalVariables.resetUncommonObstacleSpawnInterval;
+		globalVariables.commonBoostSpawnInterval = globalVariables.resetCommonBoostSpawnInterval;
+		globalVariables.uncommonBoostSpawnInterval = globalVariables.resetUncommonBoostSpawnInterval;
 	}
 }

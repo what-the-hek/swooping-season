@@ -4,7 +4,8 @@ using UnityEngine;
 public class SpawnObstacleScript : MonoBehaviour
 {
 
-    public float spawnCommonObstacleInterval = 4f;
+    public globalVariables globalVariables;
+    // public float commonObstacleSpawnInterval = 4f;
     public float[] spawnXPositions;
     public float fixedYPosition = 5f;
 
@@ -32,7 +33,7 @@ public class SpawnObstacleScript : MonoBehaviour
             Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
 
             // wait for the next spawn interval
-            yield return new WaitForSeconds(spawnCommonObstacleInterval);
+            yield return new WaitForSeconds(globalVariables.commonObstacleSpawnInterval);
         }
     }
 }

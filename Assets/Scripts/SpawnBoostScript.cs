@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class SpawnBoostScript : MonoBehaviour
 {
+    public globalVariables globalVariables;
 
-    public float spawnCommonBoostInterval = 10f;
+    // public float spawnCommonBoostInterval = 10f;
     public float[] spawnXPositions;
     public float fixedYPosition = 5f;
 
@@ -32,7 +33,7 @@ public class SpawnBoostScript : MonoBehaviour
             Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
 
             // wait for the next spawn interval
-            yield return new WaitForSeconds(spawnCommonBoostInterval);
+            yield return new WaitForSeconds(globalVariables.commonBoostSpawnInterval);
         }
     }
 }

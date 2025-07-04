@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class SpawnNpcScript : MonoBehaviour
 {
-
+    public globalVariables globalVariables;
     // spawn a common npc at random intervals **TODO add random interval
-    public float spawnCommonNpcInterval = 4f;
+    // public float commonNpcSpawnInterval = 4f;
     // spawn an uncommon npc at random intervals **TODO add random interval
     // public float spawnUncommonNpcInterval = 6f;
 
@@ -38,7 +38,7 @@ public class SpawnNpcScript : MonoBehaviour
             Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
 
             // wait for the next spawn interval
-            yield return new WaitForSeconds(spawnCommonNpcInterval);
+            yield return new WaitForSeconds(globalVariables.commonNpcSpawnInterval);
 
             // if (other.CompareTag("commonNPC"))
             // {

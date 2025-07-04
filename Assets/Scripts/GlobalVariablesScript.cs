@@ -4,8 +4,8 @@ public class globalVariables
 {
     // scores
     public static int totalScore;
-    public static int resetTotalScore;
-    public static int healthScore = 5;
+    public static int resetTotalScore = 0;
+    public static int healthScore;
     public static int resetHealthScore = 5;
     public static int highScore;
     public static int highLevel;
@@ -16,45 +16,54 @@ public class globalVariables
     public static int uncommonBoostAvailable;
 
     // level tracking
-    public static int currentLevel = 0;
+    public static int currentLevel;
     public static int resetCurrentLevel = 0;
-    public static int scoreMilestone = 10;
+    public static int scoreMilestone;
     public static int resetScoreMilestone = 10;
-    public static int increaseMilstone = 10;
 
+    public static int increaseMilstone = 10;
     public static float increaseScrollSpeed = 1f;
+    public static float increaseSpawnSpeed = 2f;
+    public static float increasePlayerMovementSpeed = 0.5f;
+
 
     // timing variables for increasing difficulty with level manager
-    public static float backgroundScrollSpeed = 1f;
+    public static float backgroundScrollSpeed;
     public static float resetBackgroundScrollSpeed = 1f;
 
     // these movement speeds should always match the background speed - consider removing
-    public static float commonObstacleMovementSpeed = 1f;
+    public static float commonObstacleMovementSpeed;
     public static float resetCommonObstacleMovementSpeed = 1f;
 
-    public static float uncommonObstacleMovementSpeed = 1f;
+    public static float uncommonObstacleMovementSpeed;
     public static float resetUncommonObstacleMovementSpeed = 1f;
 
-    public static float commonBoostMovementSpeed = 1f;
+    public static float commonBoostMovementSpeed;
     public static float resetCommonBoostMovementSpeed = 1f;
 
-    public static float uncommonBoostMovementSpeed = 1f;
+    public static float uncommonBoostMovementSpeed;
     public static float resetUncommonBoostMovementSpeed = 1f;
 
     // other movement speeds
-    public static float playerMovementSpeed = 3f;
+    public static float playerMovementSpeed;
     public static float resetPlayerMovementSpeed = 3f;
-    public static float commonNpcMovementSpeed = 0.5f;
+    public static float commonNpcMovementSpeed;
     public static float resetCommonNpcMovementSpeed = 0.5f;
-    public static float uncommonNpcMovementSpeed = 1.5f;
+    public static float uncommonNpcMovementSpeed;
     public static float resetUncommonNpcMovementSpeed = 1.5f;
 
     // spawn intervals
     public static float commonNpcSpawnInterval;
+    public static float resetCommonNpcSpawnInterval = 4f;
     public static float uncommonNpcSpawnInterval;
-    public static float commonObjectSpawnInterval;
-    public static float uncommonObjectSpawnInterval;
+    public static float resetUncommonNpcSpawnInterval = 10f;
+    public static float commonObstacleSpawnInterval;
+    public static float resetCommonObstacleSpawnInterval = 4f;
+    public static float uncommonObstacleSpawnInterval;
+    public static float resetUncommonObstacleSpawnInterval = 10f;
     public static float commonBoostSpawnInterval;
+    public static float resetCommonBoostSpawnInterval = 10f;
     public static float uncommonBoostSpawnInterval;
+    public static float resetUncommonBoostSpawnInterval = 20f;
 }
 
