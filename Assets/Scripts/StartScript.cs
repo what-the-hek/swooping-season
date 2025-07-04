@@ -8,10 +8,10 @@ using TMPro;
 
 public class StartScript : MonoBehaviour
 {
-   	public globalVariables globalVariables;
-    public string sceneName = "";
-    public Button playButton;
-    public Button exitButton;
+	public globalVariables globalVariables;
+	public string sceneName = "";
+	public Button playButton;
+	public Button exitButton;
 	public TextMeshProUGUI highScore;
 	public TextMeshProUGUI highLevel;
 
@@ -28,17 +28,36 @@ public class StartScript : MonoBehaviour
 		highLevel.text = $"high level: {globalVariables.highLevel}";
 
 		// RESET ALL MOVEMENT SPEEDS & MILESTONES
-		
+		// if (globalVariables.)
+		ResetVariables();
 	}
 
-	void TaskOnClickPlay(){
-        SceneManager.LoadScene(sceneName);
-		Debug.Log ("You have clicked Play!");
+	void TaskOnClickPlay()
+	{
+		SceneManager.LoadScene(sceneName);
+		Debug.Log("You have clicked Play!");
 	}
 
-    void TaskOnClickExit(){
-        Application.Quit();
-		Debug.Log ("You have clicked the Exit!");
+	void TaskOnClickExit()
+	{
+		Application.Quit();
+		Debug.Log("You have clicked the Exit!");
 	}
 
+	private void ResetVariables()
+	{
+		globalVariables.totalScore = globalVariables.resetTotalScore;
+		globalVariables.healthScore = globalVariables.resetHealthScore;
+		globalVariables.currentLevel = globalVariables.resetCurrentLevel;
+		globalVariables.scoreMilestone = globalVariables.resetScoreMilestone;
+		globalVariables.backgroundScrollSpeed = globalVariables.resetBackgroundScrollSpeed;
+		globalVariables.commonObstacleMovementSpeed = globalVariables.resetCommonObstacleMovementSpeed;
+		globalVariables.uncommonObstacleMovementSpeed = globalVariables.resetUncommonObstacleMovementSpeed;
+		globalVariables.commonBoostMovementSpeed = globalVariables.resetCommonBoostMovementSpeed;
+		globalVariables.uncommonBoostMovementSpeed = globalVariables.resetUncommonBoostMovementSpeed;
+		globalVariables.playerMovementSpeed = globalVariables.resetPlayerMovementSpeed;
+		globalVariables.commonNpcMovementSpeed = globalVariables.resetCommonNpcMovementSpeed;
+		globalVariables.uncommonNpcMovementSpeed = globalVariables.resetUncommonNpcMovementSpeed;
+
+	}
 }

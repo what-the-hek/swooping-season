@@ -13,6 +13,7 @@ public class EndScript : MonoBehaviour
 
     public void EndGame()
     {
+        // TODO change highScore global variable to a PlayerPrefs.int - use PlayerPrefs.Save()
         if (globalVariables.totalScore > globalVariables.highScore)
         {
             globalVariables.highScore = globalVariables.totalScore;
@@ -34,3 +35,13 @@ public class EndScript : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 }
+
+// player prefs example
+// if (totalScore > PlayerPrefs.GetInt("HighScore", 0))
+// {
+//     PlayerPrefs.SetInt("HighScore", totalScore);
+//     PlayerPrefs.Save();
+// }
+
+// int highScore = PlayerPrefs.GetInt("HighScore", 0);
+// highScoreText.text = "High Score: " + highScore;
