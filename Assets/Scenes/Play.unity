@@ -234,7 +234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebacdfc005ae0c43a0cac1ffbbc7709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCommonNpcInterval: 4
   spawnXPositions:
   - -7
   - -6
@@ -299,12 +298,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b420f203487d0344ba31ae4ae6bc57e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCommonBoostInterval: 10
   spawnXPositions:
   - 3
   - 0
   - -3
-  fixedYPosition: 5
+  fixedYPosition: 9
   prefabs:
   - {fileID: 4182858731470295240, guid: 7a9b26ccd30d9484b89fa6c0b54ec931, type: 3}
 --- !u!4 &737631474
@@ -1104,7 +1102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57a0de54ef78ff4ba69c5dd06687cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCommonObstacleInterval: 4
   spawnXPositions:
   - -6.5
   - -5.5

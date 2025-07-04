@@ -5,7 +5,7 @@ public class LevelManagerScript : MonoBehaviour
     public globalVariables globalVariables;
     public void LevelUp()
     {
-        Debug.Log("total score: " + globalVariables.totalScore + "greater than milestone: " + globalVariables.scoreMilestone);
+        // Debug.Log("total score: " + globalVariables.totalScore + "greater than milestone: " + globalVariables.scoreMilestone);
 
         globalVariables.playerMovementSpeed += globalVariables.increasePlayerMovementSpeed;
 
@@ -15,20 +15,27 @@ public class LevelManagerScript : MonoBehaviour
         globalVariables.commonNpcMovementSpeed += globalVariables.increaseScrollSpeed;
         globalVariables.uncommonNpcMovementSpeed += globalVariables.increaseScrollSpeed;
 
-        globalVariables.commonNpcSpawnInterval += globalVariables.increaseSpawnSpeed;
-        globalVariables.uncommonNpcSpawnInterval += globalVariables.increaseSpawnSpeed;
-        globalVariables.commonObstacleSpawnInterval += globalVariables.increaseSpawnSpeed;
-        globalVariables.uncommonObstacleSpawnInterval += globalVariables.increaseSpawnSpeed;
-        // globalVariables.commonBoostSpawnInterval += globalVariables.increaseSpawnSpeed;
-        // globalVariables.uncommonBoostSpawnInterval += globalVariables.increaseSpawnSpeed;
+        if (globalVariables.commonNpcSpawnInterval > 1)
+        {
+            // there is a bug with minus values where too many spawn, need to change this so that it spawns 2 prefabs instead of 1
+            // rather than continuing to try and decrease the spawn interval
+            globalVariables.commonNpcSpawnInterval -= globalVariables.descreaseSpawnInterval;
+            globalVariables.uncommonNpcSpawnInterval -= globalVariables.descreaseSpawnInterval;
+            globalVariables.commonObstacleSpawnInterval -= globalVariables.descreaseSpawnInterval;
+            globalVariables.uncommonObstacleSpawnInterval -= globalVariables.descreaseSpawnInterval;
+            // globalVariables.commonBoostSpawnInterval -= globalVariables.descreaseSpawnInterval;
+            // globalVariables.uncommonBoostSpawnInterval -= globalVariables.descreaseSpawnInterval;
+        }
 
         // Debug.Log("background Scroll Speed: " + globalVariables.backgroundScrollSpeed);
 
+            // Debug.Log("SPAWN INTERVAL LEVEL UP;" + globalVariables.commonNpcSpawnInterval);
+
         globalVariables.currentLevel++;
-        Debug.Log("current level: " + globalVariables.currentLevel);
+        // Debug.Log("current level: " + globalVariables.currentLevel);
 
         globalVariables.scoreMilestone += globalVariables.increaseMilstone;
-        Debug.Log("next score milestone: " + globalVariables.scoreMilestone);
+        // Debug.Log("next score milestone: " + globalVariables.scoreMilestone);
     }
 
 }

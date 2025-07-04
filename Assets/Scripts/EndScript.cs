@@ -22,8 +22,8 @@ public class EndScript : MonoBehaviour
         {
             globalVariables.highLevel = globalVariables.currentLevel;
         }
-        Debug.Log("YOU LOSE");
-        Debug.Log("FINAL SCORE: " + globalVariables.totalScore);
+        // Debug.Log("YOU LOSE");
+        Debug.Log("SPAWN INTERVAL END GAME " + globalVariables.commonNpcSpawnInterval);
         globalVariables.playerMovementSpeed = 0f;
         gameOver.text = $"game over";
         StartCoroutine(returnToStart());

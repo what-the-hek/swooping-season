@@ -17,13 +17,13 @@ public class globalVariables
 
     // level tracking
     public static int currentLevel;
-    public static int resetCurrentLevel = 0;
+    public static int resetCurrentLevel = 1;
     public static int scoreMilestone;
     public static int resetScoreMilestone = 10;
 
     public static int increaseMilstone = 10;
     public static float increaseScrollSpeed = 1f;
-    public static float increaseSpawnSpeed = 2f;
+    public static float descreaseSpawnInterval = 1f;
     public static float increasePlayerMovementSpeed = 0.5f;
 
 
@@ -54,16 +54,16 @@ public class globalVariables
 
     // spawn intervals
     public static float commonNpcSpawnInterval;
-    public static float resetCommonNpcSpawnInterval = 4f;
+    public static float resetCommonNpcSpawnInterval = 6f;
     public static float uncommonNpcSpawnInterval;
-    public static float resetUncommonNpcSpawnInterval = 10f;
+    public static float resetUncommonNpcSpawnInterval = 16f;
     public static float commonObstacleSpawnInterval;
-    public static float resetCommonObstacleSpawnInterval = 4f;
+    public static float resetCommonObstacleSpawnInterval = 6f;
     public static float uncommonObstacleSpawnInterval;
-    public static float resetUncommonObstacleSpawnInterval = 10f;
+    public static float resetUncommonObstacleSpawnInterval = 16f;
     public static float commonBoostSpawnInterval;
-    public static float resetCommonBoostSpawnInterval = 10f;
+    public static float resetCommonBoostSpawnInterval = 40f;
     public static float uncommonBoostSpawnInterval;
-    public static float resetUncommonBoostSpawnInterval = 20f;
+    public static float resetUncommonBoostSpawnInterval = 40f;
 }
 

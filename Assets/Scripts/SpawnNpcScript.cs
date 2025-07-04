@@ -29,27 +29,31 @@ public class SpawnNpcScript : MonoBehaviour
     {
         while (true)
         {
-            // create the prefab at a random spawn point
-            int index = Random.Range(0, spawnXPositions.Length);
-            Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
+            int spawnCount = globalVariables.currentLevel;
+            Debug.Log("spawn count / level: " + spawnCount);
+            for (int i = 0; i < spawnCount; i++)
+            {
+                // create the prefab at a random spawn point
+                int index = Random.Range(0, spawnXPositions.Length);
+                Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
 
-            // select a random prefab from prefab index range
-            int prefabIndex = Random.Range(0, prefabs.Length);
-            Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
-
+                // select a random prefab from prefab index range
+                int prefabIndex = Random.Range(0, prefabs.Length);
+                Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
+            }
             // wait for the next spawn interval
             yield return new WaitForSeconds(globalVariables.commonNpcSpawnInterval);
-
-            // if (other.CompareTag("commonNPC"))
-            // {
-            //     yield return new WaitForSeconds(spawnCommonNpcInterval);
-            // }
-            // if (other.CompareTag("uncommonNPC"))
-            // {
-            //     yield return new WaitForSeconds(spawnUncommonNpcInterval);
-            // }
         }
     }
+
+    // if (other.CompareTag("commonNPC"))
+    // {
+    //     yield return new WaitForSeconds(spawnCommonNpcInterval);
+    // }
+    // if (other.CompareTag("uncommonNPC"))
+    // {
+    //     yield return new WaitForSeconds(spawnUncommonNpcInterval);
+    // }
 
     // create a list of npc tags for different sprites to spawn, with their own random timings
     // private string GetRandomNpcTag()
