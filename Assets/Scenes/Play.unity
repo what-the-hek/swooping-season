@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b420f203487d0344ba31ae4ae6bc57e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delaySpawn: 30
   spawnXPositions:
   - 3
   - 0
@@ -1116,11 +1117,14 @@ MonoBehaviour:
   - 4.5
   - 5.5
   - 6.5
+  carRightXPosition: 1.25
   fixedYPosition: 9
   prefabs:
   - {fileID: 9179245836128084373, guid: afc40209c61a1534793257f4bfb65d6d, type: 3}
   - {fileID: 9150967141007827281, guid: d0c64e5163591db4682fbe117c8c1c03, type: 3}
   - {fileID: 9179245836128084373, guid: 56b79dca575083245adca7624f4b8b7b, type: 3}
+  carRightPrefabs:
+  - {fileID: 6716223593567684603, guid: b876d3db06c9e0f42bafbac676b49197, type: 3}
 --- !u!1 &1978305028
 GameObject:
   m_ObjectHideFlags: 0

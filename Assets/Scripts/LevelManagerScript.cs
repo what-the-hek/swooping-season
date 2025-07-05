@@ -15,6 +15,8 @@ public class LevelManagerScript : MonoBehaviour
         globalVariables.commonNpcMovementSpeed += globalVariables.increaseScrollSpeed;
         globalVariables.uncommonNpcMovementSpeed += globalVariables.increaseScrollSpeed;
 
+        globalVariables.carRightMovementSpeed += globalVariables.increaseScrollSpeed;
+
         if (globalVariables.commonNpcSpawnInterval > 1)
         {
             // there is a bug with minus values where too many spawn, need to change this so that it spawns 2 prefabs instead of 1

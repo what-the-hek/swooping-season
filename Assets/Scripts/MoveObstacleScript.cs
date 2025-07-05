@@ -13,6 +13,12 @@ public class MoveObstacleScript : MonoBehaviour
             transform.position += Vector3.down * globalVariables.commonObstacleMovementSpeed * Time.deltaTime;
         }
 
+        if (tag == "carRight")
+        {
+            // move prefab down the screen
+            transform.position += Vector3.down * globalVariables.carRightMovementSpeed * Time.deltaTime;
+        }
+
         // once the prefab is off the screen, destroy it **TODO change this so it is responsive to any screen size
         if (transform.position.y <= -19)
         {
