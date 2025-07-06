@@ -1104,27 +1104,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnXPositions:
-  - -6.5
-  - -5.5
-  - -4.5
-  - -3.5
-  - -2.5
-  - -1.5
-  - 0.5
-  - 1.5
-  - 2.5
-  - 3.5
-  - 4.5
-  - 5.5
-  - 6.5
+  - -8
+  - 8
   carRightXPosition: 1.25
   fixedYPosition: 9
   prefabs:
-  - {fileID: 9179245836128084373, guid: afc40209c61a1534793257f4bfb65d6d, type: 3}
-  - {fileID: 9150967141007827281, guid: d0c64e5163591db4682fbe117c8c1c03, type: 3}
-  - {fileID: 9179245836128084373, guid: 56b79dca575083245adca7624f4b8b7b, type: 3}
+  - {fileID: 9179245836128084373, guid: bae96895a51d88947b53134d8644f1ce, type: 3}
   carRightPrefabs:
   - {fileID: 6716223593567684603, guid: b876d3db06c9e0f42bafbac676b49197, type: 3}
+  - {fileID: 6716223593567684603, guid: 3dc981f2fff90734493110515cd956be, type: 3}
 --- !u!1 &1978305028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,7 +1324,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 6274594350816644514, guid: 4cda06d9763f1aa4792e1bdd5cc4fd08, type: 3}
+  m_Sprite: {fileID: 6814759250981815994, guid: 47709442fe703344898b774bb539d33e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
