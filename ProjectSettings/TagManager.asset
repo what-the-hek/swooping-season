@@ -9,6 +9,7 @@ TagManager:
   - obstacle
   - boost
   - carRight
+  - carLeft
   layers:
   - Default
   - TransparentFX

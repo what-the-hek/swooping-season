@@ -1106,13 +1106,18 @@ MonoBehaviour:
   spawnXPositions:
   - -8
   - 8
-  carRightXPosition: 1.25
+  carRightXPosition: 1.4
+  carLeftXPosition: -1.4
   fixedYPosition: 9
+  fixedYBottomPosition: -10
   prefabs:
   - {fileID: 9179245836128084373, guid: bae96895a51d88947b53134d8644f1ce, type: 3}
   carRightPrefabs:
   - {fileID: 6716223593567684603, guid: b876d3db06c9e0f42bafbac676b49197, type: 3}
   - {fileID: 6716223593567684603, guid: 3dc981f2fff90734493110515cd956be, type: 3}
+  carLeftPrefabs:
+  - {fileID: 6716223593567684603, guid: d31cb71042d0e8c42badd0a2722ba9c0, type: 3}
+  - {fileID: 6716223593567684603, guid: 56a4f51e8eb5cf94dba8e6ffe803bbf2, type: 3}
 --- !u!1 &1978305028
 GameObject:
   m_ObjectHideFlags: 0

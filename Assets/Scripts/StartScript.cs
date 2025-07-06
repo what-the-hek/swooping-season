@@ -61,6 +61,7 @@ public class StartScript : MonoBehaviour
 		globalVariables.uncommonNpcMovementSpeed = globalVariables.resetUncommonNpcMovementSpeed;
 
 		globalVariables.carRightMovementSpeed = globalVariables.resetCarRightMovementSpeed;
+		globalVariables.carLeftMovementSpeed = globalVariables.resetCarLeftMovementSpeed;
 
 		globalVariables.commonNpcSpawnInterval = globalVariables.resetCommonNpcSpawnInterval;
 		globalVariables.uncommonNpcSpawnInterval = globalVariables.resetUncommonNpcSpawnInterval;

@@ -7,14 +7,18 @@ public class SpawnObstacleScript : MonoBehaviour
     public globalVariables globalVariables;
     // public float commonObstacleSpawnInterval = 4f;
     public float[] spawnXPositions;
-    public float carRightXPosition = 1.25f;
+    public float carRightXPosition;
+    public float carLeftXPosition;
 
-    public float fixedYPosition = 5f;
+
+    public float fixedYPosition;
+    public float fixedYBottomPosition;
+
 
     // create an array of random prefabs to spawn
     public GameObject[] prefabs;
     public GameObject[] carRightPrefabs;
-
+    public GameObject[] carLeftPrefabs;
 
 
     void Start()
@@ -30,6 +34,8 @@ public class SpawnObstacleScript : MonoBehaviour
         while (true)
         {
             bool spawnCarRight = Random.value < 0.3f;
+            bool spawnCarLeft = Random.value < 0.3f;
+
             GameObject prefabToSpawn;
             Vector3 spawnPosition;
 
@@ -38,6 +44,12 @@ public class SpawnObstacleScript : MonoBehaviour
                 int index = Random.Range(0, carRightPrefabs.Length);
                 prefabToSpawn = carRightPrefabs[index];
                 spawnPosition = new Vector3(carRightXPosition, fixedYPosition, 0f);
+            }
+            else if (spawnCarLeft)
+            {
+                int index = Random.Range(0, carLeftPrefabs.Length);
+                prefabToSpawn = carLeftPrefabs[index];
+                spawnPosition = new Vector3(carLeftXPosition, fixedYBottomPosition, 0f);
             }
             else
             {

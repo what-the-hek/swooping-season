@@ -16,6 +16,8 @@ public class LevelManagerScript : MonoBehaviour
         globalVariables.uncommonNpcMovementSpeed += globalVariables.increaseScrollSpeed;
 
         globalVariables.carRightMovementSpeed += globalVariables.increaseScrollSpeed;
+        globalVariables.carLeftMovementSpeed += globalVariables.increaseScrollSpeed;
+
 
         if (globalVariables.commonNpcSpawnInterval > 1)
         {

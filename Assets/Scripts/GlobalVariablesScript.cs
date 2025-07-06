@@ -47,7 +47,9 @@ public class globalVariables
     // obstacle movement speeds
 
     public static float carRightMovementSpeed;
-    public static float resetCarRightMovementSpeed = 2f;
+    public static float resetCarRightMovementSpeed = 2.5f;
+    public static float carLeftMovementSpeed;
+    public static float resetCarLeftMovementSpeed = 1f;
 
     // other movement speeds
     public static float playerMovementSpeed;
