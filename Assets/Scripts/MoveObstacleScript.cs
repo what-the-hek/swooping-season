@@ -40,9 +40,14 @@ public class MoveObstacleScript : MonoBehaviour
             // }
         }
 
-        // if (transform.position.y <= 19)
-        // {
-        //     Destroy(gameObject);
-        // }
+        if (tag == "carRight" && transform.position.y <= -19 || tag == "obstacle" && transform.position.y <= -19)
+        {
+            Destroy(gameObject);
+        }
+
+        if (tag == "carLeft" && transform.position.y >= 25)
+        {
+            Destroy(gameObject);
+        }
     }
 }

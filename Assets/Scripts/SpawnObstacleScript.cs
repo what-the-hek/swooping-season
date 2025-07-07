@@ -33,34 +33,41 @@ public class SpawnObstacleScript : MonoBehaviour
     {
         while (true)
         {
-            bool spawnCarRight = Random.value < 0.3f;
-            bool spawnCarLeft = Random.value < 0.3f;
+            bool spawnCarRight = Random.value < 0.4f;
+            bool spawnCarLeft = Random.value < 0.4f;
+            bool spawnPowerline = Random.value < 0.4f;
 
             GameObject prefabToSpawn;
             Vector3 spawnPosition;
 
             if (spawnCarRight)
             {
+                Debug.Log("spawnCarRight");
                 int index = Random.Range(0, carRightPrefabs.Length);
                 prefabToSpawn = carRightPrefabs[index];
                 spawnPosition = new Vector3(carRightXPosition, fixedYPosition, 0f);
+                Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
             }
-            else if (spawnCarLeft)
+            if (spawnCarLeft)
             {
+                Debug.Log("spawnCarLeft");
                 int index = Random.Range(0, carLeftPrefabs.Length);
                 prefabToSpawn = carLeftPrefabs[index];
                 spawnPosition = new Vector3(carLeftXPosition, fixedYBottomPosition, 0f);
+                Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
             }
-            else
+            if (spawnPowerline)
             {
+                Debug.Log("spawnPowerline");
                 int index = Random.Range(0, prefabs.Length);
                 prefabToSpawn = prefabs[index];
                 int xIndex = Random.Range(0, spawnXPositions.Length);
                 float xPos = spawnXPositions[xIndex];
                 spawnPosition = new Vector3(xPos, fixedYPosition, 0f);
+                Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
             }
 
-            Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+            // Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
 
             yield return new WaitForSeconds(globalVariables.commonObstacleSpawnInterval);
         }

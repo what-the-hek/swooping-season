@@ -38,7 +38,7 @@ public class LevelManagerScript : MonoBehaviour
         globalVariables.currentLevel++;
         // Debug.Log("current level: " + globalVariables.currentLevel);
 
-        globalVariables.scoreMilestone += globalVariables.increaseMilstone;
+        globalVariables.scoreMilestone += globalVariables.increaseMilestone;
         // Debug.Log("next score milestone: " + globalVariables.scoreMilestone);
     }
 

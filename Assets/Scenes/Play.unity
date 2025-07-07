@@ -1104,8 +1104,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnXPositions:
-  - -8
-  - 8
+  - -9
+  - 9
+  - -13.4
+  - 13.4
+  - -11.14
+  - 11.14
   carRightXPosition: 1.4
   carLeftXPosition: -1.4
   fixedYPosition: 9
@@ -1116,7 +1120,6 @@ MonoBehaviour:
   - {fileID: 6716223593567684603, guid: b876d3db06c9e0f42bafbac676b49197, type: 3}
   - {fileID: 6716223593567684603, guid: 3dc981f2fff90734493110515cd956be, type: 3}
   carLeftPrefabs:
-  - {fileID: 6716223593567684603, guid: d31cb71042d0e8c42badd0a2722ba9c0, type: 3}
   - {fileID: 6716223593567684603, guid: 56a4f51e8eb5cf94dba8e6ffe803bbf2, type: 3}
 --- !u!1 &1978305028
 GameObject:

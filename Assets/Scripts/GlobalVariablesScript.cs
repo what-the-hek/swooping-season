@@ -21,43 +21,43 @@ public class globalVariables
     public static int scoreMilestone;
     public static int resetScoreMilestone = 10;
 
-    public static int increaseMilstone = 10;
-    public static float increaseScrollSpeed = 1f;
-    public static float descreaseSpawnInterval = 1f;
-    public static float increasePlayerMovementSpeed = 0.5f;
+    public static int increaseMilestone = 10;
+    public static float increaseScrollSpeed = 0.1f;
+    public static float descreaseSpawnInterval = 0.1f;
+    public static float increasePlayerMovementSpeed = 0.2f;
 
 
     // timing variables for increasing difficulty with level manager
     public static float backgroundScrollSpeed;
-    public static float resetBackgroundScrollSpeed = 1f;
+    public static float resetBackgroundScrollSpeed = 2f;
 
     // these movement speeds should always match the background speed - consider removing
     public static float commonObstacleMovementSpeed;
-    public static float resetCommonObstacleMovementSpeed = 1f;
+    public static float resetCommonObstacleMovementSpeed = 2f;
 
     public static float uncommonObstacleMovementSpeed;
-    public static float resetUncommonObstacleMovementSpeed = 1f;
+    public static float resetUncommonObstacleMovementSpeed = 2f;
 
     public static float commonBoostMovementSpeed;
-    public static float resetCommonBoostMovementSpeed = 1f;
+    public static float resetCommonBoostMovementSpeed = 2f;
 
     public static float uncommonBoostMovementSpeed;
-    public static float resetUncommonBoostMovementSpeed = 1f;
+    public static float resetUncommonBoostMovementSpeed = 2f;
 
     // obstacle movement speeds
 
     public static float carRightMovementSpeed;
-    public static float resetCarRightMovementSpeed = 2.5f;
+    public static float resetCarRightMovementSpeed = 3.5f;
     public static float carLeftMovementSpeed;
-    public static float resetCarLeftMovementSpeed = 1f;
+    public static float resetCarLeftMovementSpeed = 2f;
 
     // other movement speeds
     public static float playerMovementSpeed;
-    public static float resetPlayerMovementSpeed = 3f;
+    public static float resetPlayerMovementSpeed = 4f;
     public static float commonNpcMovementSpeed;
-    public static float resetCommonNpcMovementSpeed = 0.5f;
+    public static float resetCommonNpcMovementSpeed = 1.5f;
     public static float uncommonNpcMovementSpeed;
-    public static float resetUncommonNpcMovementSpeed = 1.5f;
+    public static float resetUncommonNpcMovementSpeed = 2.5f;
 
     // spawn intervals - TODO make these randomized intervals rather than set times
     public static float commonNpcSpawnInterval;
@@ -65,7 +65,7 @@ public class globalVariables
     public static float uncommonNpcSpawnInterval;
     public static float resetUncommonNpcSpawnInterval = 16f;
     public static float commonObstacleSpawnInterval;
-    public static float resetCommonObstacleSpawnInterval = 6f;
+    public static float resetCommonObstacleSpawnInterval = 4f;
     public static float uncommonObstacleSpawnInterval;
     public static float resetUncommonObstacleSpawnInterval = 16f;
     public static float commonBoostSpawnInterval;

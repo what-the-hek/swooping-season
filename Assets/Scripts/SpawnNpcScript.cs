@@ -30,7 +30,7 @@ public class SpawnNpcScript : MonoBehaviour
         while (true)
         {
             int spawnCount = globalVariables.currentLevel;
-            Debug.Log("spawn count / level: " + spawnCount);
+            // Debug.Log("spawn count / level: " + spawnCount);
             for (int i = 0; i < spawnCount; i++)
             {
                 // create the prefab at a random spawn point
