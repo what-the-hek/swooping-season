@@ -9,14 +9,18 @@ public class EndScript : MonoBehaviour
 {
     public globalVariables globalVariables;
     public TextMeshProUGUI gameOver;
+    public TextMeshProUGUI finalScore;
+
     public string sceneName = "";
 
     public void EndGame()
     {
         // TODO change highScore global variable to a PlayerPrefs.int - use PlayerPrefs.Save()
-        if (globalVariables.totalScore > globalVariables.highScore)
+        globalVariables.finalScore = globalVariables.totalScore + globalVariables.missedScore;
+
+        if (globalVariables.finalScore > globalVariables.highScore)
         {
-            globalVariables.highScore = globalVariables.totalScore;
+            globalVariables.highScore = globalVariables.finalScore;
         }
         if (globalVariables.currentLevel > globalVariables.highLevel)
         {
@@ -26,6 +30,7 @@ public class EndScript : MonoBehaviour
         // Debug.Log("SPAWN INTERVAL END GAME " + globalVariables.commonNpcSpawnInterval);
         globalVariables.playerMovementSpeed = 0f;
         gameOver.text = $"game over";
+        finalScore.text = $"total: {globalVariables.totalScore} \nmissed: {globalVariables.missedScore} \nfinal score: {globalVariables.finalScore}";
         StartCoroutine(returnToStart());
     }
 

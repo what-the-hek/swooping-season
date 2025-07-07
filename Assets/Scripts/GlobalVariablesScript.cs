@@ -5,8 +5,12 @@ public class globalVariables
     // scores
     public static int totalScore;
     public static int resetTotalScore = 0;
+    public static int finalScore;
+    public static int resetFinalScore = 0;
     public static int healthScore;
     public static int resetHealthScore = 5;
+    public static int missedScore;
+    public static int resetMissedScore = 0;
     public static int highScore;
     public static int highLevel;
     public static int returnToStartTimer = 6;

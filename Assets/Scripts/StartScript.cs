@@ -47,6 +47,8 @@ public class StartScript : MonoBehaviour
 	{
 		globalVariables.totalScore = globalVariables.resetTotalScore;
 		globalVariables.healthScore = globalVariables.resetHealthScore;
+		globalVariables.finalScore = globalVariables.resetFinalScore;
+		globalVariables.missedScore = globalVariables.resetMissedScore;
 
 		globalVariables.currentLevel = globalVariables.resetCurrentLevel;
 		globalVariables.scoreMilestone = globalVariables.resetScoreMilestone;

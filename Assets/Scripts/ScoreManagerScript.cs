@@ -8,6 +8,7 @@ public class CollisionDetectionScript : MonoBehaviour
     public EndScript endGame;
     public TextMeshProUGUI totalScore;
     public TextMeshProUGUI healthScore;
+    public TextMeshProUGUI missedScore;
 
     // public bool collectedCommonNpc = false;
     // public bool collectedUncommonNpc = false;
@@ -68,8 +69,8 @@ public class CollisionDetectionScript : MonoBehaviour
 
     public void MinusScore()
     {
-        globalVariables.totalScore -= 1;
-        totalScore.text = $"score: {globalVariables.totalScore}";
+        globalVariables.missedScore -= 1;
+        missedScore.text = $"missed: {globalVariables.missedScore}";
         Debug.Log("OUCH!! missed one");
     }
 
