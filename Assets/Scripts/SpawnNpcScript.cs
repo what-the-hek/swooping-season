@@ -29,21 +29,36 @@ public class SpawnNpcScript : MonoBehaviour
     {
         while (true)
         {
-            int spawnCount = globalVariables.currentLevel;
-            // Debug.Log("spawn count / level: " + spawnCount);
-            for (int i = 0; i < spawnCount; i++)
-            {
-                // create the prefab at a random spawn point
-                int index = Random.Range(0, spawnXPositions.Length);
-                Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
+            // create the prefab at a random spawn point
+            int index = Random.Range(0, spawnXPositions.Length);
+            Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
 
-                // select a random prefab from prefab index range
-                int prefabIndex = Random.Range(0, prefabs.Length);
-                Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
-            }
+            // select a random prefab from prefab index range
+            int prefabIndex = Random.Range(0, prefabs.Length);
+            Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
+            
             // wait for the next spawn interval
             yield return new WaitForSeconds(globalVariables.commonNpcSpawnInterval);
         }
+
+        // TODO REVISIT INCREASING THE NUMBER OF SPAWNED NPCS BASED ON MILESTONE - CURRENTLY TOO MANY
+        // while (true)
+        // {
+        //     int spawnCount = globalVariables.currentLevel;
+        //     // Debug.Log("spawn count / level: " + spawnCount);
+        //     for (int i = 0; i < spawnCount; i++)
+        //     {
+        //         // create the prefab at a random spawn point
+        //         int index = Random.Range(0, spawnXPositions.Length);
+        //         Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
+
+        //         // select a random prefab from prefab index range
+        //         int prefabIndex = Random.Range(0, prefabs.Length);
+        //         Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
+        //     }
+        //     // wait for the next spawn interval
+        //     yield return new WaitForSeconds(globalVariables.commonNpcSpawnInterval);
+        // }
     }
 
     // if (other.CompareTag("commonNPC"))

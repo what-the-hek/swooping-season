@@ -42,7 +42,7 @@ public class SpawnObstacleScript : MonoBehaviour
 
             if (spawnCarRight)
             {
-                Debug.Log("spawnCarRight");
+                // Debug.Log("spawnCarRight");
                 int index = Random.Range(0, carRightPrefabs.Length);
                 prefabToSpawn = carRightPrefabs[index];
                 spawnPosition = new Vector3(carRightXPosition, fixedYPosition, 0f);
@@ -50,7 +50,7 @@ public class SpawnObstacleScript : MonoBehaviour
             }
             if (spawnCarLeft)
             {
-                Debug.Log("spawnCarLeft");
+                // Debug.Log("spawnCarLeft");
                 int index = Random.Range(0, carLeftPrefabs.Length);
                 prefabToSpawn = carLeftPrefabs[index];
                 spawnPosition = new Vector3(carLeftXPosition, fixedYBottomPosition, 0f);
@@ -58,7 +58,7 @@ public class SpawnObstacleScript : MonoBehaviour
             }
             if (spawnPowerline)
             {
-                Debug.Log("spawnPowerline");
+                // Debug.Log("spawnPowerline");
                 int index = Random.Range(0, prefabs.Length);
                 prefabToSpawn = prefabs[index];
                 int xIndex = Random.Range(0, spawnXPositions.Length);

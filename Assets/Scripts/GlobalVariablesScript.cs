@@ -61,7 +61,7 @@ public class globalVariables
 
     // spawn intervals - TODO make these randomized intervals rather than set times
     public static float commonNpcSpawnInterval;
-    public static float resetCommonNpcSpawnInterval = 6f;
+    public static float resetCommonNpcSpawnInterval = 4f;
     public static float uncommonNpcSpawnInterval;
     public static float resetUncommonNpcSpawnInterval = 16f;
     public static float commonObstacleSpawnInterval;
