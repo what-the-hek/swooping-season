@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hatch-lights_0: -2971996503399954462
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

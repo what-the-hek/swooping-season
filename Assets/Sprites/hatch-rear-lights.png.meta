@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hatch-rear-lights_0: -6349907988681596088
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
