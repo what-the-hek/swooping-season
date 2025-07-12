@@ -12,10 +12,19 @@ public class MoveNpcScript : MonoBehaviour
     // public float uncommonNpcMovementSpeed = 2f;
     public bool wasCollected = false;
 
+    public Sprite defaultSprite;
+    public Sprite hitSprite;
+
+    private SpriteRenderer spriteRenderer;
+
     public void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");
         minusScore = player.GetComponent<CollisionDetectionScript>();
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = defaultSprite;
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -24,6 +33,7 @@ public class MoveNpcScript : MonoBehaviour
         {
             wasCollected = true;
             Debug.Log("collected npc: " + wasCollected);
+            spriteRenderer.sprite = hitSprite;
         }
     }
 

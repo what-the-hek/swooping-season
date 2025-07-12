@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6614929663761569966, guid: 3be5776f751272847b5a85368b8b8fb6, type: 3}
+  m_Sprite: {fileID: -565089939824127730, guid: 021b6a9f0d3a4594d94d5b24863cd022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,17 +124,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.01678729, y: 0.02797842}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.47, y: 1.83}
+    oldSize: {x: 0.86, y: 1.29}
     newSize: {x: 1.47, y: 1.83}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.47, y: 1.83}
+  m_Size: {x: 0.67540646, y: 0.9458742}
   m_EdgeRadius: 0
 --- !u!50 &766439581330551778
 Rigidbody2D:
@@ -175,5 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f53b55df30a59f45b8ac26a518f432a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commonNpcMovementSpeed: 1.5
-  uncommonNpcMovementSpeed: 2.5
+  minusScore: {fileID: 0}
+  wasCollected: 0
+  defaultSprite: {fileID: -565089939824127730, guid: 021b6a9f0d3a4594d94d5b24863cd022, type: 3}
+  hitSprite: {fileID: -7833709433789170557, guid: 30ea3f69d1271a04cabf31fab0f488a4, type: 3}
