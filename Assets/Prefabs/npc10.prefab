@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5727150479035276832}
   - component: {fileID: 6513063308770733211}
   - component: {fileID: -1272582132052007666}
-  - component: {fileID: 3073613572527126334}
+  - component: {fileID: 2591601818951997298}
   m_Layer: 0
-  m_Name: npc9
+  m_Name: npc10
   m_TagString: npc-front
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8074456098757593404, guid: b928ed5dbab292e4b8e740e0acb3cd39, type: 3}
+  m_Sprite: {fileID: -1414639902666080382, guid: 5d2a3808d577687439f1304643831cc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -129,7 +129,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9, y: 1.3}
+    oldSize: {x: 0.84, y: 1.22}
     newSize: {x: 1.47, y: 1.83}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minusScore: {fileID: 0}
   wasCollected: 0
---- !u!95 &3073613572527126334
+--- !u!95 &2591601818951997298
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ Animator:
   m_GameObject: {fileID: 1984686997501948524}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e600fabdb71b13b4f9711a670d2a7a7c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 033ca3da91cfd9e46bccef75d4fac5ea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
