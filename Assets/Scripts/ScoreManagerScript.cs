@@ -69,9 +69,12 @@ public class CollisionDetectionScript : MonoBehaviour
 
     public void MinusScore()
     {
-        globalVariables.missedScore -= 1;
-        missedScore.text = $"missed: {globalVariables.missedScore}";
-        Debug.Log("OUCH!! missed one");
+        if (globalVariables.healthScore > 0)
+        {
+            globalVariables.missedScore -= 1;
+            missedScore.text = $"missed: {globalVariables.missedScore}";
+            Debug.Log("OUCH!! missed one");
+        }
     }
 
     public void AddHealth()

@@ -255,6 +255,12 @@ MonoBehaviour:
   fixedYPosition: 9
   prefabs:
   - {fileID: 1984686997501948524, guid: f840c0d96ec72a4428fbb02e0af66e26, type: 3}
+  - {fileID: 1984686997501948524, guid: 5c324dae324d3ce4f9db16c8a543f14c, type: 3}
+  - {fileID: 1984686997501948524, guid: 9824cea97b2d15843a80f3cf557a3551, type: 3}
+  - {fileID: 1984686997501948524, guid: a7b4501ebe573ad468e27fc186ffa101, type: 3}
+  - {fileID: 1984686997501948524, guid: 7126ac4ac5ca3bf44b26225a30abcc2b, type: 3}
+  - {fileID: 1984686997501948524, guid: c7b4fc02c8c21b24fb61899e85b1fb86, type: 3}
+  - {fileID: 1984686997501948524, guid: baae17db443ebc74c8406c81d7dadeac, type: 3}
 --- !u!4 &518179368
 Transform:
   m_ObjectHideFlags: 0
