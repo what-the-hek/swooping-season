@@ -7,7 +7,7 @@ public class SpawnNpcScript : MonoBehaviour
     // spawn a common npc at random intervals **TODO add random interval
     // public float commonNpcSpawnInterval = 4f;
     // spawn an uncommon npc at random intervals **TODO add random interval
-    // public float spawnUncommonNpcInterval = 6f;
+    // public float spawnNpcFrontInterval = 6f;
 
     // create an array of random spawn points **TODO see if I can randomly generate interval based on given range -8 - 8
     public float[] spawnXPositions;
@@ -65,9 +65,9 @@ public class SpawnNpcScript : MonoBehaviour
     // {
     //     yield return new WaitForSeconds(spawnCommonNpcInterval);
     // }
-    // if (other.CompareTag("uncommonNPC"))
+    // if (other.CompareTag("npc-front"))
     // {
-    //     yield return new WaitForSeconds(spawnUncommonNpcInterval);
+    //     yield return new WaitForSeconds(spawnNpcFrontInterval);
     // }
 
     // create a list of npc tags for different sprites to spawn, with their own random timings

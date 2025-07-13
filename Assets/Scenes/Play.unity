@@ -254,8 +254,7 @@ MonoBehaviour:
   - 8
   fixedYPosition: 9
   prefabs:
-  - {fileID: 5489626404720771813, guid: b44616bcc3302174593b68ec85c15d93, type: 3}
-  - {fileID: 1984686997501948524, guid: 04d820496626b1944bcb38e79ffead32, type: 3}
+  - {fileID: 1984686997501948524, guid: f840c0d96ec72a4428fbb02e0af66e26, type: 3}
 --- !u!4 &518179368
 Transform:
   m_ObjectHideFlags: 0

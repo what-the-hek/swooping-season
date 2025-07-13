@@ -11,7 +11,7 @@ public class CollisionDetectionScript : MonoBehaviour
     public TextMeshProUGUI missedScore;
 
     // public bool collectedCommonNpc = false;
-    // public bool collectedUncommonNpc = false;
+    // public bool collectedNpcFront = false;
 
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -36,10 +36,10 @@ public class CollisionDetectionScript : MonoBehaviour
             // Debug.Log("collected common npc: " + collectedCommonNpc);
             AddScore();
         }
-        else if (other.CompareTag("uncommonNPC"))
+        else if (other.CompareTag("npc-front"))
         {
-            // collectedUncommonNpc = true;
-            // Debug.Log("collected uncommon npc: " + collectedUncommonNpc);
+            // collectedNpcFront = true;
+            // Debug.Log("collected uncommon npc: " + collectedNpcFront);
             AddScore();
         }
 
@@ -63,8 +63,8 @@ public class CollisionDetectionScript : MonoBehaviour
         totalScore.text = $"score: {globalVariables.totalScore}";
         // globalVariables.totalScore += 2;
         // totalScore.text = $"score: {globalVariables.totalScore}";
-        // collectedUncommonNpc = true;
-        // Debug.Log("collected uncommon npc: " + collectedUncommonNpc);
+        // collectedNpcFront = true;
+        // Debug.Log("collected uncommon npc: " + collectedNpcFront);
     }
 
     public void MinusScore()

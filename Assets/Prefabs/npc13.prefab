@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 6513063308770733211}
   - component: {fileID: -1272582132052007666}
   m_Layer: 0
-  m_Name: uncommonNPC
-  m_TagString: uncommonNPC
+  m_Name: npc13
+  m_TagString: npc-front
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5406742272318358328, guid: 8126f6fa812e77940b4b495303687131, type: 3}
+  m_Sprite: {fileID: -4069579509747936399, guid: 4fa329da776a4264cb845e4a169d5928, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.82, y: 1.21}
+    oldSize: {x: 0.86, y: 1.36}
     newSize: {x: 1.47, y: 1.83}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -177,5 +177,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minusScore: {fileID: 0}
   wasCollected: 0
-  defaultSprite: {fileID: -5406742272318358328, guid: 8126f6fa812e77940b4b495303687131, type: 3}
-  hitSprite: {fileID: -7565740017997071692, guid: 9bc62c576220bcf4fa4009328bf04174, type: 3}
+  defaultSprite: {fileID: -4069579509747936399, guid: 4fa329da776a4264cb845e4a169d5928, type: 3}
+  hitSprite: {fileID: -7123156665243023433, guid: eb4a5918eeae72b47ad3625252673a8d, type: 3}

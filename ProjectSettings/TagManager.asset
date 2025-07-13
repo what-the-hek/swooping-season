@@ -10,6 +10,8 @@ TagManager:
   - boost
   - carRight
   - carLeft
+  - npc-front
+  - npc-back
   layers:
   - Default
   - TransparentFX

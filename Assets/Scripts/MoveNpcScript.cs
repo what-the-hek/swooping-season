@@ -9,21 +9,23 @@ public class MoveNpcScript : MonoBehaviour
     // public float commonNpcMovementSpeed = 4f;
 
     // // uncommon npc movement speed
-    // public float uncommonNpcMovementSpeed = 2f;
+    // public float npcFrontMovementSpeed = 2f;
     public bool wasCollected = false;
 
-    public Sprite defaultSprite;
-    public Sprite hitSprite;
+    // public Sprite defaultSprite;
+    // public Sprite hitSprite;
 
-    private SpriteRenderer spriteRenderer;
+    // private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
     public void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");
         minusScore = player.GetComponent<CollisionDetectionScript>();
 
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = defaultSprite;
+        // spriteRenderer = GetComponent<SpriteRenderer>();
+        // spriteRenderer.sprite = defaultSprite;
+        animator = GetComponent<Animator>();
 
     }
 
@@ -33,7 +35,8 @@ public class MoveNpcScript : MonoBehaviour
         {
             wasCollected = true;
             Debug.Log("collected npc: " + wasCollected);
-            spriteRenderer.sprite = hitSprite;
+            // spriteRenderer.sprite = hitSprite;
+            animator.SetTrigger("hit");
         }
     }
 
@@ -44,10 +47,10 @@ public class MoveNpcScript : MonoBehaviour
             // move prefab down the screen
             transform.position += Vector3.down * globalVariables.commonNpcMovementSpeed * Time.deltaTime;
         }
-        if (tag == "uncommonNPC")
+        if (tag == "npc-front")
         {
             // move prefab down the screen
-            transform.position += Vector3.down * globalVariables.uncommonNpcMovementSpeed * Time.deltaTime;
+            transform.position += Vector3.down * globalVariables.npcFrontMovementSpeed * Time.deltaTime;
         }
 
         // once the prefab is off the screen, destroy it **TODO change this so it is responsive to any screen size

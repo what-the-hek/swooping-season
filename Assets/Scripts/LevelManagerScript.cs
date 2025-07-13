@@ -13,7 +13,7 @@ public class LevelManagerScript : MonoBehaviour
         globalVariables.commonObstacleMovementSpeed += globalVariables.increaseScrollSpeed;
         globalVariables.commonBoostMovementSpeed += globalVariables.increaseScrollSpeed;
         globalVariables.commonNpcMovementSpeed += globalVariables.increaseScrollSpeed;
-        globalVariables.uncommonNpcMovementSpeed += globalVariables.increaseScrollSpeed;
+        globalVariables.npcFrontMovementSpeed += globalVariables.increaseScrollSpeed;
 
         globalVariables.carRightMovementSpeed += globalVariables.increaseScrollSpeed;
         globalVariables.carLeftMovementSpeed += globalVariables.increaseScrollSpeed;
@@ -24,7 +24,7 @@ public class LevelManagerScript : MonoBehaviour
             // there is a bug with minus values where too many spawn, need to change this so that it spawns 2 prefabs instead of 1
             // rather than continuing to try and decrease the spawn interval
             globalVariables.commonNpcSpawnInterval -= globalVariables.descreaseSpawnInterval;
-            globalVariables.uncommonNpcSpawnInterval -= globalVariables.descreaseSpawnInterval;
+            globalVariables.npcFrontSpawnInterval -= globalVariables.descreaseSpawnInterval;
             globalVariables.commonObstacleSpawnInterval -= globalVariables.descreaseSpawnInterval;
             globalVariables.uncommonObstacleSpawnInterval -= globalVariables.descreaseSpawnInterval;
             // globalVariables.commonBoostSpawnInterval -= globalVariables.descreaseSpawnInterval;

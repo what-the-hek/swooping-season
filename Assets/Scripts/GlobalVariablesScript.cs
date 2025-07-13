@@ -60,14 +60,14 @@ public class globalVariables
     public static float resetPlayerMovementSpeed = 4f;
     public static float commonNpcMovementSpeed;
     public static float resetCommonNpcMovementSpeed = 1.5f;
-    public static float uncommonNpcMovementSpeed;
-    public static float resetUncommonNpcMovementSpeed = 2.5f;
+    public static float npcFrontMovementSpeed;
+    public static float resetNpcFrontMovementSpeed = 2.5f;
 
     // spawn intervals - TODO make these randomized intervals rather than set times
     public static float commonNpcSpawnInterval;
     public static float resetCommonNpcSpawnInterval = 4f;
-    public static float uncommonNpcSpawnInterval;
-    public static float resetUncommonNpcSpawnInterval = 16f;
+    public static float npcFrontSpawnInterval;
+    public static float resetNpcFrontSpawnInterval = 16f;
     public static float commonObstacleSpawnInterval;
     public static float resetCommonObstacleSpawnInterval = 4f;
     public static float uncommonObstacleSpawnInterval;
