@@ -9,7 +9,8 @@ using TMPro;
 public class StartScript : MonoBehaviour
 {
 	public globalVariables globalVariables;
-	public string sceneName = "";
+	public string playScene = "";
+	public string scoresScene = "";
 	public Button playButton;
 	public Button exitButton;
 	public Button scoresButton;
@@ -39,7 +40,7 @@ public class StartScript : MonoBehaviour
 
 	void TaskOnClickPlay()
 	{
-		SceneManager.LoadScene(sceneName);
+		SceneManager.LoadScene(playScene);
 		Debug.Log("You have clicked Play!");
 	}
 
@@ -51,6 +52,7 @@ public class StartScript : MonoBehaviour
 
 	void TaskOnClickScores()
 	{
+		SceneManager.LoadScene(scoresScene);
 		Debug.Log("You have clicked scores!");
 	}
 
