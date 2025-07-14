@@ -12,8 +12,11 @@ public class StartScript : MonoBehaviour
 	public string sceneName = "";
 	public Button playButton;
 	public Button exitButton;
-	public TextMeshProUGUI highScore;
-	public TextMeshProUGUI highLevel;
+	public Button scoresButton;
+	public Button leftButton;
+	public Button rightButton;
+	// public TextMeshProUGUI highScore;
+	// public TextMeshProUGUI highLevel;
 
 	void Start()
 	{
@@ -24,8 +27,17 @@ public class StartScript : MonoBehaviour
 		Button exitBtn = exitButton.GetComponent<Button>();
 		exitBtn.onClick.AddListener(TaskOnClickExit);
 
-		highScore.text = $"high score: {globalVariables.highScore}";
-		highLevel.text = $"high level: {globalVariables.highLevel}";
+		Button scoresBtn = scoresButton.GetComponent<Button>();
+		scoresBtn.onClick.AddListener(TaskOnClickScores);
+
+		Button leftArrowBtn = leftButton.GetComponent<Button>();
+		leftArrowBtn.onClick.AddListener(TaskOnClickLeft);
+		
+		Button rightArrowBtn = rightButton.GetComponent<Button>();
+		rightArrowBtn.onClick.AddListener(TaskOnClickRight);
+
+		// highScore.text = $"high score: {globalVariables.highScore}";
+		// highLevel.text = $"high level: {globalVariables.highLevel}";
 
 		// RESET ALL MOVEMENT SPEEDS & MILESTONES
 		ResetVariables();
@@ -42,6 +54,22 @@ public class StartScript : MonoBehaviour
 		Application.Quit();
 		Debug.Log("You have clicked the Exit!");
 	}
+
+	void TaskOnClickScores()
+	{
+		Debug.Log("You have clicked scores!");
+	}
+
+	void TaskOnClickLeft()
+	{
+		Debug.Log("You have clicked left!");
+	}
+
+	void TaskOnClickRight()
+	{
+		Debug.Log("You have clicked right!");
+	}
+
 
 	private void ResetVariables()
 	{

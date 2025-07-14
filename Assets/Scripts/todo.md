@@ -1,3 +1,41 @@
+---- COLOUR SCHEME  ----  
+
+BACKGROUND
+#5C715E - primary (Eucalyptus Green)
+#E2D6C4 - accent/border (Pale Sand)
+#2D2D2D - text (Deep Charcoal)
+
+BUTTONS
+#C47F2E - primary (Burnt Ochre)
+#8A5E3A - accent/border (Bark Brown)
+#E2D6C4 - text (white or pale sand)
+
+HOVERED BUTTONS
+#8C3A1E - primary (Deep Rust)
+#D6B370 - accent/border (Highlight Gold)
+#E2D6C4 - text (white or pale sand)
+
+BORDERS
+#A4A098 - primary (Ghost Gum Grey)
+#7A7668 - accent/border (Dusty Olive)
+
+HEADINGS / TITLES
+#1C1C1C - primary (Charcoal Black)
+#C1440E - accent/border (Ochre Red)
+#E2D6C4 - text (white or pale sand)
+
+BODY TEXT
+#3B3B3B - primary (Deep Slate)
+#E2D6C4 - text (white or pale sand)
+
+CONTRAST BLUES
+#497D7F - Rainwater Teal
+#5F9EA0 - Kakadu Mist
+#3C6E71 - Bushland Blue
+#2C5F5D - Billabong Deep
+#6EBFB5 - Desert Lake
+
+
 ---- TODO LIST  ----  
 
 START SCREEN
