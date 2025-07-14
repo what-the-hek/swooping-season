@@ -13,14 +13,14 @@ public class StartScript : MonoBehaviour
 	public Button playButton;
 	public Button exitButton;
 	public Button scoresButton;
-	public Button leftButton;
-	public Button rightButton;
+
 	// public TextMeshProUGUI highScore;
 	// public TextMeshProUGUI highLevel;
 
 	void Start()
 	{
 		Debug.Log("GAME START");
+
 		Button playBtn = playButton.GetComponent<Button>();
 		playBtn.onClick.AddListener(TaskOnClickPlay);
 
@@ -29,12 +29,6 @@ public class StartScript : MonoBehaviour
 
 		Button scoresBtn = scoresButton.GetComponent<Button>();
 		scoresBtn.onClick.AddListener(TaskOnClickScores);
-
-		Button leftArrowBtn = leftButton.GetComponent<Button>();
-		leftArrowBtn.onClick.AddListener(TaskOnClickLeft);
-		
-		Button rightArrowBtn = rightButton.GetComponent<Button>();
-		rightArrowBtn.onClick.AddListener(TaskOnClickRight);
 
 		// highScore.text = $"high score: {globalVariables.highScore}";
 		// highLevel.text = $"high level: {globalVariables.highLevel}";
@@ -59,17 +53,6 @@ public class StartScript : MonoBehaviour
 	{
 		Debug.Log("You have clicked scores!");
 	}
-
-	void TaskOnClickLeft()
-	{
-		Debug.Log("You have clicked left!");
-	}
-
-	void TaskOnClickRight()
-	{
-		Debug.Log("You have clicked right!");
-	}
-
 
 	private void ResetVariables()
 	{
