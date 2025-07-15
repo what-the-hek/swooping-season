@@ -1,16 +1,34 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class ScorePageScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public globalVariables globalVariables;
+	public string startScene = "";
+	public Button backButton;
+
+    // public TextMeshProUGUI highScore;
+    // public TextMeshProUGUI highLevel;
+    // public TextMeshProUGUI highScore;
+    // public TextMeshProUGUI highLevel;
+    // public TextMeshProUGUI highScore;
+    // public TextMeshProUGUI highLevel;
+    // public TextMeshProUGUI highScore;
+    // public TextMeshProUGUI highLevel;
+
     void Start()
     {
+        Button backBtn = backButton.GetComponent<Button>();
+		backBtn.onClick.AddListener(TaskOnClickReturn);
         
+        // highScore.text = $"high score: {globalVariables.highScore}";
+        // highLevel.text = $"high level: {globalVariables.highLevel}";
     }
 
-    // Update is called once per frame
-    void Update()
+    void TaskOnClickReturn()
     {
-        
+        SceneManager.LoadScene(startScene);
     }
 }

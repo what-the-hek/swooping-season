@@ -39,16 +39,17 @@ CONTRAST BLUES
 ---- TODO LIST  ----  
 
 START SCREEN
-- [ ] button to achievements screen
-- [ ] a player skin carousel (based on unlocked skins from achievements)
+- [X] button to achievements screen
+- [X] a player skin carousel (based on unlocked skins from achievements)
+- [ ] connect player skin carousel to actual player prefab/skin
 
 ACHIEVEMENTS SCREEN
-- [ ] highest total score
+- [ ] highest total score (AKA targets hit)
 - [ ] highest level
-- [ ] highest final score
+- [ ] highest final score (AKA targets hit - targets missed)
 - [ ] highest number of times 1 npc was hit
 - [ ] lowest score (hidden until unlocked, must be a negative number)
-- [ ] most missed people
+- [ ] most missed targets
 - [ ] *special achievement missed no people (unlock skin)
 - [ ] *special achievement hit 1 npc 10x times (unlock skin)
 - [ ] *special achievement hit each cat (x3) (unlock skins)
