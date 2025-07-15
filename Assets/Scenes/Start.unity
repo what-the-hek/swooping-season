@@ -2177,6 +2177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: magpieLockedSkin
       objectReference: {fileID: 0}
+    - target: {fileID: 8207330449997210595, guid: 148b234536ff851479a7d0e9ac941da8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
