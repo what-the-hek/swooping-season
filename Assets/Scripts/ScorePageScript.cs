@@ -9,10 +9,10 @@ public class ScorePageScript : MonoBehaviour
 	public string startScene = "";
 	public Button backButton;
 
-    // public TextMeshProUGUI highScore;
-    // public TextMeshProUGUI highLevel;
-    // public TextMeshProUGUI highScore;
-    // public TextMeshProUGUI highLevel;
+    public TextMeshProUGUI finalHScore;
+    public TextMeshProUGUI levelHScore;
+    public TextMeshProUGUI finalScore;
+    public TextMeshProUGUI totalScore;
     // public TextMeshProUGUI highScore;
     // public TextMeshProUGUI highLevel;
     // public TextMeshProUGUI highScore;
@@ -21,9 +21,13 @@ public class ScorePageScript : MonoBehaviour
     void Start()
     {
         Button backBtn = backButton.GetComponent<Button>();
-		backBtn.onClick.AddListener(TaskOnClickReturn);
-        
-        // highScore.text = $"high score: {globalVariables.highScore}";
+        backBtn.onClick.AddListener(TaskOnClickReturn);
+
+        finalHScore.text = $"{globalVariables.highScore}";
+        levelHScore.text = $"{globalVariables.highLevel}";
+
+        finalScore.text = $"{globalVariables.finalScore}";
+        totalScore.text = $"{globalVariables.totalScore}";
         // highLevel.text = $"high level: {globalVariables.highLevel}";
     }
 
