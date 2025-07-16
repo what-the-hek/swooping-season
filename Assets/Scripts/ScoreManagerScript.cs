@@ -6,6 +6,7 @@ public class CollisionDetectionScript : MonoBehaviour
     public globalVariables globalVariables;
     public LevelManagerScript levelManager;
     public EndScript endGame;
+    public HealthBarScript healthBar;
     public TextMeshProUGUI totalScore;
     public TextMeshProUGUI healthScore;
     public TextMeshProUGUI missedScore;
@@ -83,6 +84,7 @@ public class CollisionDetectionScript : MonoBehaviour
         {
             globalVariables.healthScore += 1;
             healthScore.text = $"health: {globalVariables.healthScore}";
+            healthBar.UpdateEggs();
         }
     }
 
@@ -90,6 +92,7 @@ public class CollisionDetectionScript : MonoBehaviour
     {
         globalVariables.healthScore -= 1;
         healthScore.text = $"health: {globalVariables.healthScore}";
+        healthBar.UpdateEggs();
     }
 
     // player collides with a non-trigger collider
