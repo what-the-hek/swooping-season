@@ -16,8 +16,18 @@ public class EndScript : MonoBehaviour
     public void EndGame()
     {
         // TODO change highScore global variable to a PlayerPrefs.int - use PlayerPrefs.Save()
+
+        // final score
         globalVariables.finalScore = globalVariables.totalScore + globalVariables.missedScore;
 
+        // update last game scores
+        globalVariables.lastFinalScore = globalVariables.finalScore;
+        globalVariables.lastScore = globalVariables.totalScore;
+        globalVariables.lastMissed = globalVariables.missedScore;
+        globalVariables.lastLevel = globalVariables.currentLevel;
+        globalVariables.lastTargetHits = globalVariables.targetHits;
+
+        // update top scores
         if (globalVariables.finalScore > globalVariables.highScore)
         {
             globalVariables.highScore = globalVariables.finalScore;
@@ -26,6 +36,27 @@ public class EndScript : MonoBehaviour
         {
             globalVariables.highLevel = globalVariables.currentLevel;
         }
+        if (globalVariables.missedScore < globalVariables.highMissedScore)
+        {
+            globalVariables.highMissedScore = globalVariables.missedScore;
+        }
+        if (globalVariables.totalScore > globalVariables.highTotalScore)
+        {
+            globalVariables.highTotalScore = globalVariables.totalScore;
+        }
+        if (globalVariables.targetHits > globalVariables.highTargetHits)
+        {
+            globalVariables.highTargetHits = globalVariables.targetHits;
+        }
+        if (globalVariables.finalScore < -10)
+        {
+            if (globalVariables.finalScore < globalVariables.lowestScore)
+            {
+                globalVariables.lowestScore = globalVariables.finalScore;
+            }
+        }
+
+
         // Debug.Log("YOU LOSE");
         // Debug.Log("SPAWN INTERVAL END GAME " + globalVariables.commonNpcSpawnInterval);
         globalVariables.playerMovementSpeed = 0f;

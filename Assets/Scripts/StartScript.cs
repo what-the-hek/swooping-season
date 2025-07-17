@@ -15,9 +15,6 @@ public class StartScript : MonoBehaviour
 	public Button exitButton;
 	public Button scoresButton;
 
-	// public TextMeshProUGUI highScore;
-	// public TextMeshProUGUI highLevel;
-
 	void Start()
 	{
 		Debug.Log("GAME START");
@@ -30,9 +27,6 @@ public class StartScript : MonoBehaviour
 
 		Button scoresBtn = scoresButton.GetComponent<Button>();
 		scoresBtn.onClick.AddListener(TaskOnClickScores);
-
-		// highScore.text = $"high score: {globalVariables.highScore}";
-		// highLevel.text = $"high level: {globalVariables.highLevel}";
 
 		// RESET ALL MOVEMENT SPEEDS & MILESTONES
 		ResetVariables();
@@ -62,6 +56,7 @@ public class StartScript : MonoBehaviour
 		globalVariables.healthScore = globalVariables.resetHealthScore;
 		globalVariables.finalScore = globalVariables.resetFinalScore;
 		globalVariables.missedScore = globalVariables.resetMissedScore;
+		globalVariables.targetHits = globalVariables.resetTargetHits;
 
 		globalVariables.currentLevel = globalVariables.resetCurrentLevel;
 		globalVariables.scoreMilestone = globalVariables.resetScoreMilestone;

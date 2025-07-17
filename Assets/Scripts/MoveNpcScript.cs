@@ -11,6 +11,7 @@ public class MoveNpcScript : MonoBehaviour
     // // uncommon npc movement speed
     // public float npcFrontMovementSpeed = 2f;
     public bool wasCollected = false;
+    public int hitCount;
 
     // public Sprite defaultSprite;
     // public Sprite hitSprite;
@@ -26,6 +27,7 @@ public class MoveNpcScript : MonoBehaviour
         // spriteRenderer = GetComponent<SpriteRenderer>();
         // spriteRenderer.sprite = defaultSprite;
         animator = GetComponent<Animator>();
+        hitCount = 0;
 
     }
 
@@ -37,6 +39,8 @@ public class MoveNpcScript : MonoBehaviour
             Debug.Log("collected npc: " + wasCollected);
             // spriteRenderer.sprite = hitSprite;
             animator.SetTrigger("hit");
+            hitCount++;
+            CheckHits();
         }
     }
 
@@ -62,6 +66,14 @@ public class MoveNpcScript : MonoBehaviour
                 minusScore.MinusScore();
             }
             Destroy(gameObject);
+        }
+    }
+
+    public void CheckHits()
+    {
+        if (hitCount > globalVariables.targetHits)
+        {
+            globalVariables.targetHits = hitCount;
         }
     }
 }

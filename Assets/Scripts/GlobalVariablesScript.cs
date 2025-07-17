@@ -2,6 +2,22 @@ using UnityEngine;
 
 public class globalVariables
 {
+    // top scores
+    public static int highScore;
+    public static int highLevel;
+    public static int highMissedScore;
+    public static int highTotalScore;
+    public static int highTargetHits;
+    public static int lowestScore;
+
+
+    // last game scores
+    public static int lastFinalScore;
+    public static int lastScore;
+    public static int lastMissed;
+    public static int lastLevel;
+    public static int lastTargetHits;
+
     // scores
     public static int totalScore;
     public static int resetTotalScore = 0;
@@ -11,8 +27,10 @@ public class globalVariables
     public static int resetHealthScore = 5;
     public static int missedScore;
     public static int resetMissedScore = 0;
-    public static int highScore;
-    public static int highLevel;
+    public static int targetHits;
+    public static int resetTargetHits = 0;
+
+    // other
     public static int returnToStartTimer = 6;
 
     // track the number of objects currently on screen, for reducing the number of rare items

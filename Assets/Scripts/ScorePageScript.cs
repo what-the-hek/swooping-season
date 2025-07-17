@@ -9,26 +9,42 @@ public class ScorePageScript : MonoBehaviour
 	public string startScene = "";
 	public Button backButton;
 
+    // top scores
     public TextMeshProUGUI finalHScore;
     public TextMeshProUGUI levelHScore;
-    public TextMeshProUGUI finalScore;
-    public TextMeshProUGUI totalScore;
-    // public TextMeshProUGUI highScore;
-    // public TextMeshProUGUI highLevel;
-    // public TextMeshProUGUI highScore;
-    // public TextMeshProUGUI highLevel;
+    public TextMeshProUGUI missedHScore;
+    public TextMeshProUGUI totalHScore;
+    public TextMeshProUGUI targetHitsHScore;
+    public TextMeshProUGUI lowestHScore;
+
+    // last game
+    public TextMeshProUGUI lastFinalScore;
+    public TextMeshProUGUI lastTotalScore;
+    public TextMeshProUGUI lastMissedScore;
+    public TextMeshProUGUI lastLevelScore;
+    public TextMeshProUGUI lastTargetHitsScore;
+
 
     void Start()
     {
         Button backBtn = backButton.GetComponent<Button>();
         backBtn.onClick.AddListener(TaskOnClickReturn);
 
+        // top scores
         finalHScore.text = $"{globalVariables.highScore}";
         levelHScore.text = $"{globalVariables.highLevel}";
+        missedHScore.text = $"{globalVariables.highMissedScore}";
+        totalHScore.text = $"{globalVariables.highTotalScore}";
+        targetHitsHScore.text = $"{globalVariables.highTargetHits}";
+        lowestHScore.text = $"{globalVariables.lowestScore}";
 
-        finalScore.text = $"{globalVariables.finalScore}";
-        totalScore.text = $"{globalVariables.totalScore}";
-        // highLevel.text = $"high level: {globalVariables.highLevel}";
+        // last game scores
+        lastFinalScore.text = $"{globalVariables.lastFinalScore}";
+        lastTotalScore.text = $"{globalVariables.lastScore}";
+        lastMissedScore.text = $"{globalVariables.lastMissed}";
+        lastLevelScore.text = $"{globalVariables.lastLevel}";
+        lastTargetHitsScore.text = $"{globalVariables.lastTargetHits}";
+        
     }
 
     void TaskOnClickReturn()
