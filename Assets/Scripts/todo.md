@@ -61,8 +61,8 @@ ACHIEVEMENTS SCREEN
 - [ ] last 3 games stats?
 
 PLAY SCREEN / UI
-- [ ] eggs & animation for health
-- [ ] scores happy/sad faces?
+- [X] eggs & animation for health
+- [X] scores happy/sad faces?
 - [ ] achievements?
 
 END GAME
@@ -72,24 +72,28 @@ END GAME
 
 OBSTACLES
 - [ ] more car skins
-- [ ] maybe a house
+- [ ] maybe a house/building
 - [ ] maybe a tree/bush on fire
 
 PLAYER
-- [ ] new sprite
+- [X] new sprite
 - [ ] animations for movement
 - [ ] animations for npc collision
 - [ ] animations for obstacle collision
 - [ ] animations for boost collision
 
 NPCS
-- [ ] more pedestrian npc skins
-- [ ] animate walking forwards/backwards
-- [ ] create cyclist npc skins
-- [ ] animate cycling forwards/backwards
+- [X] more forward-facing pedestrian npc skins
+- [X] animate forwards walking
+- [ ] back-facing pedestrian npc skins
+- [ ] animate backwards walking
+- [ ] create forwards cyclist npc skins
+- [ ] animate cycling forwards
+- [ ] create backwards cyclist npc skins
+- [ ] animate cycling backwards
 
 BOOSTS
-- [ ] change health boost graphic to fairy bread
+- [X] change health boost graphic to fairy bread
 - [ ] add a willy-willy that boosts player speed
 
 SPECIALS
@@ -112,9 +116,12 @@ AUDIO
 - [ ] missed npc (hehe or phew)
 - [ ] end game
 
+---- BUGS  ----  
+- [ ] score continues to count when game over
+- [ ] stop npcs running in same spot as obstacles
 
 TOOLS USED
-- [ ] unity
-- [ ] vs code
-- [ ] bfxr (sound effects)
-- [ ] krita (graphics and animation)
+- unity
+- vs code
+- bfxr (sound effects)
+- krita (graphics and animation)

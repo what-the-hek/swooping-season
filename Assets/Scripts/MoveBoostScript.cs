@@ -3,7 +3,18 @@ using UnityEngine;
 public class MoveBoostScript : MonoBehaviour
 {
     public globalVariables globalVariables;
+    public void Start()
+    {
+        GameObject player = GameObject.FindWithTag("Player");
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            gameObject.SetActive(false);
+        }
+    }
     void Update()
     {
         if (tag == "boost")
