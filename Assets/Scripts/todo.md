@@ -119,6 +119,7 @@ AUDIO
 ---- BUGS  ----  
 - [ ] score continues to count when game over
 - [ ] stop npcs running in same spot as obstacles
+- [ ] change the deli collision to box not edge
 
 TOOLS USED
 - unity

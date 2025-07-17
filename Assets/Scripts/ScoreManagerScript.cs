@@ -28,20 +28,14 @@ public class CollisionDetectionScript : MonoBehaviour
             {
                 AddHealth();
             }
-        }
-
-        // TOTAL SCORE
-        if (other.CompareTag("commonNPC"))
-        {
-            // collectedCommonNpc = true;
-            // Debug.Log("collected common npc: " + collectedCommonNpc);
-            AddScore();
-        }
-        else if (other.CompareTag("npc-front"))
-        {
-            // collectedNpcFront = true;
-            // Debug.Log("collected uncommon npc: " + collectedNpcFront);
-            AddScore();
+            if (other.CompareTag("commonNPC"))
+            {
+                AddScore();
+            }
+            else if (other.CompareTag("npc-front"))
+            {
+                AddScore();
+            }
         }
 
         // LEVEL UP

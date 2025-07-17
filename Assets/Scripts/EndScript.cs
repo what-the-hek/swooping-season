@@ -9,8 +9,6 @@ public class EndScript : MonoBehaviour
 {
     public globalVariables globalVariables;
     public TextMeshProUGUI gameOver;
-    public TextMeshProUGUI finalScore;
-
     public string sceneName = "";
 
     public void EndGame()
@@ -61,7 +59,6 @@ public class EndScript : MonoBehaviour
         // Debug.Log("SPAWN INTERVAL END GAME " + globalVariables.commonNpcSpawnInterval);
         globalVariables.playerMovementSpeed = 0f;
         gameOver.text = $"game over";
-        finalScore.text = $"total: {globalVariables.totalScore} \nmissed: {globalVariables.missedScore} \nfinal score: {globalVariables.finalScore}";
         StartCoroutine(returnToStart());
     }
 
