@@ -1,8 +1,10 @@
 using UnityEngine;
+using TMPro;
 
 public class LevelManagerScript : MonoBehaviour
 {
     public globalVariables globalVariables;
+    public TextMeshProUGUI levelScore;
     public void LevelUp()
     {
         // Debug.Log("total score: " + globalVariables.totalScore + "greater than milestone: " + globalVariables.scoreMilestone);
@@ -33,10 +35,12 @@ public class LevelManagerScript : MonoBehaviour
 
         // Debug.Log("background Scroll Speed: " + globalVariables.backgroundScrollSpeed);
 
-            // Debug.Log("SPAWN INTERVAL LEVEL UP;" + globalVariables.commonNpcSpawnInterval);
+        // Debug.Log("SPAWN INTERVAL LEVEL UP;" + globalVariables.commonNpcSpawnInterval);
 
         globalVariables.currentLevel++;
         // Debug.Log("current level: " + globalVariables.currentLevel);
+
+        levelScore.text = $"{globalVariables.currentLevel}";
 
         globalVariables.scoreMilestone += globalVariables.increaseMilestone;
         // Debug.Log("next score milestone: " + globalVariables.scoreMilestone);

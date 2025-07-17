@@ -8,7 +8,7 @@ public class CollisionDetectionScript : MonoBehaviour
     public EndScript endGame;
     public HealthBarScript healthBar;
     public TextMeshProUGUI totalScore;
-    public TextMeshProUGUI healthScore;
+    // public TextMeshProUGUI healthScore;
     public TextMeshProUGUI missedScore;
 
     // public bool collectedCommonNpc = false;
@@ -61,7 +61,7 @@ public class CollisionDetectionScript : MonoBehaviour
     public void AddScore()
     {
         globalVariables.totalScore += 1;
-        totalScore.text = $"score: {globalVariables.totalScore}";
+        totalScore.text = $"{globalVariables.totalScore}";
         // globalVariables.totalScore += 2;
         // totalScore.text = $"score: {globalVariables.totalScore}";
         // collectedNpcFront = true;
@@ -73,7 +73,7 @@ public class CollisionDetectionScript : MonoBehaviour
         if (globalVariables.healthScore > 0)
         {
             globalVariables.missedScore -= 1;
-            missedScore.text = $"missed: {globalVariables.missedScore}";
+            missedScore.text = $"{globalVariables.missedScore}";
             Debug.Log("OUCH!! missed one");
         }
     }
@@ -83,7 +83,7 @@ public class CollisionDetectionScript : MonoBehaviour
         if (globalVariables.healthScore < 5)
         {
             globalVariables.healthScore += 1;
-            healthScore.text = $"health: {globalVariables.healthScore}";
+            // healthScore.text = $"{globalVariables.healthScore}";
             healthBar.UpdateEggs();
         }
     }
@@ -91,7 +91,7 @@ public class CollisionDetectionScript : MonoBehaviour
     public void MinusHealth()
     {
         globalVariables.healthScore -= 1;
-        healthScore.text = $"health: {globalVariables.healthScore}";
+        // healthScore.text = $"health: {globalVariables.healthScore}";
         healthBar.UpdateEggs();
     }
 
