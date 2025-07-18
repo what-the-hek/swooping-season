@@ -5,6 +5,7 @@ public class GameManagerScript : MonoBehaviour
 {
     public string sceneName = "";
     private bool isPaused = false;
+    public GameObject pauseBlob;
     void Update()
     {
         if (Input.GetKeyDown("escape"))
@@ -21,6 +22,7 @@ public class GameManagerScript : MonoBehaviour
     void TogglePause()
     {
         isPaused = !isPaused;
+        pauseBlob.SetActive(isPaused);
 
         Time.timeScale = isPaused ? 0f : 1f;
 

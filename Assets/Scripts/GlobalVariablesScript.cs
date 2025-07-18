@@ -74,7 +74,7 @@ public class globalVariables
 
     // other movement speeds
     public static float playerMovementSpeed;
-    public static float resetPlayerMovementSpeed = 4f;
+    public static float resetPlayerMovementSpeed = 5f;
     public static float commonNpcMovementSpeed;
     public static float resetCommonNpcMovementSpeed = 1.5f;
     public static float npcFrontMovementSpeed;
