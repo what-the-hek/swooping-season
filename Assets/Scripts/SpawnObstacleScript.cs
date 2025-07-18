@@ -5,6 +5,7 @@ public class SpawnObstacleScript : MonoBehaviour
 {
 
     public globalVariables globalVariables;
+    public GameManagerScript gameManager;
     // public float commonObstacleSpawnInterval = 4f;
     public float[] spawnXPositions;
     public float carRightXPosition;
@@ -23,11 +24,14 @@ public class SpawnObstacleScript : MonoBehaviour
 
     void Start()
     {
-        // start a coroutine and spawn prefabs
-        StartCoroutine(SpawnPrefab());
+        StartCoroutine(DelaySpawn());
     }
 
-    // part of the coroutine to respawn a prefab at random intervals depending on tag
+    IEnumerator DelaySpawn()
+    {
+        yield return new WaitUntil(() => GameManagerScript.spawnObjects);
+        StartCoroutine(SpawnPrefab());
+    }
 
     IEnumerator SpawnPrefab()
     {

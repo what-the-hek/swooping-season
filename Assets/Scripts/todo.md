@@ -59,19 +59,26 @@ ACHIEVEMENTS SCREEN
 - [ ] *dodge the road train(?)
 - [ ] *schools out - bonus round of smaller npcs running all across screen with no obstacles? - only appears if you unlock an achievement
 - [X] last 3 games stats?
-- [ ] fun magpie facts on bottom of screen
+- [X] fun magpie facts on bottom of screen
 
 PLAY SCREEN / UI
 - [X] eggs & animation for health
 - [X] scores happy/sad faces?
 - [ ] achievements?
 - [ ] 'dodge' obstacles by pressing space bar + (left, right, up + down)
-- [ ] pause game
+- [X] pause game
+- [ ] delayed start before objects spawn
 
 END GAME
 - [X] splash screen with game stats & any new achievement unlocks
 - [X] button to achievements screen
 - [X] button to start screen
+
+ABOUT SCREEN
+- [ ] button on start screen
+- [ ] include any credits/references
+- [ ] acknowledgment of country(?)
+- [ ] controls
 
 OBSTACLES
 - [ ] more car skins
@@ -113,6 +120,7 @@ LEVELS
 - [ ] set level increments to every 8 points
 - [ ] keep 'level' milestone to every 10?
 - [ ] introduce a new X every level, e.g. new obstacle, then npc etc
+- [ ] add timer - change level to correspond with timer
 
 AUDIO
 - [ ] background music
@@ -141,4 +149,10 @@ MAGPIE FACTS
 - https://www.canning.wa.gov.au/about-us/about-the-area/aboriginal-culture-and-heritage/birds-of-country/
 - https://www.noongarculture.org.au/
 - https://www.abc.net.au/news/science/2017-12-11/magies-ten-things-you-didnt-know/9245780
+
+
+
+
+
+
 
