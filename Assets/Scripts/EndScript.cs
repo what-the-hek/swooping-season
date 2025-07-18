@@ -2,14 +2,15 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 
 public class EndScript : MonoBehaviour
 {
     public globalVariables globalVariables;
-    public TextMeshProUGUI gameOver;
+    // public TextMeshProUGUI gameOver;
     public string sceneName = "";
+    public GameObject gameOverBlob;
 
     public void EndGame()
     {
@@ -58,13 +59,15 @@ public class EndScript : MonoBehaviour
         // Debug.Log("YOU LOSE");
         // Debug.Log("SPAWN INTERVAL END GAME " + globalVariables.commonNpcSpawnInterval);
         globalVariables.playerMovementSpeed = 0f;
-        gameOver.text = $"game over";
+        gameOverBlob.SetActive(true);
+        // gameOver.text = $"game over";
         StartCoroutine(returnToStart());
     }
 
     IEnumerator returnToStart()
     {
         yield return new WaitForSeconds(globalVariables.returnToStartTimer);
+        gameOverBlob.SetActive(false);
         SceneManager.LoadScene(sceneName);
     }
 }

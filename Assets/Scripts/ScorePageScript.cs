@@ -2,12 +2,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+// using System.Collections;
 
 public class ScorePageScript : MonoBehaviour
 {
     public globalVariables globalVariables;
 	public string startScene = "";
+    public string[] funFacts;
 	public Button backButton;
+
+    public TextMeshProUGUI magpieFacts;
 
     // top scores
     public TextMeshProUGUI finalHScore;
@@ -44,7 +48,10 @@ public class ScorePageScript : MonoBehaviour
         lastMissedScore.text = $"{globalVariables.lastMissed}";
         lastLevelScore.text = $"{globalVariables.lastLevel}";
         lastTargetHitsScore.text = $"{globalVariables.lastTargetHits}";
-        
+
+        // random magpie facts
+        int randomFact = Random.Range(0, funFacts.Length);
+        magpieFacts.text = funFacts[randomFact];
     }
 
     void TaskOnClickReturn()

@@ -2008,8 +2008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4afa1a5c94ea222438d4c07c382f8403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: {fileID: 1426619451}
   sceneName: Scores
+  gameOverBlob: {fileID: 1329840741}
 --- !u!4 &1237624086
 Transform:
   m_ObjectHideFlags: 0
@@ -2042,7 +2042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1329840742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2158,7 +2158,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: game over
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92cbaf47603a8b1408be19188862080f, type: 2}
   m_sharedMaterial: {fileID: -4189442771230048072, guid: 92cbaf47603a8b1408be19188862080f, type: 2}
@@ -2885,7 +2885,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: -3122745877028238078, guid: 022bc6df28f15a74dbcfb7560c32df8f, type: 3}
+  m_Sprite: {fileID: -1378896164655040182, guid: 8df0a3d83d6f74c49a1a5a3df22e665f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
