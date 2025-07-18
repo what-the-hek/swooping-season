@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Start
+  pauseBlob: {fileID: 0}
 --- !u!1 &12688282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,16 +2027,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startScene: Start
-  funFacts:
-  - The Noongar name for magpie is Koorlbardi, also spelled Kulbardi, Koolbardi or
-    Kooldjak. The Whadjuck Noongar people are from the Perth area of Western Australia.
-  - There are nine different subspecies of magpies across Australia. Their plumage
-    varies across these subspecies, including the amount of white feathering on their
-    back.
-  - Australian magpies are known for their aggressive swooping during breeding season,
-    however only about 8 to 10 percent of magpies swoop people.
-  - It is typically the male Australian magpie that defends the nest and swoops during
-    breeding season, which peaks between August and November.
   backButton: {fileID: 210357778}
   magpieFacts: {fileID: 1300821641}
   finalHScore: {fileID: 752250452}
@@ -3797,8 +3788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 698.05, y: 38.614}
+  m_AnchoredPosition: {x: -1.036, y: 0}
+  m_SizeDelta: {x: 682.175, y: 38.614}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1300821641
 MonoBehaviour:
