@@ -11,9 +11,11 @@ public class StartScript : MonoBehaviour
 	public globalVariables globalVariables;
 	public string playScene = "";
 	public string scoresScene = "";
+	public string aboutScene = "";
 	public Button playButton;
 	public Button exitButton;
 	public Button scoresButton;
+	public Button aboutButton;
 
 	void Start()
 	{
@@ -27,6 +29,9 @@ public class StartScript : MonoBehaviour
 
 		Button scoresBtn = scoresButton.GetComponent<Button>();
 		scoresBtn.onClick.AddListener(TaskOnClickScores);
+
+		Button aboutBtn = aboutButton.GetComponent<Button>();
+		aboutBtn.onClick.AddListener(TaskOnClickAbout);
 
 		// RESET ALL MOVEMENT SPEEDS & MILESTONES
 		ResetVariables();
@@ -48,6 +53,12 @@ public class StartScript : MonoBehaviour
 	{
 		SceneManager.LoadScene(scoresScene);
 		Debug.Log("You have clicked scores!");
+	}
+
+	void TaskOnClickAbout()
+	{
+		SceneManager.LoadScene(aboutScene);
+		Debug.Log("You have clicked about!");
 	}
 
 	private void ResetVariables()

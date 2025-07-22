@@ -151,7 +151,10 @@ MAGPIE FACTS
 - https://www.abc.net.au/news/science/2017-12-11/magies-ten-things-you-didnt-know/9245780
 
 
+CREDITS
 
+Music from #Uppbeat (free for Creators!):
+https://uppbeat.io/t/all-good-folks/pop-and-crunch
 
 
 
