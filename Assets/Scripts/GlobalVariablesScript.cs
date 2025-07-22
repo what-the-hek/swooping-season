@@ -34,7 +34,7 @@ public class globalVariables
     // other
     public static int returnToStartTimer = 6;
 
-    // track the number of objects currently on screen, for reducing the number of rare items
+    // TODO track the number of objects currently on screen, for reducing the number of rare items
     public static int commonBoostAvailable;
     public static int uncommonBoostAvailable;
 

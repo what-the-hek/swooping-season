@@ -134,6 +134,12 @@ AUDIO
 - [X] score continues to count when game over
 - [ ] stop npcs running in same spot as obstacles
 - [X] change the deli collision to box not edge
+- [ ] npc spawns are ignoring the delay start from game manager
+
+
+
+
+
 
 TOOLS USED
 - unity

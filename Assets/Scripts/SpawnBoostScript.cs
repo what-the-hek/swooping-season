@@ -4,7 +4,7 @@ using UnityEngine;
 public class SpawnBoostScript : MonoBehaviour
 {
     public globalVariables globalVariables;
-
+    public GameManagerScript gameManager;
     public float delaySpawn = 30f;
     public float[] spawnXPositions;
     public float fixedYPosition;
@@ -15,7 +15,12 @@ public class SpawnBoostScript : MonoBehaviour
 
     void Start()
     {
-        // start a coroutine and spawn prefabs
+        StartCoroutine(DelaySpawn());
+    }
+
+    IEnumerator DelaySpawn()
+    {
+        yield return new WaitUntil(() => GameManagerScript.spawnObjects);
         StartCoroutine(SpawnPrefab());
     }
 

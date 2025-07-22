@@ -10,26 +10,41 @@ public class GameManagerScript : MonoBehaviour
     public LevelManagerScript levelManager;
     public GameObject pauseBlob;
     public TextMeshProUGUI timerText;
+    public GameObject countDownBlob;
+    public TextMeshProUGUI countDownText;
     public string sceneName = "";
     private bool isPaused = false;
     public static bool spawnObjects = false;
     public float timer = 0f;
     public float levelInterval;
+    public float countDown;
 
     void Start()
     {
-        StartCoroutine(EnableSpawningAfterDelay());
+        spawnObjects = false;
+        countDown = 4f;
+        StartCoroutine(EnableSpawningAfterDelay());       
     }
 
     IEnumerator EnableSpawningAfterDelay()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         spawnObjects = true;
     }
 
     public void Update()
     {
-        if (globalVariables.healthScore > 0)
+        if (countDown > 0)
+        {
+            countDown -= Time.deltaTime;
+            int secondsOnly = Mathf.FloorToInt(countDown);
+            countDownText.text = secondsOnly.ToString();
+        }
+        else
+        {
+            countDownBlob.SetActive(false);
+        }
+        if (globalVariables.healthScore > 0 && countDown <= 0)
         {
             timer += Time.deltaTime;
             int minutes = Mathf.FloorToInt(timer / 60f);

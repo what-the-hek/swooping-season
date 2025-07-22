@@ -4,6 +4,7 @@ using UnityEngine;
 public class SpawnNpcScript : MonoBehaviour
 {
     public globalVariables globalVariables;
+    public GameManagerScript gameManager;
     // spawn a common npc at random intervals **TODO add random interval
     // public float commonNpcSpawnInterval = 4f;
     // spawn an uncommon npc at random intervals **TODO add random interval
@@ -20,7 +21,12 @@ public class SpawnNpcScript : MonoBehaviour
 
     void Start()
     {
-        // start a coroutine and spawn prefabs
+        StartCoroutine(DelaySpawn());
+    }
+
+    IEnumerator DelaySpawn()
+    {
+        yield return new WaitUntil(() => GameManagerScript.spawnObjects);
         StartCoroutine(SpawnPrefab());
     }
 
