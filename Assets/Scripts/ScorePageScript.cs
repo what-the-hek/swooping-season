@@ -31,12 +31,19 @@ public class ScorePageScript : MonoBehaviour
 
     void Start()
     {
+        int hMinutes = Mathf.FloorToInt(globalVariables.highTime / 60f);
+        int hSeconds = Mathf.FloorToInt(globalVariables.highTime % 60f);
+
+        int lMinutes = Mathf.FloorToInt(globalVariables.lastTime / 60f);
+        int lSeconds = Mathf.FloorToInt(globalVariables.lastTime % 60f);
+
         Button backBtn = backButton.GetComponent<Button>();
         backBtn.onClick.AddListener(TaskOnClickReturn);
 
         // top scores
         finalHScore.text = $"{globalVariables.highScore}";
-        levelHScore.text = $"{globalVariables.highLevel}";
+        // levelHScore.text = $"{globalVariables.highLevel}";
+        levelHScore.text = string.Format("{0:00}:{1:00}", hMinutes, hSeconds);
         missedHScore.text = $"{globalVariables.highMissedScore}";
         totalHScore.text = $"{globalVariables.highTotalScore}";
         targetHitsHScore.text = $"{globalVariables.highTargetHits}";
@@ -46,7 +53,8 @@ public class ScorePageScript : MonoBehaviour
         lastFinalScore.text = $"{globalVariables.lastFinalScore}";
         lastTotalScore.text = $"{globalVariables.lastScore}";
         lastMissedScore.text = $"{globalVariables.lastMissed}";
-        lastLevelScore.text = $"{globalVariables.lastLevel}";
+        // lastLevelScore.text = $"{globalVariables.lastLevel}";
+        lastLevelScore.text = string.Format("{0:00}:{1:00}", lMinutes, lSeconds);
         lastTargetHitsScore.text = $"{globalVariables.lastTargetHits}";
 
         // random magpie facts

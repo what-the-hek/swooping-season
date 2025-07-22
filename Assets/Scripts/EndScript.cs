@@ -8,12 +8,16 @@ using UnityEngine.UI;
 public class EndScript : MonoBehaviour
 {
     public globalVariables globalVariables;
-    // public TextMeshProUGUI gameOver;
+    public GameManagerScript gameManager;
+    
     public string sceneName = "";
     public GameObject gameOverBlob;
 
     public void EndGame()
     {
+        globalVariables.playerMovementSpeed = 0f;
+        gameOverBlob.SetActive(true);
+
         // TODO change highScore global variable to a PlayerPrefs.int - use PlayerPrefs.Save()
 
         // final score
@@ -25,6 +29,7 @@ public class EndScript : MonoBehaviour
         globalVariables.lastMissed = globalVariables.missedScore;
         globalVariables.lastLevel = globalVariables.currentLevel;
         globalVariables.lastTargetHits = globalVariables.targetHits;
+        globalVariables.lastTime = gameManager.timer;
 
         // update top scores
         if (globalVariables.finalScore > globalVariables.highScore)
@@ -54,13 +59,11 @@ public class EndScript : MonoBehaviour
                 globalVariables.lowestScore = globalVariables.finalScore;
             }
         }
+        if (globalVariables.lastTime > globalVariables.highTime)
+        {
+            globalVariables.highTime = globalVariables.lastTime;
+        }
 
-
-        // Debug.Log("YOU LOSE");
-        // Debug.Log("SPAWN INTERVAL END GAME " + globalVariables.commonNpcSpawnInterval);
-        globalVariables.playerMovementSpeed = 0f;
-        gameOverBlob.SetActive(true);
-        // gameOver.text = $"game over";
         StartCoroutine(returnToStart());
     }
 

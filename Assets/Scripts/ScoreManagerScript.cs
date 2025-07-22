@@ -4,7 +4,7 @@ using TMPro;
 public class CollisionDetectionScript : MonoBehaviour
 {
     public globalVariables globalVariables;
-    public LevelManagerScript levelManager;
+    // public LevelManagerScript levelManager;
     public EndScript endGame;
     public HealthBarScript healthBar;
     public TextMeshProUGUI totalScore;
@@ -39,10 +39,10 @@ public class CollisionDetectionScript : MonoBehaviour
         }
 
         // LEVEL UP
-        if (globalVariables.totalScore >= globalVariables.scoreMilestone)
-        {
-            levelManager.LevelUp();
-        }
+        // if (globalVariables.totalScore >= globalVariables.scoreMilestone)
+        // {
+        //     levelManager.LevelUp();
+        // }
 
         // END GAME
         if (globalVariables.healthScore == 0)

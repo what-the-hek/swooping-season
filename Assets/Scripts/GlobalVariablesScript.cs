@@ -9,6 +9,7 @@ public class globalVariables
     public static int highTotalScore;
     public static int highTargetHits;
     public static int lowestScore;
+    public static float highTime;
 
     // last game scores
     public static int lastFinalScore;
@@ -16,6 +17,7 @@ public class globalVariables
     public static int lastMissed;
     public static int lastLevel;
     public static int lastTargetHits;
+    public static float lastTime;
 
     // scores
     public static int totalScore;
