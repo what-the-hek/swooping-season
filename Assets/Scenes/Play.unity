@@ -2460,7 +2460,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1508517715}
   - component: {fileID: 1508517714}
-  - component: {fileID: 1508517713}
   - component: {fileID: 1508517716}
   m_Layer: 0
   m_Name: Main Camera
@@ -2469,14 +2468,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1508517713
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508517712}
-  m_Enabled: 1
 --- !u!20 &1508517714
 Camera:
   m_ObjectHideFlags: 0
@@ -2865,6 +2856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57a0de54ef78ff4ba69c5dd06687cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   spawnXPositions:
   - 9
   - -9

@@ -123,6 +123,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -359,7 +372,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hotdog3_0: -6169839722407091219
+      hotdog3_1: -638246321448199845
+      hotdog3_2: -2064348763005598530
+      hotdog3_3: 8802152380583572657
+      hotdog3_4: 5288769514283797175
+      hotdog3_5: -5686582467071882800
+      hotdog3_6: -4800216364919032470
+      hotdog3_7: 819967293505504943
+      hotdog3_8: -2636011665535495007
+      hotdog3_9: 837043820679858113
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
