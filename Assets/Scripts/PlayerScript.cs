@@ -12,27 +12,32 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        // no movement on start
         Vector3 direction = Vector3.zero;
+        float moveSpeed = 1f;
+        float dodgeBoost = 6f;
 
-        // player keyboard input for direction
+        bool isDodging = Input.GetKey(KeyCode.Space);
+
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            direction.x -= 1;
+            direction.x -= isDodging ? moveSpeed + dodgeBoost : moveSpeed;
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            direction.x += 1;
+            direction.x += isDodging ? moveSpeed + dodgeBoost : moveSpeed;
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-            direction.y += 1;
+            direction.y += isDodging ? moveSpeed + dodgeBoost : moveSpeed;
 
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-            direction.y -= 1;
+            direction.y -= isDodging ? moveSpeed + dodgeBoost : moveSpeed;
+
 
         // this prevents faster diagonal movement
         direction.Normalize();
 
-        // update player movement
-        Vector3 newPosition = transform.position + direction * globalVariables.playerMovementSpeed * Time.deltaTime;
+        float baseSpeed = globalVariables.playerMovementSpeed;
+        float finalSpeed = isDodging ? baseSpeed + dodgeBoost : baseSpeed;
+
+        Vector3 newPosition = transform.position + direction * finalSpeed * Time.deltaTime;
 
         // get screen bounds in world units
         Vector3 lowerLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
