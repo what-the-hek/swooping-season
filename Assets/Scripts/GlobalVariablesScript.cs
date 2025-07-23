@@ -52,48 +52,48 @@ public class globalVariables
 
     // timing variables for increasing difficulty with level manager
     public static float backgroundScrollSpeed;
-    public static float resetBackgroundScrollSpeed = 2f;
+    public static float resetBackgroundScrollSpeed = 3f;
 
     // these movement speeds should always match the background speed - consider removing
     public static float commonObstacleMovementSpeed;
-    public static float resetCommonObstacleMovementSpeed = 2f;
+    public static float resetCommonObstacleMovementSpeed = 3f;
 
     public static float uncommonObstacleMovementSpeed;
-    public static float resetUncommonObstacleMovementSpeed = 2f;
+    public static float resetUncommonObstacleMovementSpeed = 3f;
 
     public static float commonBoostMovementSpeed;
-    public static float resetCommonBoostMovementSpeed = 2f;
+    public static float resetCommonBoostMovementSpeed = 3f;
 
     public static float uncommonBoostMovementSpeed;
-    public static float resetUncommonBoostMovementSpeed = 2f;
+    public static float resetUncommonBoostMovementSpeed = 3f;
 
     // obstacle movement speeds
 
     public static float carRightMovementSpeed;
-    public static float resetCarRightMovementSpeed = 3.5f;
+    public static float resetCarRightMovementSpeed = 4.5f;
     public static float carLeftMovementSpeed;
-    public static float resetCarLeftMovementSpeed = 2f;
+    public static float resetCarLeftMovementSpeed = 3f;
 
     // other movement speeds
     public static float playerMovementSpeed;
-    public static float resetPlayerMovementSpeed = 5f;
+    public static float resetPlayerMovementSpeed = 6f;
     public static float commonNpcMovementSpeed;
-    public static float resetCommonNpcMovementSpeed = 1.5f;
+    public static float resetCommonNpcMovementSpeed = 2.5f;
     public static float npcFrontMovementSpeed;
-    public static float resetNpcFrontMovementSpeed = 2.5f;
+    public static float resetNpcFrontMovementSpeed = 3.5f;
 
     // spawn intervals - TODO make these randomized intervals rather than set times
     public static float commonNpcSpawnInterval;
-    public static float resetCommonNpcSpawnInterval = 4f;
+    public static float resetCommonNpcSpawnInterval = 5f;
     public static float npcFrontSpawnInterval;
-    public static float resetNpcFrontSpawnInterval = 16f;
+    public static float resetNpcFrontSpawnInterval = 17f;
     public static float commonObstacleSpawnInterval;
-    public static float resetCommonObstacleSpawnInterval = 4f;
+    public static float resetCommonObstacleSpawnInterval = 5f;
     public static float uncommonObstacleSpawnInterval;
-    public static float resetUncommonObstacleSpawnInterval = 16f;
+    public static float resetUncommonObstacleSpawnInterval = 17f;
     public static float commonBoostSpawnInterval;
-    public static float resetCommonBoostSpawnInterval = 40f;
+    public static float resetCommonBoostSpawnInterval = 41f;
     public static float uncommonBoostSpawnInterval;
-    public static float resetUncommonBoostSpawnInterval = 40f;
+    public static float resetUncommonBoostSpawnInterval = 41f;
 }
 

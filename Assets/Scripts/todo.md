@@ -135,6 +135,7 @@ AUDIO
 - [ ] stop npcs running in same spot as obstacles
 - [X] change the deli collision to box not edge
 - [ ] npc spawns are ignoring the delay start from game manager
+- [ ] npcs / boosts overlap especially with animation
 
 
 
