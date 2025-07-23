@@ -31,37 +31,42 @@ public class EndScript : MonoBehaviour
         globalVariables.lastTargetHits = globalVariables.targetHits;
         globalVariables.lastTime = gameManager.timer;
 
-        // update top scores
+        // update top scores 
         if (globalVariables.finalScore > globalVariables.highScore)
         {
             globalVariables.highScore = globalVariables.finalScore;
-        }
-        if (globalVariables.currentLevel > globalVariables.highLevel)
-        {
             globalVariables.highLevel = globalVariables.currentLevel;
-        }
-        if (globalVariables.missedScore < globalVariables.highMissedScore)
-        {
             globalVariables.highMissedScore = globalVariables.missedScore;
-        }
-        if (globalVariables.totalScore > globalVariables.highTotalScore)
-        {
             globalVariables.highTotalScore = globalVariables.totalScore;
-        }
-        if (globalVariables.targetHits > globalVariables.highTargetHits)
-        {
             globalVariables.highTargetHits = globalVariables.targetHits;
+            globalVariables.highTime = globalVariables.lastTime;
         }
+        // if (globalVariables.currentLevel > globalVariables.highLevel)
+        // {
+        //     globalVariables.highLevel = globalVariables.currentLevel;
+        // }
+        // if (globalVariables.missedScore < globalVariables.highMissedScore)
+        // {
+        //     globalVariables.highMissedScore = globalVariables.missedScore;
+        // }
+        // if (globalVariables.totalScore > globalVariables.highTotalScore)
+        // {
+        //     globalVariables.highTotalScore = globalVariables.totalScore;
+        // }
+        // if (globalVariables.targetHits > globalVariables.highTargetHits)
+        // {
+        //     globalVariables.highTargetHits = globalVariables.targetHits;
+        // }
+        // if (globalVariables.lastTime > globalVariables.highTime)
+        // {
+        //     globalVariables.highTime = globalVariables.lastTime;
+        // }
         if (globalVariables.finalScore < -10)
         {
             if (globalVariables.finalScore < globalVariables.lowestScore)
             {
                 globalVariables.lowestScore = globalVariables.finalScore;
             }
-        }
-        if (globalVariables.lastTime > globalVariables.highTime)
-        {
-            globalVariables.highTime = globalVariables.lastTime;
         }
 
         StartCoroutine(returnToStart());
