@@ -5,15 +5,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D magpie;
     public globalVariables globalVariables;
     private Animator animator;
-    // public Sprite leftSprite;
-    // private SpriteRenderer spriteRenderer;
 
     void Start()
     {
         magpie = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        // spriteRenderer = GetComponent<SpriteRenderer>();
-        
+        animator = GetComponent<Animator>();        
     }
 
     void Update()
@@ -30,16 +26,16 @@ public class Player : MonoBehaviour
         bool movingRight = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
         animator.SetBool("isMovingRight", movingRight);
 
+        bool movingBack = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+        animator.SetBool("isMovingBack", movingBack);
+
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             direction.x -= isDodging ? moveSpeed + dodgeBoost : moveSpeed;
-            // animator.SetTrigger("left");
-            // spriteRenderer.sprite = leftSprite;
         }
         else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
             animator.SetTrigger("left-correct");
-            // break;
         }
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
@@ -47,7 +43,6 @@ public class Player : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
         {
             animator.SetTrigger("right-correct");
-            // break;
         }
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
@@ -55,6 +50,10 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             direction.y -= isDodging ? moveSpeed + dodgeBoost : moveSpeed;
+        else if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            animator.SetTrigger("back-correct");
+        }
 
 
         // this prevents faster diagonal movement
