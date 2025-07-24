@@ -16,7 +16,7 @@ public class GameManagerScript : MonoBehaviour
     private bool isPaused = false;
     public static bool spawnObjects = false;
     public float timer = 0f;
-    public float levelInterval;
+    public float levelInterval = 5f;
     public float countDown;
 
     void Start()
@@ -54,7 +54,7 @@ public class GameManagerScript : MonoBehaviour
 
         if (timer > levelInterval)
             {
-                levelInterval += levelInterval;
+                levelInterval += 5f;
                 Debug.Log("level interval: " + levelInterval);
                 levelManager.LevelUp();
             }

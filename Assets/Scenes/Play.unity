@@ -875,7 +875,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebacdfc005ae0c43a0cac1ffbbc7709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1608120612}
+  frontNpcSpawnInterval: 0
+  frontNpcSpawnMin: 4
+  frontNpcSpawnMax: 5
   spawnXPositions:
   - -7.5
   - -6.5
@@ -1760,6 +1763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbed81b852087745a42d3a6ac64618c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnNpc: {fileID: 518179367}
   levelScore: {fileID: 454489103}
 --- !u!4 &837379446
 Transform:
@@ -2553,7 +2557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35405ee99c72124196c5547b53ae925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftSprite: {fileID: -7309104208010916672, guid: 92e43f6f3c6abc24b931919577086b8e, type: 3}
 --- !u!50 &1118535892
 Rigidbody2D:
   serializedVersion: 5
@@ -2647,22 +2650,26 @@ PolygonCollider2D:
       - {x: -0.0060033803, y: -0.8561398}
       - {x: 0.42199653, y: -0.67385036}
       - {x: 0.23393667, y: -0.49639478}
-      - {x: 0.3234316, y: -0.13543749}
-      - {x: 0.27302164, y: 0.18462448}
+      - {x: 0.23318616, y: -0.3769715}
+      - {x: 1.0511857, y: -0.22688293}
+      - {x: 1.4286889, y: 0.19384241}
+      - {x: 0.34194067, y: 0.17951925}
       - {x: 0.17620547, y: 0.306784}
       - {x: 0.1384401, y: 0.3451115}
       - {x: 0.1474853, y: 0.42489693}
       - {x: 0.16392446, y: 0.48848623}
       - {x: 0.1574488, y: 0.6222465}
-      - {x: 0.077111825, y: 0.7488478}
-      - {x: -0.0033652186, y: 0.99466056}
-      - {x: -0.068779886, y: 0.75480795}
+      - {x: 0.08501735, y: 0.7567534}
+      - {x: -0.0033652186, y: 1.0394588}
+      - {x: -0.08722628, y: 0.7600784}
       - {x: -0.16033964, y: 0.6385711}
       - {x: -0.16623938, y: 0.4930666}
       - {x: -0.1254138, y: 0.36244863}
       - {x: -0.1606566, y: 0.30268118}
       - {x: -0.2616259, y: 0.17426008}
-      - {x: -0.3059933, y: -0.11810956}
+      - {x: -1.4020233, y: 0.19288944}
+      - {x: -1.0428703, y: -0.20633873}
+      - {x: -0.2306593, y: -0.37776715}
       - {x: -0.23024127, y: -0.50138605}
   m_UseDelaunayMesh: 0
 --- !u!95 &1118535896
@@ -3276,7 +3283,7 @@ MonoBehaviour:
   countDownText: {fileID: 273657651}
   sceneName: Start
   timer: 0
-  levelInterval: 10
+  levelInterval: 5
   countDown: 3
 --- !u!1001 &1716509482
 PrefabInstance:

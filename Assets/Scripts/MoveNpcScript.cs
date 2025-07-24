@@ -36,7 +36,7 @@ public class MoveNpcScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             wasCollected = true;
-            Debug.Log("collected npc: " + wasCollected);
+            // Debug.Log("collected npc: " + wasCollected);
             // spriteRenderer.sprite = hitSprite;
             animator.SetTrigger("hit");
             hitCount++;
@@ -62,7 +62,7 @@ public class MoveNpcScript : MonoBehaviour
         {
             if (!wasCollected)
             {
-                Debug.Log("!! WHOOPS !! missed one");
+                // Debug.Log("!! WHOOPS !! missed one");
                 minusScore.MinusScore();
             }
             Destroy(gameObject);

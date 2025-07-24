@@ -5,8 +5,12 @@ public class SpawnNpcScript : MonoBehaviour
 {
     public globalVariables globalVariables;
     public GameManagerScript gameManager;
+    // public LevelManagerScript levelManager;
+    public float frontNpcSpawnInterval;
+    public float frontNpcSpawnMin = 3.5f;
+    public float frontNpcSpawnMax = 4f;
+
     // spawn a common npc at random intervals **TODO add random interval
-    // public float commonNpcSpawnInterval = 4f;
     // spawn an uncommon npc at random intervals **TODO add random interval
     // public float spawnNpcFrontInterval = 6f;
 
@@ -22,6 +26,8 @@ public class SpawnNpcScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(DelaySpawn());
+        // float frontNpcSpawnInterval = Random.Range(0f, 3f);    
+        // Debug.Log("START frontNpcSpawnInterval: " + frontNpcSpawnInterval);
     }
 
     IEnumerator DelaySpawn()
@@ -35,16 +41,28 @@ public class SpawnNpcScript : MonoBehaviour
     {
         while (true)
         {
-            bool spawnNpcFront = Random.value < 0.6f;
-            if (spawnNpcFront)
-            {
+            frontNpcSpawnInterval = Random.Range(frontNpcSpawnMin, frontNpcSpawnMax);  
+            Debug.Log("SPAWN frontNpcSpawnInterval: " + frontNpcSpawnInterval);
+            // float test = 0.6f + levelManager.increaseSpawn;
+            // Debug.Log("current npc spawn interval: " + test);
+            // bool spawnNpcFront = Random.value < 2f;
+            // // Debug.Log("current npc spawn interval: " + levelManager.increaseSpawn);
+            // if (spawnNpcFront)
+            // {
+            //     int index = Random.Range(0, spawnXPositions.Length);
+            //     Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
+            //     int prefabIndex = Random.Range(0, prefabs.Length);
+            //     Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
+            // }
+
+            // yield return new WaitForSeconds(globalVariables.commonNpcSpawnInterval);
+
             int index = Random.Range(0, spawnXPositions.Length);
             Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
             int prefabIndex = Random.Range(0, prefabs.Length);
             Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
-            }
-            
-            yield return new WaitForSeconds(globalVariables.commonNpcSpawnInterval);
+
+            yield return new WaitForSeconds(frontNpcSpawnInterval);
         }
 
         // TODO REVISIT INCREASING THE NUMBER OF SPAWNED NPCS BASED ON MILESTONE - CURRENTLY TOO MANY
