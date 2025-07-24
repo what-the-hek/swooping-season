@@ -35,15 +35,15 @@ public class SpawnNpcScript : MonoBehaviour
     {
         while (true)
         {
-            // create the prefab at a random spawn point
+            bool spawnNpcFront = Random.value < 0.6f;
+            if (spawnNpcFront)
+            {
             int index = Random.Range(0, spawnXPositions.Length);
             Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
-
-            // select a random prefab from prefab index range
             int prefabIndex = Random.Range(0, prefabs.Length);
             Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
+            }
             
-            // wait for the next spawn interval
             yield return new WaitForSeconds(globalVariables.commonNpcSpawnInterval);
         }
 
