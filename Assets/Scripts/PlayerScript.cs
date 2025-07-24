@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
         bool isDodging = Input.GetKey(KeyCode.Space);
         
+        // TODO combine this logic with the movement
         bool movingLeft = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
         animator.SetBool("isMovingLeft", movingLeft);
 
@@ -54,7 +55,6 @@ public class Player : MonoBehaviour
         {
             animator.SetTrigger("back-correct");
         }
-
 
         // this prevents faster diagonal movement
         direction.Normalize();

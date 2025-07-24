@@ -67,7 +67,7 @@ PLAY SCREEN / UI
 - [ ] achievements?
 - [ ] 'dodge' obstacles by pressing space bar + (left, right, up + down)
 - [X] pause game
-- [ ] delayed start before objects spawn
+- [X] delayed start before objects spawn
 
 END GAME
 - [X] splash screen with game stats & any new achievement unlocks
@@ -75,8 +75,8 @@ END GAME
 - [X] button to start screen
 
 ABOUT SCREEN
-- [ ] button on start screen
-- [ ] include any credits/references
+- [X] button on start screen
+- [X] include any credits/references
 - [ ] acknowledgment of country(?)
 - [ ] controls
 
@@ -87,8 +87,7 @@ OBSTACLES
 
 PLAYER
 - [X] new sprite
-- [ ] animations for movement
-- [ ] animations for npc collision
+- [X] animations for movement (left, right & back)
 - [ ] animations for obstacle collision
 - [ ] animations for boost collision
 - [ ] animations for 'dodge' left
@@ -96,10 +95,12 @@ PLAYER
 - [ ] animations for 'dodge' up/down
 
 NPCS
+- [X] animations for npc hit
 - [X] more forward-facing pedestrian npc skins
 - [X] animate forwards walking
 - [ ] back-facing pedestrian npc skins
 - [ ] animate backwards walking
+- [ ] animations for cyclist hit
 - [ ] create forwards cyclist npc skins
 - [ ] animate cycling forwards
 - [ ] create backwards cyclist npc skins
@@ -123,7 +124,7 @@ LEVELS
 - [ ] add timer - change level to correspond with timer
 
 AUDIO
-- [ ] background music
+- [X] background music
 - [ ] npc collision (ouch!)
 - [ ] obstacle collision (powerline zap, car splat)
 - [ ] boost collision (magpie chortle)

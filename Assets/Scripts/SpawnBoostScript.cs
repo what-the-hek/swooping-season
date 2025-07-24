@@ -5,7 +5,7 @@ public class SpawnBoostScript : MonoBehaviour
 {
     public globalVariables globalVariables;
     public GameManagerScript gameManager;
-    public float delaySpawn = 30f;
+    public float delaySpawn = 20f;
     public float[] spawnXPositions;
     public float fixedYPosition;
 
@@ -30,12 +30,14 @@ public class SpawnBoostScript : MonoBehaviour
         yield return new WaitForSeconds(delaySpawn);
         while (true)
         {
-            int index = Random.Range(0, spawnXPositions.Length);
-            Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
+            if (globalVariables.healthScore < 5)
+            {
+                int index = Random.Range(0, spawnXPositions.Length);
+                Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
 
-            int prefabIndex = Random.Range(0, prefabs.Length);         
-            Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
-
+                int prefabIndex = Random.Range(0, prefabs.Length);
+                Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
+            }
             yield return new WaitForSeconds(globalVariables.commonBoostSpawnInterval);
         }
     }
