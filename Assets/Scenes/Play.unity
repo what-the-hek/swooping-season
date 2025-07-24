@@ -2461,8 +2461,9 @@ GameObject:
   - component: {fileID: 1118535889}
   - component: {fileID: 1118535891}
   - component: {fileID: 1118535892}
-  - component: {fileID: 1118535893}
   - component: {fileID: 1118535894}
+  - component: {fileID: 1118535895}
+  - component: {fileID: 1118535896}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -2552,6 +2553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35405ee99c72124196c5547b53ae925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftSprite: {fileID: -7309104208010916672, guid: 92e43f6f3c6abc24b931919577086b8e, type: 3}
 --- !u!50 &1118535892
 Rigidbody2D:
   serializedVersion: 5
@@ -2579,8 +2581,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1118535893
-BoxCollider2D:
+--- !u!114 &1118535894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118535888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f180f7b389cb648a660969aa4313cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endGame: {fileID: 1237624085}
+  healthBar: {fileID: 285091624}
+  totalScore: {fileID: 983341664}
+  missedScore: {fileID: 2133815508}
+--- !u!60 &1118535895
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2609,11 +2627,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0074929297, y: 0.0019174814}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2623,24 +2641,52 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9699133, y: 2.172859}
-  m_EdgeRadius: 0
---- !u!114 &1118535894
-MonoBehaviour:
+  m_Points:
+    m_Paths:
+    - - {x: -0.4079865, y: -0.68313164}
+      - {x: -0.0060033803, y: -0.8561398}
+      - {x: 0.42199653, y: -0.67385036}
+      - {x: 0.23393667, y: -0.49639478}
+      - {x: 0.3234316, y: -0.13543749}
+      - {x: 0.27302164, y: 0.18462448}
+      - {x: 0.17620547, y: 0.306784}
+      - {x: 0.1384401, y: 0.3451115}
+      - {x: 0.1474853, y: 0.42489693}
+      - {x: 0.16392446, y: 0.48848623}
+      - {x: 0.1574488, y: 0.6222465}
+      - {x: 0.077111825, y: 0.7488478}
+      - {x: -0.0033652186, y: 0.99466056}
+      - {x: -0.068779886, y: 0.75480795}
+      - {x: -0.16033964, y: 0.6385711}
+      - {x: -0.16623938, y: 0.4930666}
+      - {x: -0.1254138, y: 0.36244863}
+      - {x: -0.1606566, y: 0.30268118}
+      - {x: -0.2616259, y: 0.17426008}
+      - {x: -0.3059933, y: -0.11810956}
+      - {x: -0.23024127, y: -0.50138605}
+  m_UseDelaunayMesh: 0
+--- !u!95 &1118535896
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118535888}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f180f7b389cb648a660969aa4313cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endGame: {fileID: 1237624085}
-  healthBar: {fileID: 285091624}
-  totalScore: {fileID: 983341664}
-  missedScore: {fileID: 2133815508}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5da6387d73d9c98478bc832ca4ec93d7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1237624084
 GameObject:
   m_ObjectHideFlags: 0

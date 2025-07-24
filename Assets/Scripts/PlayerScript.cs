@@ -4,10 +4,16 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D magpie;
     public globalVariables globalVariables;
+    private Animator animator;
+    // public Sprite leftSprite;
+    // private SpriteRenderer spriteRenderer;
 
     void Start()
     {
         magpie = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        // spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     void Update()
@@ -17,12 +23,32 @@ public class Player : MonoBehaviour
         float dodgeBoost = 6f;
 
         bool isDodging = Input.GetKey(KeyCode.Space);
+        
+        bool movingLeft = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
+        animator.SetBool("isMovingLeft", movingLeft);
+
+        bool movingRight = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
+        animator.SetBool("isMovingRight", movingRight);
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
             direction.x -= isDodging ? moveSpeed + dodgeBoost : moveSpeed;
+            // animator.SetTrigger("left");
+            // spriteRenderer.sprite = leftSprite;
+        }
+        else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            animator.SetTrigger("left-correct");
+            // break;
+        }
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             direction.x += isDodging ? moveSpeed + dodgeBoost : moveSpeed;
+        else if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            animator.SetTrigger("right-correct");
+            // break;
+        }
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             direction.y += isDodging ? moveSpeed + dodgeBoost : moveSpeed;
