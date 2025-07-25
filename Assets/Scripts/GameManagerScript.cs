@@ -16,7 +16,7 @@ public class GameManagerScript : MonoBehaviour
     private bool isPaused = false;
     public static bool spawnObjects = false;
     public float timer = 0f;
-    public float levelInterval = 5f;
+    private float levelInterval = 2f;
     public float countDown;
 
     void Start()
@@ -53,10 +53,31 @@ public class GameManagerScript : MonoBehaviour
         }
 
         if (timer > levelInterval)
+        {
+            if (timer < 10f)
+            {
+                levelInterval += 1f;
+                Debug.Log("level interval: " + levelInterval);
+                levelManager.LevelUp();
+            }
+            else if (timer >= 10 && timer < 30f)
+            {
+                levelInterval += 2f;
+                Debug.Log("level interval: " + levelInterval);
+                levelManager.LevelUp();
+            }
+            else if (timer >= 30 && timer < 90f)
             {
                 levelInterval += 5f;
                 Debug.Log("level interval: " + levelInterval);
                 levelManager.LevelUp();
+            }
+            else
+            {
+                levelInterval += 7f;
+                Debug.Log("level interval: " + levelInterval);
+                levelManager.LevelUp();
+            }
             }
 
         if (Input.GetKeyDown("escape"))

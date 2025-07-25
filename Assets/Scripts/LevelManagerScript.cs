@@ -10,7 +10,7 @@ public class LevelManagerScript : MonoBehaviour
     public void LevelUp()
     {
         // Debug.Log("total score: " + globalVariables.totalScore + "greater than milestone: " + globalVariables.scoreMilestone);
-        if (spawnNpc.frontNpcSpawnMin > 1f)
+        if (spawnNpc.frontNpcSpawnMin > 0.7f)
         {
             spawnNpc.frontNpcSpawnMin -= 0.1f;
             spawnNpc.frontNpcSpawnMax -= 0.1f;

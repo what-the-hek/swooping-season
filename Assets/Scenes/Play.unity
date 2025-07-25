@@ -878,7 +878,7 @@ MonoBehaviour:
   gameManager: {fileID: 1608120612}
   frontNpcSpawnInterval: 0
   frontNpcSpawnMin: 4
-  frontNpcSpawnMax: 5
+  frontNpcSpawnMax: 4.5
   spawnXPositions:
   - -7.5
   - -6.5
@@ -3283,7 +3283,6 @@ MonoBehaviour:
   countDownText: {fileID: 273657651}
   sceneName: Start
   timer: 0
-  levelInterval: 5
   countDown: 3
 --- !u!1001 &1716509482
 PrefabInstance:
