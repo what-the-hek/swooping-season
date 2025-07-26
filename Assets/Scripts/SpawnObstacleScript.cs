@@ -41,7 +41,6 @@ public class SpawnObstacleScript : MonoBehaviour
             bool spawnCarRight = Random.value < 0.4f;
             bool spawnCarLeft = Random.value < 0.4f;
             bool spawnPowerline = Random.value < 0.4f;
-            bool isBuilding = tag == "obstacle-building";
 
             GameObject prefabToSpawn;
             Vector3 spawnPosition;
@@ -67,6 +66,7 @@ public class SpawnObstacleScript : MonoBehaviour
                 // Debug.Log("spawnPowerline");
                 int index = Random.Range(0, prefabs.Length);
                 prefabToSpawn = prefabs[index];
+                bool isBuilding = prefabToSpawn.CompareTag("obstacle-building");
                 int xIndex = isBuilding ? Random.Range(0, spawnXPositionsBuildings.Length) : Random.Range(0, spawnXPositions.Length);
                 float xPos = isBuilding ? spawnXPositionsBuildings[xIndex] : spawnXPositions[xIndex];
                 Debug.Log("++++++++++++++++++++++++++++++++++++++");
