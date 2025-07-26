@@ -8,6 +8,7 @@ public class SpawnObstacleScript : MonoBehaviour
     public GameManagerScript gameManager;
     // public float commonObstacleSpawnInterval = 4f;
     public float[] spawnXPositions;
+    public float[] spawnXPositionsBuildings;
     public float carRightXPosition;
     public float carLeftXPosition;
 
@@ -40,6 +41,7 @@ public class SpawnObstacleScript : MonoBehaviour
             bool spawnCarRight = Random.value < 0.4f;
             bool spawnCarLeft = Random.value < 0.4f;
             bool spawnPowerline = Random.value < 0.4f;
+            bool isBuilding = tag == "obstacle-building";
 
             GameObject prefabToSpawn;
             Vector3 spawnPosition;
@@ -65,8 +67,22 @@ public class SpawnObstacleScript : MonoBehaviour
                 // Debug.Log("spawnPowerline");
                 int index = Random.Range(0, prefabs.Length);
                 prefabToSpawn = prefabs[index];
-                int xIndex = Random.Range(0, spawnXPositions.Length);
-                float xPos = spawnXPositions[xIndex];
+                int xIndex = isBuilding ? Random.Range(0, spawnXPositionsBuildings.Length) : Random.Range(0, spawnXPositions.Length);
+                float xPos = isBuilding ? spawnXPositionsBuildings[xIndex] : spawnXPositions[xIndex];
+                Debug.Log("++++++++++++++++++++++++++++++++++++++");
+                Debug.Log("isBuilding: " + isBuilding);
+                Debug.Log("++++++++++++++++++++++++++++++++++++++");
+                // if (tag == "obstacle")
+                // {
+                //     int xIndex = Random.Range(0, spawnXPositions.Length);
+                //     // float xPos = spawnXPositions[xIndex];
+                // }
+                // else if (tag == "obstacle-building")
+                // {
+                //     int xIndex = Random.Range(0, spawnXPositionsBuildings.Length);
+                //     // float xPos = spawnXPositionsBuildings[xIndex];
+                // }
+
                 spawnPosition = new Vector3(xPos, fixedYPosition, 0f);
                 Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
             }

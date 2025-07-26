@@ -3453,6 +3453,13 @@ MonoBehaviour:
   - -12
   - 13
   - -13
+  spawnXPositionsBuildings:
+  - -8
+  - -9
+  - -10
+  - 10
+  - 9
+  - 8
   carRightXPosition: 1.4
   carLeftXPosition: -1.4
   fixedYPosition: 9

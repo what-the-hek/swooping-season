@@ -7,7 +7,7 @@ public class MoveObstacleScript : MonoBehaviour
 
     void Update()
     {
-        if (tag == "obstacle")
+        if (tag == "obstacle" || tag == "obstacle-building")
         {
             // move prefab down the screen
             transform.position += Vector3.down * globalVariables.commonObstacleMovementSpeed * Time.deltaTime;
@@ -40,7 +40,7 @@ public class MoveObstacleScript : MonoBehaviour
             // }
         }
 
-        if (tag == "carRight" && transform.position.y <= -19 || tag == "obstacle" && transform.position.y <= -19)
+        if (tag == "carRight" && transform.position.y <= -19 || tag == "obstacle" && transform.position.y <= -19 || tag == "obstacle-building" && transform.position.y <= -19)
         {
             Destroy(gameObject);
         }

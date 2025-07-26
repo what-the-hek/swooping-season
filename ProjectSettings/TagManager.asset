@@ -12,6 +12,7 @@ TagManager:
   - carLeft
   - npc-front
   - npc-back
+  - obstacle-building
   layers:
   - Default
   - TransparentFX
