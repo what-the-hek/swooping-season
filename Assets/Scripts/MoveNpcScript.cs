@@ -46,7 +46,7 @@ public class MoveNpcScript : MonoBehaviour
 
     public void Update()
     {
-        if (tag == "commonNPC")
+        if (tag == "npc-back")
         {
             // move prefab down the screen
             transform.position += Vector3.down * globalVariables.commonNpcMovementSpeed * Time.deltaTime;
