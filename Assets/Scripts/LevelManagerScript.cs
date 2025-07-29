@@ -5,6 +5,7 @@ public class LevelManagerScript : MonoBehaviour
 {
     public globalVariables globalVariables;
     public SpawnNpcScript spawnNpc;
+    public SpawnObstacleScript spawnObstacles;
     public TextMeshProUGUI levelScore;
     // public float increaseSpawn = 0f;
     public void LevelUp()
@@ -14,6 +15,11 @@ public class LevelManagerScript : MonoBehaviour
         {
             spawnNpc.frontNpcSpawnMin -= 0.1f;
             spawnNpc.frontNpcSpawnMax -= 0.1f;
+        }
+        if (spawnObstacles.minSpawnInterval > 2f)
+        {
+            spawnObstacles.minSpawnInterval -= 0.1f;
+            spawnObstacles.maxSpawnInterval -= 0.1f;
         }
         // Debug.Log("LEVEL UP: " + increaseSpawn);
 

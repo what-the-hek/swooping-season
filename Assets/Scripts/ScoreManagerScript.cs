@@ -32,7 +32,7 @@ public class CollisionDetectionScript : MonoBehaviour
             {
                 AddScore();
             }
-            else if (other.CompareTag("npc-front"))
+            else if (other.CompareTag("npc-front") || other.CompareTag("npc-back"))
             {
                 AddScore();
             }

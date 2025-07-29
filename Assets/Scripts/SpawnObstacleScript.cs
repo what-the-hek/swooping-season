@@ -22,6 +22,11 @@ public class SpawnObstacleScript : MonoBehaviour
     public GameObject[] carRightPrefabs;
     public GameObject[] carLeftPrefabs;
 
+    public float rightCarSpawnInterval;
+    public float leftCarSpawnInterval;
+    public float sideObstacleSpawnInterval;
+    public float minSpawnInterval = 5f;
+    public float maxSpawnInterval = 5.5f;
 
     void Start()
     {
@@ -31,65 +36,73 @@ public class SpawnObstacleScript : MonoBehaviour
     IEnumerator DelaySpawn()
     {
         yield return new WaitUntil(() => GameManagerScript.spawnObjects);
-        StartCoroutine(SpawnPrefab());
+        StartCoroutine(SpawnCarLeftPrefab());
+        StartCoroutine(SpawnCarRightPrefab());
+        StartCoroutine(SpawnSideObstaclePrefab());
     }
 
-    IEnumerator SpawnPrefab()
+    IEnumerator SpawnCarLeftPrefab()
     {
         while (true)
         {
-            bool spawnCarRight = Random.value < 0.4f;
-            bool spawnCarLeft = Random.value < 0.4f;
-            bool spawnPowerline = Random.value < 0.4f;
+            leftCarSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
+            Debug.Log("------------------------------------------------");
+            Debug.Log("leftCarSpawnInterval: " + leftCarSpawnInterval);
+            Debug.Log("------------------------------------------------");
 
             GameObject prefabToSpawn;
             Vector3 spawnPosition;
 
-            if (spawnCarRight)
-            {
-                // Debug.Log("spawnCarRight");
-                int index = Random.Range(0, carRightPrefabs.Length);
-                prefabToSpawn = carRightPrefabs[index];
-                spawnPosition = new Vector3(carRightXPosition, fixedYPosition, 0f);
-                Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
-            }
-            if (spawnCarLeft)
-            {
-                // Debug.Log("spawnCarLeft");
-                int index = Random.Range(0, carLeftPrefabs.Length);
-                prefabToSpawn = carLeftPrefabs[index];
-                spawnPosition = new Vector3(carLeftXPosition, fixedYBottomPosition, 0f);
-                Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
-            }
-            if (spawnPowerline)
-            {
-                // Debug.Log("spawnPowerline");
-                int index = Random.Range(0, prefabs.Length);
-                prefabToSpawn = prefabs[index];
-                bool isBuilding = prefabToSpawn.CompareTag("obstacle-building");
-                int xIndex = isBuilding ? Random.Range(0, spawnXPositionsBuildings.Length) : Random.Range(0, spawnXPositions.Length);
-                float xPos = isBuilding ? spawnXPositionsBuildings[xIndex] : spawnXPositions[xIndex];
-                Debug.Log("++++++++++++++++++++++++++++++++++++++");
-                Debug.Log("isBuilding: " + isBuilding);
-                Debug.Log("++++++++++++++++++++++++++++++++++++++");
-                // if (tag == "obstacle")
-                // {
-                //     int xIndex = Random.Range(0, spawnXPositions.Length);
-                //     // float xPos = spawnXPositions[xIndex];
-                // }
-                // else if (tag == "obstacle-building")
-                // {
-                //     int xIndex = Random.Range(0, spawnXPositionsBuildings.Length);
-                //     // float xPos = spawnXPositionsBuildings[xIndex];
-                // }
+            int index = Random.Range(0, carLeftPrefabs.Length);
+            prefabToSpawn = carLeftPrefabs[index];
+            spawnPosition = new Vector3(carLeftXPosition, fixedYBottomPosition, 0f);
+            Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
 
-                spawnPosition = new Vector3(xPos, fixedYPosition, 0f);
-                Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
-            }
+            yield return new WaitForSeconds(leftCarSpawnInterval);
+        }
+    }
+    IEnumerator SpawnCarRightPrefab()
+    {
+        while (true)
+        {
+            rightCarSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
+            Debug.Log("------------------------------------------------");
+            Debug.Log("rightCarSpawnInterval: " + rightCarSpawnInterval);
+            Debug.Log("------------------------------------------------");
 
-            // Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+            GameObject prefabToSpawn;
+            Vector3 spawnPosition;
 
-            yield return new WaitForSeconds(globalVariables.commonObstacleSpawnInterval);
+            int index = Random.Range(0, carRightPrefabs.Length);
+            prefabToSpawn = carRightPrefabs[index];
+            spawnPosition = new Vector3(carRightXPosition, fixedYPosition, 0f);
+            Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+
+            yield return new WaitForSeconds(rightCarSpawnInterval);
+        }
+    }
+    IEnumerator SpawnSideObstaclePrefab()
+    {
+        while (true)
+        {
+            sideObstacleSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
+            Debug.Log("------------------------------------------------" );
+            Debug.Log("sideObstacleSpawnInterval: " + sideObstacleSpawnInterval);
+            Debug.Log("------------------------------------------------" );
+
+            GameObject prefabToSpawn;
+            Vector3 spawnPosition;
+
+            int index = Random.Range(0, prefabs.Length);
+            prefabToSpawn = prefabs[index];
+            bool isBuilding = prefabToSpawn.CompareTag("obstacle-building");
+            int xIndex = isBuilding ? Random.Range(0, spawnXPositionsBuildings.Length) : Random.Range(0, spawnXPositions.Length);
+            float xPos = isBuilding ? spawnXPositionsBuildings[xIndex] : spawnXPositions[xIndex];
+
+            spawnPosition = new Vector3(xPos, fixedYPosition, 0f);
+            Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+
+            yield return new WaitForSeconds(sideObstacleSpawnInterval);
         }
     }
 }

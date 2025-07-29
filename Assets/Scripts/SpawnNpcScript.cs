@@ -29,10 +29,10 @@ public class SpawnNpcScript : MonoBehaviour
         while (true)
         {
             frontNpcSpawnInterval = Random.Range(frontNpcSpawnMin, frontNpcSpawnMax); 
-            Debug.Log("SPAWN frontNpcSpawnMin: " + frontNpcSpawnMin);
-            Debug.Log("SPAWN frontNpcSpawnMax: " + frontNpcSpawnMax); 
-            Debug.Log("SPAWN frontNpcSpawnInterval: " + frontNpcSpawnInterval);
-            Debug.Log("--------------------------------------------------------");
+            // Debug.Log("SPAWN frontNpcSpawnMin: " + frontNpcSpawnMin);
+            // Debug.Log("SPAWN frontNpcSpawnMax: " + frontNpcSpawnMax); 
+            // Debug.Log("SPAWN frontNpcSpawnInterval: " + frontNpcSpawnInterval);
+            // Debug.Log("--------------------------------------------------------");
             int index = Random.Range(0, spawnXPositions.Length);
             Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
             int prefabIndex = Random.Range(0, prefabs.Length);

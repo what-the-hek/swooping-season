@@ -1779,6 +1779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnNpc: {fileID: 518179367}
+  spawnObstacles: {fileID: 1891429176}
   levelScore: {fileID: 454489103}
 --- !u!4 &837379446
 Transform:
@@ -3494,6 +3495,11 @@ MonoBehaviour:
   - {fileID: 6716223593567684603, guid: 56a4f51e8eb5cf94dba8e6ffe803bbf2, type: 3}
   - {fileID: 6716223593567684603, guid: 56a4f51e8eb5cf94dba8e6ffe803bbf2, type: 3}
   - {fileID: 6716223593567684603, guid: 56a4f51e8eb5cf94dba8e6ffe803bbf2, type: 3}
+  rightCarSpawnInterval: 0
+  leftCarSpawnInterval: 0
+  sideObstacleSpawnInterval: 0
+  minSpawnInterval: 5
+  maxSpawnInterval: 5.5
 --- !u!1 &1935459701
 GameObject:
   m_ObjectHideFlags: 0

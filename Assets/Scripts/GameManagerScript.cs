@@ -57,25 +57,25 @@ public class GameManagerScript : MonoBehaviour
             if (timer < 10f)
             {
                 levelInterval += 1f;
-                Debug.Log("level interval: " + levelInterval);
+                // Debug.Log("level interval: " + levelInterval);
                 levelManager.LevelUp();
             }
             else if (timer >= 10 && timer < 30f)
             {
                 levelInterval += 2f;
-                Debug.Log("level interval: " + levelInterval);
+                // Debug.Log("level interval: " + levelInterval);
                 levelManager.LevelUp();
             }
             else if (timer >= 30 && timer < 90f)
             {
                 levelInterval += 5f;
-                Debug.Log("level interval: " + levelInterval);
+                // Debug.Log("level interval: " + levelInterval);
                 levelManager.LevelUp();
             }
             else
             {
                 levelInterval += 7f;
-                Debug.Log("level interval: " + levelInterval);
+                // Debug.Log("level interval: " + levelInterval);
                 levelManager.LevelUp();
             }
             }
