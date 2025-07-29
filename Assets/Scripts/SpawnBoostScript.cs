@@ -11,6 +11,9 @@ public class SpawnBoostScript : MonoBehaviour
 
     // create an array of random prefabs to spawn
     public GameObject[] prefabs;
+    public float boostSpawnInterval;
+    public float minSpawnInterval = 7f;
+    public float maxSpawnInterval = 7.5f;
 
 
     void Start()
@@ -27,18 +30,20 @@ public class SpawnBoostScript : MonoBehaviour
     // part of the coroutine to respawn a prefab at random intervals depending on tag
     IEnumerator SpawnPrefab()
     {
-        yield return new WaitForSeconds(delaySpawn);
+        // yield return new WaitForSeconds(delaySpawn); //why do I need this? does this stop the npc spawn bug?
         while (true)
         {
             if (globalVariables.healthScore < 5)
             {
+                boostSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
+
                 int index = Random.Range(0, spawnXPositions.Length);
                 Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
 
                 int prefabIndex = Random.Range(0, prefabs.Length);
                 Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
             }
-            yield return new WaitForSeconds(globalVariables.commonBoostSpawnInterval);
+            yield return new WaitForSeconds(boostSpawnInterval);
         }
     }
 }

@@ -20,7 +20,7 @@ public class CollisionDetectionScript : MonoBehaviour
         // HEALTH SCORE
         if (globalVariables.healthScore > 0)
         {
-            if (other.CompareTag("obstacle") || other.CompareTag("carRight") || other.CompareTag("carLeft"))
+            if (other.CompareTag("obstacle") || other.CompareTag("carRight") || other.CompareTag("carLeft") || other.CompareTag("obstacle-building"))
             {
                 MinusHealth();
             }

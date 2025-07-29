@@ -894,7 +894,6 @@ MonoBehaviour:
   prefabs:
   - {fileID: 1984686997501948524, guid: f840c0d96ec72a4428fbb02e0af66e26, type: 3}
   - {fileID: 1984686997501948524, guid: 5c324dae324d3ce4f9db16c8a543f14c, type: 3}
-  - {fileID: 1984686997501948524, guid: 9824cea97b2d15843a80f3cf557a3551, type: 3}
   - {fileID: 1984686997501948524, guid: a7b4501ebe573ad468e27fc186ffa101, type: 3}
   - {fileID: 1984686997501948524, guid: 7126ac4ac5ca3bf44b26225a30abcc2b, type: 3}
   - {fileID: 1984686997501948524, guid: c7b4fc02c8c21b24fb61899e85b1fb86, type: 3}
@@ -907,21 +906,6 @@ MonoBehaviour:
   - {fileID: 1984686997501948524, guid: aca4df71ebeaba94abc058765bbfa6be, type: 3}
   - {fileID: 1984686997501948524, guid: 76867f5e1107ba3458b4fad32d5e1028, type: 3}
   - {fileID: 1984686997501948524, guid: e31c2d4fdb8cac246a632ec24c18464c, type: 3}
-  - {fileID: 1984686997501948524, guid: dda1cb9f344436a45a0080041e8178e3, type: 3}
-  - {fileID: 1984686997501948524, guid: 33f6f664d8e98f74fbd04d0972517580, type: 3}
-  - {fileID: 1984686997501948524, guid: 96806a8a318b9724683972c47d98cafa, type: 3}
-  - {fileID: 1984686997501948524, guid: 8237bda4c233b0148b0ca18d3d20a8dd, type: 3}
-  - {fileID: 1984686997501948524, guid: fef9770ad63b92849a9deb5fed8c0a97, type: 3}
-  - {fileID: 1984686997501948524, guid: 6d809423a991bca4584606e596cdda61, type: 3}
-  - {fileID: 1984686997501948524, guid: 0eb12c38d8eb7a843aac8dab762ac00c, type: 3}
-  - {fileID: 1984686997501948524, guid: 7d8c68f762d05c242909af342b58f450, type: 3}
-  - {fileID: 1984686997501948524, guid: f602ee3d87593974fa91b8a2e8dc52d9, type: 3}
-  - {fileID: 1984686997501948524, guid: 3cf7403d2ca6d8846abc57e7e07c00a4, type: 3}
-  - {fileID: 1984686997501948524, guid: 2d6cef7e5592e5e4dae4759566b9840e, type: 3}
-  - {fileID: 1984686997501948524, guid: 07651352f0b87a54a9108a7049940a55, type: 3}
-  - {fileID: 1984686997501948524, guid: cbe35a6325d8c1940aab78fc6ddc25e9, type: 3}
-  - {fileID: 1984686997501948524, guid: 98f8754e16e8e2d479f73ad1478d27dc, type: 3}
-  - {fileID: 1984686997501948524, guid: d619b63a341959b488562653c583f064, type: 3}
 --- !u!4 &518179368
 Transform:
   m_ObjectHideFlags: 0
@@ -1312,6 +1296,9 @@ MonoBehaviour:
   prefabs:
   - {fileID: 4182858731470295240, guid: 7a9b26ccd30d9484b89fa6c0b54ec931, type: 3}
   - {fileID: 4182858731470295240, guid: c841fadb6b132a64799184a3a6d338f9, type: 3}
+  boostSpawnInterval: 0
+  minSpawnInterval: 6
+  maxSpawnInterval: 6.5
 --- !u!4 &737631474
 Transform:
   m_ObjectHideFlags: 0
@@ -1780,6 +1767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnNpc: {fileID: 518179367}
   spawnObstacles: {fileID: 1891429176}
+  spawnBoost: {fileID: 737631473}
   levelScore: {fileID: 454489103}
 --- !u!4 &837379446
 Transform:
@@ -2654,7 +2642,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.66, y: 2.06}
+    oldSize: {x: 3.62, y: 2.06}
     newSize: {x: 10.72, y: 5.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2662,14 +2650,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.4079865, y: -0.68313164}
+    - - {x: -0.33906463, y: -0.69297767}
       - {x: -0.0060033803, y: -0.8561398}
-      - {x: 0.42199653, y: -0.67385036}
-      - {x: 0.23393667, y: -0.49639478}
+      - {x: 0.37276673, y: -0.6812352}
+      - {x: 0.20439877, y: -0.49885657}
       - {x: 0.23318616, y: -0.3769715}
-      - {x: 1.0511857, y: -0.22688293}
-      - {x: 1.4286889, y: 0.19384241}
-      - {x: 0.34194067, y: 0.17951925}
+      - {x: 0.7262688, y: -0.22442143}
+      - {x: 0.95362115, y: 0.1864579}
+      - {x: 0.26124695, y: 0.18290956}
       - {x: 0.17620547, y: 0.306784}
       - {x: 0.1384401, y: 0.3451115}
       - {x: 0.1474853, y: 0.42489693}
@@ -2683,10 +2671,10 @@ PolygonCollider2D:
       - {x: -0.1254138, y: 0.36244863}
       - {x: -0.1606566, y: 0.30268118}
       - {x: -0.2616259, y: 0.17426008}
-      - {x: -1.4020233, y: 0.19288944}
-      - {x: -1.0428703, y: -0.20633873}
+      - {x: -0.99341595, y: 0.18304344}
+      - {x: -0.7327224, y: -0.2260304}
       - {x: -0.2306593, y: -0.37776715}
-      - {x: -0.23024127, y: -0.50138605}
+      - {x: -0.21547234, y: -0.50138605}
   m_UseDelaunayMesh: 0
 --- !u!95 &1118535896
 Animator:
