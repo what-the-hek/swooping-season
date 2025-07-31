@@ -3,9 +3,13 @@ using UnityEngine;
 public class MoveBoostScript : MonoBehaviour
 {
     public globalVariables globalVariables;
+    public int hitCount;
+    public int totalBoostHits;
     public void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");
+        hitCount = 0;
+        totalBoostHits = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -13,6 +17,8 @@ public class MoveBoostScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             gameObject.SetActive(false);
+            hitCount++;
+            CheckHits();
         }
     }
     void Update()
@@ -27,6 +33,14 @@ public class MoveBoostScript : MonoBehaviour
         if (transform.position.y <= -19)
         {
             Destroy(gameObject);
+        }
+    }
+    public void CheckHits()
+    {
+        if (hitCount > totalBoostHits)
+        {
+            totalBoostHits = hitCount;
+            Debug.Log("total boosts consumed: " + totalBoostHits);
         }
     }
 }

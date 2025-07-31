@@ -21,10 +21,10 @@ public class SpawnNpcScript : MonoBehaviour
     IEnumerator DelaySpawn()
     {
         yield return new WaitUntil(() => GameManagerScript.spawnObjects);
-        StartCoroutine(SpawnPrefab());
+        StartCoroutine(SpawnNpcPrefab());
     }
 
-    IEnumerator SpawnPrefab()
+    IEnumerator SpawnNpcPrefab()
     {
         while (true)
         {
