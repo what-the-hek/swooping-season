@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 996b4006fddf7534dbdab623d344ec89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minusScore: {fileID: 0}
   wasCollected: 0
   hitCount: 0
   totalBoostHits: 0
+  trophy: {fileID: 0}

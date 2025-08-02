@@ -140,6 +140,25 @@ AUDIO
 
 
 
+------ TROPHIES --------
+- cat1
+- cat2
+- cat3
+- dog1
+- dog2
+- dog3
+- eat all boosts
+- eat no boosts
+- no npc misses
+- negative score
+- most hits on 1 target
+
+------ SKINS --------
+- all cats (red tail black cockatoo?)
+- all dogs (pink & grey galah?)
+- hits / misses / target (eagle?)
+- boosts (seagull? bin chicken?)
+
 
 
 

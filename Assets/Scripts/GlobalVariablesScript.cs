@@ -95,5 +95,10 @@ public class globalVariables
     public static float resetCommonBoostSpawnInterval = 41f;
     public static float uncommonBoostSpawnInterval;
     public static float resetUncommonBoostSpawnInterval = 41f;
+
+    // achievements
+    public static bool cat1Unlocked = false;
+    public static bool cat2Unlocked = false;
+    public static bool cat3Unlocked = false;
 }
 

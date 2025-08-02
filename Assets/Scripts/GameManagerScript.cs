@@ -23,7 +23,7 @@ public class GameManagerScript : MonoBehaviour
     {
         spawnObjects = false;
         countDown = 4f;
-        StartCoroutine(EnableSpawningAfterDelay());       
+        StartCoroutine(EnableSpawningAfterDelay());
     }
 
     IEnumerator EnableSpawningAfterDelay()
@@ -78,7 +78,7 @@ public class GameManagerScript : MonoBehaviour
                 // Debug.Log("level interval: " + levelInterval);
                 levelManager.LevelUp();
             }
-            }
+        }
 
         if (Input.GetKeyDown("escape"))
         {
@@ -90,7 +90,7 @@ public class GameManagerScript : MonoBehaviour
             TogglePause();
         }
     }
-    
+
     void TogglePause()
     {
         isPaused = !isPaused;
