@@ -12,7 +12,8 @@ public class CollisionDetectionScript : MonoBehaviour
     // public TextMeshProUGUI healthScore;
     public TextMeshProUGUI missedScore;
     private SpriteRenderer spriteRenderer;
-    private Color red;
+    // private Color red;
+    // private shrinkScale;
 
     // public bool collectedCommonNpc = false;
     // public bool collectedNpcFront = false;
@@ -30,19 +31,21 @@ public class CollisionDetectionScript : MonoBehaviour
             if (other.CompareTag("obstacle") || other.CompareTag("carRight") || other.CompareTag("carLeft") || other.CompareTag("obstacle-building"))
             {
                 MinusHealth();
-                StartCoroutine(PlayerBlink());
+                StartCoroutine(PlayerBlinkOrange());
             }
             if (other.CompareTag("boost"))
             {
                 AddHealth();
+                StartCoroutine(PlayerBlinkBlue());
             }
             if (other.CompareTag("commonNPC"))
             {
                 AddScore();
             }
-            else if (other.CompareTag("npc-front") || other.CompareTag("npc-back"))
+            else if (other.CompareTag("npc-front") || other.CompareTag("npc-back") || other.CompareTag("cat1"))
             {
                 AddScore();
+                StartCoroutine(PlayerShrink(new Vector3(0.5f, 0.5f, 1f), 0.15f));
             }
         }
 
@@ -104,13 +107,65 @@ public class CollisionDetectionScript : MonoBehaviour
         Debug.Log("total score: " + globalVariables.totalScore);
     }
 
-    IEnumerator PlayerBlink()
+    IEnumerator PlayerBlinkOrange()
     {
         Color orange;
-        ColorUtility.TryParseHtmlString( "#C1440E" , out orange);
+        ColorUtility.TryParseHtmlString("#C1440E", out orange);
         Color original = spriteRenderer.color;
         spriteRenderer.color = orange;
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = original;
     }
+
+    IEnumerator PlayerBlinkBlue()
+    {
+        Color blue;
+        ColorUtility.TryParseHtmlString("#5F9EA0", out blue);
+        Color original = spriteRenderer.color;
+        spriteRenderer.color = blue;
+        yield return new WaitForSeconds(0.1f);
+        spriteRenderer.color = original;
+    }
+
+    // IEnumerator PlayerShrink()
+    // {
+    //     transform.localScale = new Vector3(0.6f, 0.6f, 1f);
+    //     yield return new WaitForSeconds(0.3f);
+    //     transform.localScale = new Vector3(0.7f, 0.7f, 1f);
+    // }
+
+    IEnumerator PlayerShrink(Vector3 shrinkScale, float duration)
+    {
+
+        Vector3 originalScale = transform.localScale;
+        // Vector3 shrinkScale = (0.6f, 0.6f, 1f);
+        float time = 0f;
+        // float duration = 0.1f;
+
+
+        while (time < duration)
+        {
+            transform.localScale = Vector3.Lerp(originalScale, shrinkScale, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        transform.localScale = shrinkScale;
+        time = 0f;
+        while (time < duration)
+        {
+            transform.localScale = Vector3.Lerp(shrinkScale, originalScale, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        transform.localScale = originalScale;
+
+    }
+
+    IEnumerator PlayerGrow()
+    {
+        transform.localScale = new Vector3(0.8f, 0.8f, 1f);
+        yield return new WaitForSeconds(0.2f);
+        transform.localScale = new Vector3(0.7f, 0.7f, 1f);
+    }
+
 }

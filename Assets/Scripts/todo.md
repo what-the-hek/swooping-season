@@ -139,6 +139,10 @@ AUDIO
 - [ ] npc spawns are ignoring the delay start from game manager
 - [ ] npcs / boosts overlap especially with animation
 
+STRETCH GOALS
+- [ ] player collision with obstacle, pause movement and give small immunity for x seconds
+- [ ] player controller with mouse
+ 
 
 
 ------ TROPHIES --------
