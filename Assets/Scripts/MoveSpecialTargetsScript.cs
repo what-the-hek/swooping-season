@@ -13,4 +13,9 @@ public class MoveSpecialTargetsScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    // on collision
+    // if tag == cat1
+        // global.cat1 = true
+        // cat1 = true
 }

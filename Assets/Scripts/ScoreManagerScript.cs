@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class CollisionDetectionScript : MonoBehaviour
 {
@@ -10,10 +11,16 @@ public class CollisionDetectionScript : MonoBehaviour
     public TextMeshProUGUI totalScore;
     // public TextMeshProUGUI healthScore;
     public TextMeshProUGUI missedScore;
+    private SpriteRenderer spriteRenderer;
+    private Color red;
 
     // public bool collectedCommonNpc = false;
     // public bool collectedNpcFront = false;
 
+    public void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,6 +30,7 @@ public class CollisionDetectionScript : MonoBehaviour
             if (other.CompareTag("obstacle") || other.CompareTag("carRight") || other.CompareTag("carLeft") || other.CompareTag("obstacle-building"))
             {
                 MinusHealth();
+                StartCoroutine(PlayerBlink());
             }
             if (other.CompareTag("boost"))
             {
@@ -94,5 +102,15 @@ public class CollisionDetectionScript : MonoBehaviour
     {
         Debug.Log("hit non-trigger: " + collision.gameObject.name);
         Debug.Log("total score: " + globalVariables.totalScore);
+    }
+
+    IEnumerator PlayerBlink()
+    {
+        Color orange;
+        ColorUtility.TryParseHtmlString( "#C1440E" , out orange);
+        Color original = spriteRenderer.color;
+        spriteRenderer.color = orange;
+        yield return new WaitForSeconds(0.1f);
+        spriteRenderer.color = original;
     }
 }

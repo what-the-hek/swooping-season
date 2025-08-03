@@ -68,6 +68,7 @@ PLAY SCREEN / UI
 - [ ] 'dodge' obstacles by pressing space bar + (left, right, up + down)
 - [X] pause game
 - [X] delayed start before objects spawn
+- [ ] hit stop, when you collide have some kind of movement stutter
 
 END GAME
 - [X] splash screen with game stats & any new achievement unlocks
@@ -152,14 +153,16 @@ AUDIO
 - no npc misses
 - negative score
 - most hits on 1 target
+- live fast die young / 27 club (die before 27 seconds)
 
 ------ SKINS --------
 - all cats (red tail black cockatoo?)
 - all dogs (pink & grey galah?)
+- all cats & dogs in a single run ()
 - hits / misses / target (eagle?)
 - boosts (seagull? bin chicken?)
 
-
+- pelican(?)
 
 
 TOOLS USED
