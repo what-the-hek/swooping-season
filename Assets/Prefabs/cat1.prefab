@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4486370020430900195}
   m_Layer: 0
   m_Name: cat1
-  m_TagString: Untagged
+  m_TagString: cat1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,7 +276,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 996b4006fddf7534dbdab623d344ec89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wasCollected: 0
-  hitCount: 0
-  totalBoostHits: 0
-  trophy: {fileID: 0}

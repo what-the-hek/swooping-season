@@ -40,7 +40,7 @@ public class MoveBoostScript : MonoBehaviour
         if (hitCount > totalBoostHits)
         {
             totalBoostHits = hitCount;
-            Debug.Log("total boosts consumed: " + totalBoostHits);
+            // Debug.Log("total boosts consumed: " + totalBoostHits);
         }
     }
 }

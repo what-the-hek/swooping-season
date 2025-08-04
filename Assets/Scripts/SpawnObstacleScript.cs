@@ -46,9 +46,9 @@ public class SpawnObstacleScript : MonoBehaviour
         while (true)
         {
             leftCarSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
-            Debug.Log("------------------------------------------------");
-            Debug.Log("leftCarSpawnInterval: " + leftCarSpawnInterval);
-            Debug.Log("------------------------------------------------");
+            // Debug.Log("------------------------------------------------");
+            // Debug.Log("leftCarSpawnInterval: " + leftCarSpawnInterval);
+            // Debug.Log("------------------------------------------------");
 
             GameObject prefabToSpawn;
             Vector3 spawnPosition;
@@ -66,9 +66,9 @@ public class SpawnObstacleScript : MonoBehaviour
         while (true)
         {
             rightCarSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
-            Debug.Log("------------------------------------------------");
-            Debug.Log("rightCarSpawnInterval: " + rightCarSpawnInterval);
-            Debug.Log("------------------------------------------------");
+            // Debug.Log("------------------------------------------------");
+            // Debug.Log("rightCarSpawnInterval: " + rightCarSpawnInterval);
+            // Debug.Log("------------------------------------------------");
 
             GameObject prefabToSpawn;
             Vector3 spawnPosition;
@@ -86,9 +86,9 @@ public class SpawnObstacleScript : MonoBehaviour
         while (true)
         {
             sideObstacleSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
-            Debug.Log("------------------------------------------------" );
-            Debug.Log("sideObstacleSpawnInterval: " + sideObstacleSpawnInterval);
-            Debug.Log("------------------------------------------------" );
+            // Debug.Log("------------------------------------------------" );
+            // Debug.Log("sideObstacleSpawnInterval: " + sideObstacleSpawnInterval);
+            // Debug.Log("------------------------------------------------" );
 
             GameObject prefabToSpawn;
             Vector3 spawnPosition;

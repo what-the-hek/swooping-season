@@ -36,7 +36,7 @@ public class MagpieSkinsScript : MonoBehaviour
         if (currentIndex > 0)
         {
             currentIndex--;
-            Debug.Log("LEFT INDEX = " + currentIndex);
+            // Debug.Log("LEFT INDEX = " + currentIndex);
             ShowCurrentSkin();
             ShowCurrentSkinText();
         }
@@ -47,7 +47,7 @@ public class MagpieSkinsScript : MonoBehaviour
         if (currentIndex < indexLength - 1)
         {
             currentIndex++;
-            Debug.Log("RIGHT INDEX = " + currentIndex);
+            // Debug.Log("RIGHT INDEX = " + currentIndex);
             ShowCurrentSkin();
             ShowCurrentSkinText();
         }

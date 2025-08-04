@@ -27,7 +27,7 @@ public class AchievementsManager : MonoBehaviour
         {
             // TODO add some logic here about unlocking achievements etc...
             wasCollected = true;
-            Debug.Log("hit the cat!!!!!! ");
+            // Debug.Log("hit the cat!!!!!! ");
 
             hitCount++;
             CheckHits();
@@ -39,7 +39,7 @@ public class AchievementsManager : MonoBehaviour
         if (hitCount > totalBoostHits)
         {
             totalBoostHits = hitCount;
-            Debug.Log("total cats hit: " + totalBoostHits);
+            // Debug.Log("total cats hit: " + totalBoostHits);
         }
     }
 
