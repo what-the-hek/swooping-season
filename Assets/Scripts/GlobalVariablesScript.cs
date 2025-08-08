@@ -100,5 +100,8 @@ public class globalVariables
     public static bool cat1Unlocked = false;
     public static bool cat2Unlocked = false;
     public static bool cat3Unlocked = false;
+    public static bool dog1Unlocked = false;
+    public static bool dog2Unlocked = false;
+    public static bool dog3Unlocked = false;
 }
 

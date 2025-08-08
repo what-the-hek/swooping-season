@@ -57,6 +57,17 @@ public class ScorePageScript : MonoBehaviour
         lastLevelScore.text = string.Format("{0:00}:{1:00}", lMinutes, lSeconds);
         lastTargetHitsScore.text = $"{globalVariables.lastTargetHits}";
 
+        // achievements
+        Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        Debug.Log("cat1Unlocked? " + globalVariables.cat1Unlocked);
+        Debug.Log("cat2Unlocked? " + globalVariables.cat2Unlocked);
+        Debug.Log("cat3Unlocked? " + globalVariables.cat3Unlocked);
+        Debug.Log("dog1Unlocked? " + globalVariables.dog1Unlocked);
+        Debug.Log("dog2Unlocked? " + globalVariables.dog2Unlocked);
+        Debug.Log("dog3Unlocked? " + globalVariables.dog3Unlocked);
+        Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
+
         // random magpie facts
         factsList = new List<string>();
         factsList.Add("The Noongar name for magpie is Koorlbardi, also spelled Kulbardi, Koolbardi or Kooldjak. The Whadjuck Noongar people are from the Perth area of Western Australia.");

@@ -52,6 +52,9 @@ public static class GameDataManager
         globalVariables.cat1Unlocked = PlayerPrefs.GetInt("Cat1Unlocked", 0) == 1;
         globalVariables.cat2Unlocked = PlayerPrefs.GetInt("Cat2Unlocked", 0) == 1;
         globalVariables.cat3Unlocked = PlayerPrefs.GetInt("Cat3Unlocked", 0) == 1;
+        globalVariables.dog1Unlocked = PlayerPrefs.GetInt("Dog1Unlocked", 0) == 1;
+        globalVariables.dog2Unlocked = PlayerPrefs.GetInt("Dog2Unlocked", 0) == 1;
+        globalVariables.dog3Unlocked = PlayerPrefs.GetInt("Dog3Unlocked", 0) == 1;
     }
 
     public static void ResetGameData()

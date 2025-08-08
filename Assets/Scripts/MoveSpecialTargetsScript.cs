@@ -5,7 +5,7 @@ using TMPro;
 public class MoveSpecialTargetsScript : MonoBehaviour
 {
     public globalVariables globalVariables;
-    public bool wasCollected = false;
+    // public bool wasCollected = false;
     public void Update()
     {
         transform.position += Vector3.down * globalVariables.commonNpcMovementSpeed * Time.deltaTime;
@@ -22,9 +22,18 @@ public class MoveSpecialTargetsScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // TODO add some logic here about unlocking achievements etc...
-            globalVariables.cat1Unlocked = true;
-            wasCollected = true;
-            Debug.Log("hit the cat/dog!!!!!! ");
+            if (tag == "cat1")
+            {
+                globalVariables.cat1Unlocked = true;
+                // wasCollected = true;
+                Debug.Log("hit cat1!!!!!! ");
+            }
+            if (tag == "dog1")
+            {
+                globalVariables.dog1Unlocked = true;
+                // wasCollected = true;
+                Debug.Log("hit dog1!!!!!! ");
+            }
         }
     }
     // on collision
