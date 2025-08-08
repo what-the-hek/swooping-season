@@ -780,15 +780,35 @@ MonoBehaviour:
   - -9
   fixedYPosition: 5
   specialTargets:
-  - targetName: cat1
-    prefab: {fileID: 1984686997501948524, guid: ccf9f3e755f959d4399a487e39ca4d17, type: 3}
+  - targetName: dog1
+    prefab: {fileID: 1984686997501948524, guid: d3b5f8429e007ae41a3592a569e39170, type: 3}
     minSpawnInterval: 10
     maxSpawnInterval: 20
     hasSpawned: 0
-  - targetName: dog1
-    prefab: {fileID: 1984686997501948524, guid: d3b5f8429e007ae41a3592a569e39170, type: 3}
+  - targetName: cat1
+    prefab: {fileID: 1984686997501948524, guid: ccf9f3e755f959d4399a487e39ca4d17, type: 3}
     minSpawnInterval: 21
     maxSpawnInterval: 30
+    hasSpawned: 0
+  - targetName: dog2
+    prefab: {fileID: 1984686997501948524, guid: 60309b80c24b7d14595578c711b55455, type: 3}
+    minSpawnInterval: 31
+    maxSpawnInterval: 40
+    hasSpawned: 0
+  - targetName: cat2
+    prefab: {fileID: 1984686997501948524, guid: 501676a757c5acf46a4fe3f6c320cfe4, type: 3}
+    minSpawnInterval: 41
+    maxSpawnInterval: 60
+    hasSpawned: 0
+  - targetName: dog3
+    prefab: {fileID: 1984686997501948524, guid: 7e0fda763236a9f4ead4a347324155b8, type: 3}
+    minSpawnInterval: 61
+    maxSpawnInterval: 80
+    hasSpawned: 0
+  - targetName: cat3
+    prefab: {fileID: 1984686997501948524, guid: 35bb8713586e6cb47a02d390dcaa9a17, type: 3}
+    minSpawnInterval: 81
+    maxSpawnInterval: 100
     hasSpawned: 0
 --- !u!1 &454489101
 GameObject:

@@ -15,6 +15,10 @@ TagManager:
   - obstacle-building
   - cat1
   - dog1
+  - cat2
+  - cat3
+  - dog2
+  - dog3
   layers:
   - Default
   - TransparentFX

@@ -28,11 +28,35 @@ public class MoveSpecialTargetsScript : MonoBehaviour
                 // wasCollected = true;
                 Debug.Log("hit cat1!!!!!! ");
             }
+            if (tag == "cat2")
+            {
+                globalVariables.cat2Unlocked = true;
+                // wasCollected = true;
+                Debug.Log("hit cat2!!!!!! ");
+            }
+            if (tag == "cat3")
+            {
+                globalVariables.cat3Unlocked = true;
+                // wasCollected = true;
+                Debug.Log("hit cat3!!!!!! ");
+            }
             if (tag == "dog1")
             {
                 globalVariables.dog1Unlocked = true;
                 // wasCollected = true;
                 Debug.Log("hit dog1!!!!!! ");
+            }
+            if (tag == "dog2")
+            {
+                globalVariables.dog2Unlocked = true;
+                // wasCollected = true;
+                Debug.Log("hit dog2!!!!!! ");
+            }
+            if (tag == "dog3")
+            {
+                globalVariables.dog3Unlocked = true;
+                // wasCollected = true;
+                Debug.Log("hit dog3!!!!!! ");
             }
         }
     }

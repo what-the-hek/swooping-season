@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7928535327792491744}
   - component: {fileID: 4486370020430900195}
   m_Layer: 0
-  m_Name: dog1
-  m_TagString: dog1
+  m_Name: dog3
+  m_TagString: dog3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -3339808209795534703, guid: d47f943d791cea2448f27dcf1ac34fdd, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.18969822, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
