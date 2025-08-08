@@ -2959,6 +2959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1608120612}
+  achievementsManager: {fileID: 153970781}
   sceneName: Scores
   gameOverBlob: {fileID: 1329840741}
 --- !u!4 &1237624086

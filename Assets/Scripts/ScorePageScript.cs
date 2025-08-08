@@ -58,13 +58,28 @@ public class ScorePageScript : MonoBehaviour
         lastTargetHitsScore.text = $"{globalVariables.lastTargetHits}";
 
         // achievements
-        Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        Debug.Log("~~~~~~~~~~~~~~~~~~~~~Special Targets~~~~~~~~~~~~~~~~~~~~~~~~");
         Debug.Log("cat1Unlocked? " + globalVariables.cat1Unlocked);
         Debug.Log("cat2Unlocked? " + globalVariables.cat2Unlocked);
         Debug.Log("cat3Unlocked? " + globalVariables.cat3Unlocked);
         Debug.Log("dog1Unlocked? " + globalVariables.dog1Unlocked);
         Debug.Log("dog2Unlocked? " + globalVariables.dog2Unlocked);
         Debug.Log("dog3Unlocked? " + globalVariables.dog3Unlocked);
+        Debug.Log("~~~~~~~~~~~~~~~~~~~~~Other Achievements~~~~~~~~~~~~~~~~~~~~~~~~");
+        Debug.Log("allBoostsUnlocked? " + globalVariables.allBoostsUnlocked);
+        Debug.Log("noBoostsUnlocked? " + globalVariables.noBoostsUnlocked);
+        Debug.Log("noMissesUnlocked? " + globalVariables.noMissesUnlocked);
+        Debug.Log("allMissesUnlocked? " + globalVariables.allMissesUnlocked);
+        Debug.Log("targetHitsUnlocked? " + globalVariables.targetHitsUnlocked);
+        Debug.Log("lowTimeUnlocked? " + globalVariables.lowTimeUnlocked);
+        Debug.Log("highTimeUnlocked? " + globalVariables.highTimeUnlocked);
+        Debug.Log("~~~~~~~~~~~~~~~~~~~~~Achievement Skins~~~~~~~~~~~~~~~~~~~~~~~~");
+        Debug.Log("catSkinUnlocked? " + globalVariables.catSkinUnlocked);
+        Debug.Log("dogSkinUnlocked? " + globalVariables.dogSkinUnlocked);
+        Debug.Log("animalsSkinUnlocked? " + globalVariables.animalsSkinUnlocked);
+        Debug.Log("boostSkinUnlocked? " + globalVariables.boostSkinUnlocked);
+        Debug.Log("npcSkinUnlocked? " + globalVariables.npcSkinUnlocked);
+        Debug.Log("timeSkinUnlocked? " + globalVariables.timeSkinUnlocked);
         Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
 

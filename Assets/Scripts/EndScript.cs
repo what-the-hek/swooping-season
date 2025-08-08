@@ -9,6 +9,7 @@ public class EndScript : MonoBehaviour
 {
     public globalVariables globalVariables;
     public GameManagerScript gameManager;
+    public AchievementsManagerScript achievementsManager;
     
     public string sceneName = "";
     public GameObject gameOverBlob;
@@ -16,9 +17,6 @@ public class EndScript : MonoBehaviour
     public void EndGame()
     {
         globalVariables.playerMovementSpeed = 0f;
-        gameOverBlob.SetActive(true);
-
-        // TODO change highScore global variable to a PlayerPrefs.int - use PlayerPrefs.Save()
 
         // final score
         globalVariables.finalScore = globalVariables.totalScore + globalVariables.missedScore;
@@ -31,44 +29,12 @@ public class EndScript : MonoBehaviour
         globalVariables.lastTargetHits = globalVariables.targetHits;
         globalVariables.lastTime = gameManager.timer;
 
-        // update top scores 
-        if (globalVariables.finalScore > globalVariables.highScore)
-        {
-            globalVariables.highScore = globalVariables.finalScore;
-            globalVariables.highLevel = globalVariables.currentLevel;
-            globalVariables.highMissedScore = globalVariables.missedScore;
-            globalVariables.highTotalScore = globalVariables.totalScore;
-            globalVariables.highTargetHits = globalVariables.targetHits;
-            globalVariables.highTime = globalVariables.lastTime;
-        }
-        // if (globalVariables.currentLevel > globalVariables.highLevel)
-        // {
-        //     globalVariables.highLevel = globalVariables.currentLevel;
-        // }
-        // if (globalVariables.missedScore < globalVariables.highMissedScore)
-        // {
-        //     globalVariables.highMissedScore = globalVariables.missedScore;
-        // }
-        // if (globalVariables.totalScore > globalVariables.highTotalScore)
-        // {
-        //     globalVariables.highTotalScore = globalVariables.totalScore;
-        // }
-        // if (globalVariables.targetHits > globalVariables.highTargetHits)
-        // {
-        //     globalVariables.highTargetHits = globalVariables.targetHits;
-        // }
-        // if (globalVariables.lastTime > globalVariables.highTime)
-        // {
-        //     globalVariables.highTime = globalVariables.lastTime;
-        // }
-        if (globalVariables.finalScore < -10)
-        {
-            if (globalVariables.finalScore < globalVariables.lowestScore)
-            {
-                globalVariables.lowestScore = globalVariables.finalScore;
-            }
-        }
+        gameOverBlob.SetActive(true);
 
+        achievementsManager.UpdateAchievements();
+        Debug.Log("--- Updating achievements data ---");
+        achievementsManager.UpdateTopScores();
+        Debug.Log("--- Updating top score data ---");
         GameDataManager.SaveGameData();
         Debug.Log("--- Saving game data ---");
 
@@ -82,13 +48,3 @@ public class EndScript : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 }
-
-// player prefs example
-// if (totalScore > PlayerPrefs.GetInt("HighScore", 0))
-// {
-//     PlayerPrefs.SetInt("HighScore", totalScore);
-//     PlayerPrefs.Save();
-// }
-
-// int highScore = PlayerPrefs.GetInt("HighScore", 0);
-// highScoreText.text = "High Score: " + highScore;

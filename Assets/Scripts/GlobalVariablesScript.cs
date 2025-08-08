@@ -96,12 +96,29 @@ public class globalVariables
     public static float uncommonBoostSpawnInterval;
     public static float resetUncommonBoostSpawnInterval = 41f;
 
-    // achievements
+    // special target achievements
     public static bool cat1Unlocked = false;
     public static bool cat2Unlocked = false;
     public static bool cat3Unlocked = false;
     public static bool dog1Unlocked = false;
     public static bool dog2Unlocked = false;
     public static bool dog3Unlocked = false;
+
+    // other achievements
+    public static bool allBoostsUnlocked = false;
+    public static bool noBoostsUnlocked = false;
+    public static bool noMissesUnlocked = false;
+    public static bool allMissesUnlocked = false;
+    public static bool targetHitsUnlocked = false;
+    public static bool lowTimeUnlocked = false;
+    public static bool highTimeUnlocked = false;
+
+    // achievement skins
+    public static bool catSkinUnlocked = false;
+    public static bool dogSkinUnlocked = false;
+    public static bool animalsSkinUnlocked = false;
+    public static bool boostSkinUnlocked = false;
+    public static bool npcSkinUnlocked = false;
+    public static bool timeSkinUnlocked = false;
 }
 
