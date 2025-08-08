@@ -4,6 +4,8 @@ using TMPro;
 
 public class MoveSpecialTargetsScript : MonoBehaviour
 {
+    public globalVariables globalVariables;
+    public bool wasCollected = false;
     public void Update()
     {
         transform.position += Vector3.down * globalVariables.commonNpcMovementSpeed * Time.deltaTime;
@@ -14,8 +16,19 @@ public class MoveSpecialTargetsScript : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.CompareTag("Player"))
+        {
+            // TODO add some logic here about unlocking achievements etc...
+            globalVariables.cat1Unlocked = true;
+            wasCollected = true;
+            Debug.Log("hit the cat!!!!!! ");
+        }
+    }
     // on collision
     // if tag == cat1
-        // global.cat1 = true
-        // cat1 = true
+    // global.cat1 = true
+    // cat1 = true
 }

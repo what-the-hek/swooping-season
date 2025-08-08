@@ -418,6 +418,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0c8421abc629c4c8022fd0daa69d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wasCollected: 0
+  hitCount: 0
+  totalBoostHits: 0
+  gotCat1: 0
+  gotCat2: 0
+  gotCat3: 0
 --- !u!1 &273657649
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +783,13 @@ MonoBehaviour:
   fixedYPosition: 5
   prefabs:
   - {fileID: 1984686997501948524, guid: ccf9f3e755f959d4399a487e39ca4d17, type: 3}
+  cat1Spawned: 0
+  specialTargets:
+  - targetName: cat1
+    prefab: {fileID: 1984686997501948524, guid: ccf9f3e755f959d4399a487e39ca4d17, type: 3}
+    minSpawnInterval: 4
+    maxSpawnInterval: 4.5
+    hasSpawned: 0
 --- !u!1 &454489101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,8 +2833,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endGame: {fileID: 1237624085}
   healthBar: {fileID: 285091624}
-  totalScore: {fileID: 983341664}
   missedScore: {fileID: 2133815508}
+  totalScore: {fileID: 983341664}
 --- !u!60 &1118535895
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ public class CollisionDetectionScript : MonoBehaviour
                 AddHealth();
                 ColorUtility.TryParseHtmlString("#5F9EA0", out blue);
                 // TODO change TriggerBlink back to coroutine, but add a cooldown if statement so it doesn't interrupt existing coroutine
-                TriggerBlink(blue, 0.1f);
+                // TriggerBlink(blue, 0.1f);
             }
             if (other.CompareTag("commonNPC"))
             {
@@ -57,7 +57,7 @@ public class CollisionDetectionScript : MonoBehaviour
             else if (other.CompareTag("npc-front") || other.CompareTag("npc-back") || other.CompareTag("cat1"))
             {
                 AddScore();
-                StartCoroutine(PlayerShrink(new Vector3(0.5f, 0.5f, 1f), 0.15f));
+                // StartCoroutine(PlayerShrink(new Vector3(0.5f, 0.5f, 1f), 0.15f));
             }
         }
 
@@ -112,38 +112,38 @@ public class CollisionDetectionScript : MonoBehaviour
         healthBar.UpdateEggs();
     }
 
-    public void TriggerBlink(Color newColor, float duration)
-    {
-        if (blinkCoroutine == null)
-        {
-            blinkCoroutine = StartCoroutine(PlayerBlink(newColor, duration));
-            Debug.Log("blink coroutine is not null");
-        }
-        StopCoroutine(blinkCoroutine);
-        Debug.Log("coroutine already going!!!");
-
-        // else if (blinkCoroutine != null)
-        // {
-        //     Debug.Log("coroutine already going!!!");
-        // }
-        // Debug.Log("start blink coroutine");
-        // blinkCoroutine = StartCoroutine(PlayerBlink(newColor, duration));
-    }
-
     // public void TriggerBlink(Color newColor, float duration)
     // {
-    //     if (blinkCoroutine != null)
+    //     if (blinkCoroutine == null)
     //     {
-    //         StopCoroutine(blinkCoroutine);
+    //         blinkCoroutine = StartCoroutine(PlayerBlink(newColor, duration));
     //         Debug.Log("blink coroutine is not null");
     //     }
-    //     Debug.Log("start blink coroutine");
-    //     blinkCoroutine = StartCoroutine(PlayerBlink(newColor, duration));
+    //     StopCoroutine(blinkCoroutine);
+    //     Debug.Log("coroutine already going!!!");
+
+    //     // else if (blinkCoroutine != null)
+    //     // {
+    //     //     Debug.Log("coroutine already going!!!");
+    //     // }
+    //     // Debug.Log("start blink coroutine");
+    //     // blinkCoroutine = StartCoroutine(PlayerBlink(newColor, duration));
     // }
+
+    public void TriggerBlink(Color newColor, float duration)
+    {
+        if (blinkCoroutine != null)
+        {
+            StopCoroutine(blinkCoroutine);
+            // Debug.Log("blink coroutine is not null");
+        }
+        // Debug.Log("start blink coroutine");
+        blinkCoroutine = StartCoroutine(PlayerBlink(newColor, duration));
+    }
 
     IEnumerator PlayerBlink(Color newColor, float duration)
     {
-        Debug.Log("Player blink!!!!!!!!!!!");
+        // Debug.Log("Player blink!!!!!!!!!!!");
         Color original = spriteRenderer.color;
         spriteRenderer.color = newColor;
         yield return new WaitForSeconds(duration);
