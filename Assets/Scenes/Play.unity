@@ -1526,6 +1526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  endGame: {fileID: 1237624085}
   delaySpawn: 30
   spawnXPositions:
   - 7
@@ -1547,9 +1548,8 @@ MonoBehaviour:
   prefabs:
   - {fileID: 4182858731470295240, guid: 7a9b26ccd30d9484b89fa6c0b54ec931, type: 3}
   - {fileID: 4182858731470295240, guid: c841fadb6b132a64799184a3a6d338f9, type: 3}
-  boostSpawnInterval: 0
-  minSpawnInterval: 6
-  maxSpawnInterval: 6.5
+  minSpawnInterval: 8
+  maxSpawnInterval: 12
 --- !u!4 &737631474
 Transform:
   m_ObjectHideFlags: 0
@@ -2982,6 +2982,7 @@ MonoBehaviour:
   achievementsManager: {fileID: 153970781}
   sceneName: Scores
   gameOverBlob: {fileID: 1329840741}
+  gameOver: 0
 --- !u!4 &1237624086
 Transform:
   m_ObjectHideFlags: 0

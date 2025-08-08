@@ -5,15 +5,16 @@ public class SpawnBoostScript : MonoBehaviour
 {
     public globalVariables globalVariables;
     public GameManagerScript gameManager;
+    public EndScript endGame;
     public float delaySpawn = 20f;
     public float[] spawnXPositions;
     public float fixedYPosition;
 
     // create an array of random prefabs to spawn
     public GameObject[] prefabs;
-    public float boostSpawnInterval;
-    public float minSpawnInterval = 7f;
-    public float maxSpawnInterval = 7.5f;
+    private float boostSpawnInterval = 8f;
+    public float minSpawnInterval;
+    public float maxSpawnInterval;
 
 
     void Start()
@@ -33,7 +34,8 @@ public class SpawnBoostScript : MonoBehaviour
         // yield return new WaitForSeconds(delaySpawn); //why do I need this? does this stop the npc spawn bug?
         while (true)
         {
-            if (globalVariables.healthScore < 5)
+            yield return new WaitForSeconds(boostSpawnInterval);
+            if (globalVariables.healthScore < 5 && !endGame.gameOver)
             {
                 boostSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
 
@@ -42,8 +44,9 @@ public class SpawnBoostScript : MonoBehaviour
 
                 int prefabIndex = Random.Range(0, prefabs.Length);
                 Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
+                globalVariables.boostsSpawned++;
+                Debug.Log("BOOSTS SPAWNED: " + globalVariables.boostsSpawned);
             }
-            yield return new WaitForSeconds(boostSpawnInterval);
         }
     }
 }

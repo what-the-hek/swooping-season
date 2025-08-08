@@ -3,13 +3,13 @@ using UnityEngine;
 public class MoveBoostScript : MonoBehaviour
 {
     public globalVariables globalVariables;
-    public int hitCount;
-    public int totalBoostHits;
+    // public int hitCount;
+    // public int totalBoostHits;
     public void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");
-        hitCount = 0;
-        totalBoostHits = 0;
+        // hitCount = 0;
+        // totalBoostHits = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -17,15 +17,16 @@ public class MoveBoostScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             gameObject.SetActive(false);
-            hitCount++;
-            CheckHits();
+            globalVariables.boostsConsumed++;
+            Debug.Log("BOOSTS CONSUMED: " + globalVariables.boostsConsumed);
+
+            // CheckHits();
         }
     }
     void Update()
     {
         if (tag == "boost")
         {
-            // move prefab down the screen
             transform.position += Vector3.down * globalVariables.commonBoostMovementSpeed * Time.deltaTime;
         }
 
@@ -35,12 +36,12 @@ public class MoveBoostScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void CheckHits()
-    {
-        if (hitCount > totalBoostHits)
-        {
-            totalBoostHits = hitCount;
-            // Debug.Log("total boosts consumed: " + totalBoostHits);
-        }
-    }
+    // public void CheckHits()
+    // {
+    //     if (hitCount > totalBoostHits)
+    //     {
+    //         totalBoostHits = hitCount;
+    //         // Debug.Log("total boosts consumed: " + totalBoostHits);
+    //     }
+    // }
 }

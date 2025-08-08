@@ -13,10 +13,12 @@ public class EndScript : MonoBehaviour
     
     public string sceneName = "";
     public GameObject gameOverBlob;
+    public bool gameOver = false;
 
     public void EndGame()
     {
         globalVariables.playerMovementSpeed = 0f;
+        gameOver = true;
 
         // final score
         globalVariables.finalScore = globalVariables.totalScore + globalVariables.missedScore;

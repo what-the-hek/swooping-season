@@ -63,10 +63,16 @@ public class AchievementsManagerScript : MonoBehaviour
         }
 
         // eat all boosts in 1 game
-        // unlock allBoostsUnlocked in the boosts script
+        if (globalVariables.boostsConsumed == globalVariables.boostsSpawned)
+        {
+            globalVariables.allBoostsUnlocked = true;
+        }
 
         // eat no boosts in 1 game
-        // unlock noBoostsUnlocked in the boosts script
+        if (globalVariables.boostsConsumed == 0)
+        {
+            globalVariables.noBoostsUnlocked = true;
+        }
 
         // both boost trophies *skin
         if (globalVariables.allBoostsUnlocked && globalVariables.noBoostsUnlocked)

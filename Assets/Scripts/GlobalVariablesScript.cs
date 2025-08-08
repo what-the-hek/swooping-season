@@ -30,6 +30,10 @@ public class globalVariables
     public static int resetMissedScore = 0;
     public static int targetHits;
     public static int resetTargetHits = 0;
+    public static int boostsSpawned;
+    public static int resetboostsSpawned = 0;
+    public static int boostsConsumed;
+    public static int resetboostsConsumed = 0;
 
     // other
     public static int returnToStartTimer = 6;
