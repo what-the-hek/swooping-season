@@ -14,6 +14,7 @@ TagManager:
   - npc-back
   - obstacle-building
   - cat1
+  - dog1
   layers:
   - Default
   - TransparentFX

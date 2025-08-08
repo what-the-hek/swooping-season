@@ -774,21 +774,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1608120612}
-  specialTargetSpawnInterval: 0
-  minSpawnInterval: 4
-  maxSpawnInterval: 4.5
+  spawnDelay: 0
   spawnXPositions:
   - -6
   - -9
   fixedYPosition: 5
-  prefabs:
-  - {fileID: 1984686997501948524, guid: ccf9f3e755f959d4399a487e39ca4d17, type: 3}
-  cat1Spawned: 0
   specialTargets:
   - targetName: cat1
     prefab: {fileID: 1984686997501948524, guid: ccf9f3e755f959d4399a487e39ca4d17, type: 3}
-    minSpawnInterval: 4
-    maxSpawnInterval: 4.5
+    minSpawnInterval: 10
+    maxSpawnInterval: 20
+    hasSpawned: 0
+  - targetName: dog1
+    prefab: {fileID: 1984686997501948524, guid: d3b5f8429e007ae41a3592a569e39170, type: 3}
+    minSpawnInterval: 21
+    maxSpawnInterval: 30
     hasSpawned: 0
 --- !u!1 &454489101
 GameObject:

@@ -24,7 +24,7 @@ public class MoveSpecialTargetsScript : MonoBehaviour
             // TODO add some logic here about unlocking achievements etc...
             globalVariables.cat1Unlocked = true;
             wasCollected = true;
-            Debug.Log("hit the cat!!!!!! ");
+            Debug.Log("hit the cat/dog!!!!!! ");
         }
     }
     // on collision
