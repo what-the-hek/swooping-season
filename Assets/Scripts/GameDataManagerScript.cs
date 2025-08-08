@@ -25,6 +25,9 @@ public static class GameDataManager
         PlayerPrefs.SetInt("Cat1Unlocked", globalVariables.cat1Unlocked ? 1 : 0);
         PlayerPrefs.SetInt("Cat2Unlocked", globalVariables.cat2Unlocked ? 1 : 0);
         PlayerPrefs.SetInt("Cat3Unlocked", globalVariables.cat3Unlocked ? 1 : 0);
+        PlayerPrefs.SetInt("Dog1Unlocked", globalVariables.dog1Unlocked ? 1 : 0);
+        PlayerPrefs.SetInt("Dog2Unlocked", globalVariables.dog2Unlocked ? 1 : 0);
+        PlayerPrefs.SetInt("Dog3Unlocked", globalVariables.dog3Unlocked ? 1 : 0);
 
         PlayerPrefs.Save();
     }
