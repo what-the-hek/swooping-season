@@ -20,6 +20,13 @@ public class CollisionDetectionScript : MonoBehaviour
     private Color orange;
     private Color blue;
 
+    public void Initialize(TextMeshProUGUI missedScoreUI, TextMeshProUGUI totalScoreUI, HealthBarScript healthBarScript, EndScript endScript)
+    {
+        missedScore = missedScoreUI;
+        totalScore = totalScoreUI;
+        healthBar = healthBarScript;
+        endGame = endScript;
+    }
 
     public void Start()
     {
