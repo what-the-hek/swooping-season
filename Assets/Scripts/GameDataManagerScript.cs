@@ -94,6 +94,13 @@ public static class GameDataManager
         globalVariables.timeSkinUnlocked = PlayerPrefs.GetInt("TimeSkinUnlocked", 0) == 1;
     }
 
+    public static void SaveSkinChoice()
+    {
+        PlayerPrefs.SetInt("SelectedMagpieSkin", globalVariables.magpieSkinsIndex);
+        PlayerPrefs.Save();
+        Debug.Log("magpieSkins.currentIndex: " + globalVariables.magpieSkinsIndex);
+    }
+
     public static void ResetGameData()
     {
         PlayerPrefs.DeleteAll();

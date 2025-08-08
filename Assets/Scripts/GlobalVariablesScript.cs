@@ -37,6 +37,7 @@ public class globalVariables
 
     // other
     public static int returnToStartTimer = 6;
+    public static int magpieSkinsIndex = 0;
 
     // TODO track the number of objects currently on screen, for reducing the number of rare items
     public static int commonBoostAvailable;

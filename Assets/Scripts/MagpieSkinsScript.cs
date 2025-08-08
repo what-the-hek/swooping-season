@@ -14,7 +14,7 @@ public class MagpieSkinsScript : MonoBehaviour
     public TextMeshProUGUI magpieSkinText;
     public string[] MagpieSkinList;
 
-    private int currentIndex = 0;
+    public int currentIndex = 0;
     private int indexLength;
 
     void Start()

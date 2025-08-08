@@ -9,6 +9,7 @@ using TMPro;
 public class StartScript : MonoBehaviour
 {
 	public globalVariables globalVariables;
+	public MagpieSkinsScript magpieSkins;
 	public string playScene = "";
 	public string scoresScene = "";
 	public string aboutScene = "";
@@ -46,6 +47,8 @@ public class StartScript : MonoBehaviour
 
 	void TaskOnClickPlay()
 	{
+		globalVariables.magpieSkinsIndex = magpieSkins.currentIndex;
+		GameDataManager.SaveSkinChoice();
 		SceneManager.LoadScene(playScene);
 		Debug.Log("You have clicked Play!");
 	}
