@@ -69,6 +69,9 @@ public class EndScript : MonoBehaviour
             }
         }
 
+        GameDataManager.SaveGameData();
+        Debug.Log("--- Saving game data ---");
+
         StartCoroutine(returnToStart());
     }
 

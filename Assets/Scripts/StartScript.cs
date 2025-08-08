@@ -16,10 +16,13 @@ public class StartScript : MonoBehaviour
 	public Button exitButton;
 	public Button scoresButton;
 	public Button aboutButton;
+	public Button deleteButton;
 
 	void Start()
 	{
-		Debug.Log("GAME START");
+		GameDataManager.LoadGameData();
+		Debug.Log("--- Loading game data ---");
+		// Debug.Log("GAME START");
 
 		Button playBtn = playButton.GetComponent<Button>();
 		playBtn.onClick.AddListener(TaskOnClickPlay);
@@ -32,6 +35,10 @@ public class StartScript : MonoBehaviour
 
 		Button aboutBtn = aboutButton.GetComponent<Button>();
 		aboutBtn.onClick.AddListener(TaskOnClickAbout);
+
+		// dev debug delete scores
+		Button deleteBtn = deleteButton.GetComponent<Button>();
+		deleteBtn.onClick.AddListener(TaskOnClickDelete);
 
 		// RESET ALL MOVEMENT SPEEDS & MILESTONES
 		ResetVariables();
@@ -59,6 +66,12 @@ public class StartScript : MonoBehaviour
 	{
 		SceneManager.LoadScene(aboutScene);
 		Debug.Log("You have clicked about!");
+	}
+
+	void TaskOnClickDelete()
+	{
+		GameDataManager.ResetGameData();
+		Debug.Log("!!!! DELETING GAME DATA !!!!");
 	}
 
 	private void ResetVariables()
