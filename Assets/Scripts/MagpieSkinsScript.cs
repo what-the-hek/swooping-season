@@ -9,12 +9,14 @@ public class MagpieSkinsScript : MonoBehaviour
 {
     public globalVariables globalVariables;
     public Image[] magpieSkins;
+    private Color[] originalColors;
+    public string[] MagpieSkinList;
 
     public Button leftButton;
     public Button rightButton;
 
     public TextMeshProUGUI magpieSkinText;
-    public string[] MagpieSkinList;
+    
 
     public int currentIndex = 0;
     private int indexLength;
@@ -22,12 +24,19 @@ public class MagpieSkinsScript : MonoBehaviour
     // check if skin unlocked
     // list of global variables for unlocked skins
     List<bool> unlockedSkinsList;
+    Color grey;
 
     void Start()
     {
         Debug.Log("catSkinUnlocked SKINS = " + globalVariables.catSkinUnlocked);
 		Debug.Log("dogSkinUnlocked SKINS = " + globalVariables.dogSkinUnlocked);
-        
+
+        originalColors = new Color[magpieSkins.Length];
+        for (int index = 0; index < magpieSkins.Length; index++)
+        {
+            originalColors[index] = magpieSkins[index].color;
+        }
+
         unlockedSkinsList = new List<bool>();
         unlockedSkinsList.Add(true);
         unlockedSkinsList.Add(globalVariables.catSkinUnlocked);
@@ -75,43 +84,38 @@ public class MagpieSkinsScript : MonoBehaviour
     {
         for (int magpieIndex = 0; magpieIndex < magpieSkins.Length; magpieIndex++)
         {
+            Color magpieColor = originalColors[magpieIndex];
             magpieSkins[magpieIndex].gameObject.SetActive(magpieIndex == currentIndex);
-            // create unlocked skins index to check if unlocked and match to magpie index
             if (!unlockedSkinsList[currentIndex])
             {
+                ColorUtility.TryParseHtmlString("#7A7668", out grey);
+                magpieSkins[magpieIndex].color = grey;
                 globalVariables.magpieSkinsIndex = 0;
                 Debug.Log("!!!! SKIN IS LOCKED !!!!! " + currentIndex);
             }
             else
             {
                 globalVariables.magpieSkinsIndex = currentIndex;
+                magpieSkins[magpieIndex].color = magpieColor;
                 Debug.Log("!!!! SKIN IS UNLOCKED !!!!! " + currentIndex);
             }
-            // for (int unlockedSkinsIndex = 0; unlockedSkinsIndex < unlockedSkinsList.Count; unlockedSkinsIndex++)
-            // {
-            //     if (unlockedSkinsList[unlockedSkinsIndex] == false)
-            //     {
-            //         globalVariables.magpieSkinsIndex = 0;
-            //         Debug.Log("!!!! SKIN IS LOCKED !!!!! " + unlockedSkinsList[unlockedSkinsIndex]);
-            //     }
-            //     else
-            //     {
-            //         globalVariables.magpieSkinsIndex = currentIndex;
-            //         Debug.Log("!!!! SKIN IS UNLOCKED !!!!! " + globalVariables.magpieSkinsIndex);
-            //     }
-            // }
         }
-
         leftButton.interactable = currentIndex > 0;
         rightButton.interactable = currentIndex < magpieSkins.Length - 1;
-
     }
 
     private void ShowCurrentSkinText()
     {
         if (currentIndex >= 0 && currentIndex < MagpieSkinList.Length)
         {
-            magpieSkinText.text = MagpieSkinList[currentIndex];
+            if (!unlockedSkinsList[currentIndex])
+            {
+                magpieSkinText.text = "Locked";
+            }
+            else
+            {
+                magpieSkinText.text = MagpieSkinList[currentIndex];
+            }
         }
     }
 
