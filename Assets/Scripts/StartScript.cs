@@ -21,8 +21,14 @@ public class StartScript : MonoBehaviour
 
 	void Start()
 	{
+		Debug.Log("catSkinUnlocked START 1 = " + globalVariables.catSkinUnlocked);
+		Debug.Log("dogSkinUnlocked START 1 = " + globalVariables.dogSkinUnlocked);
+
 		GameDataManager.LoadGameData();
 		Debug.Log("--- Loading game data ---");
+
+		Debug.Log("catSkinUnlocked START 2 = " + globalVariables.catSkinUnlocked);
+		Debug.Log("dogSkinUnlocked START 2 = " + globalVariables.dogSkinUnlocked);
 		// Debug.Log("GAME START");
 
 		Button playBtn = playButton.GetComponent<Button>();
@@ -47,8 +53,8 @@ public class StartScript : MonoBehaviour
 
 	void TaskOnClickPlay()
 	{
-		globalVariables.magpieSkinsIndex = magpieSkins.currentIndex;
 		GameDataManager.SaveSkinChoice();
+
 		SceneManager.LoadScene(playScene);
 		Debug.Log("You have clicked Play!");
 	}
