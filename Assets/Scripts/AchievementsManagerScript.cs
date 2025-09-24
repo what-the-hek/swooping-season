@@ -33,6 +33,7 @@ public class AchievementsManagerScript : MonoBehaviour
             globalVariables.highTotalScore = globalVariables.totalScore;
             globalVariables.highTargetHits = globalVariables.targetHits;
             globalVariables.highTime = globalVariables.lastTime;
+            globalVariables.highScoreName = globalVariables.lastGameName;
         }
 
         if (globalVariables.finalScore < -10)

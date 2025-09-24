@@ -4,6 +4,10 @@ public static class GameDataManager
 {
     public static void SaveGameData()
     {
+        // player name
+        PlayerPrefs.SetString("LastGameName", globalVariables.lastGameName);
+        PlayerPrefs.SetString("HighScoreName", globalVariables.highScoreName);
+
         // top scores
         PlayerPrefs.SetInt("HighScore", globalVariables.highScore);
         PlayerPrefs.SetInt("HighLevel", globalVariables.highLevel);
@@ -51,6 +55,10 @@ public static class GameDataManager
 
     public static void LoadGameData()
     {
+        // player name
+        globalVariables.lastGameName = PlayerPrefs.GetString("LastGameName", "");
+        globalVariables.highScoreName = PlayerPrefs.GetString("HighScoreName", "");
+
         // top scores
         globalVariables.highScore = PlayerPrefs.GetInt("HighScore", 0);
         globalVariables.highLevel = PlayerPrefs.GetInt("HighLevel", 0);

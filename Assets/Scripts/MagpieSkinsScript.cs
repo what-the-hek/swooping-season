@@ -88,7 +88,8 @@ public class MagpieSkinsScript : MonoBehaviour
             magpieSkins[magpieIndex].gameObject.SetActive(magpieIndex == currentIndex);
             if (!unlockedSkinsList[currentIndex])
             {
-                ColorUtility.TryParseHtmlString("#7A7668", out grey);
+                // ColorUtility.TryParseHtmlString("#7A7668", out grey);
+                ColorUtility.TryParseHtmlString("#A4A098", out grey);
                 magpieSkins[magpieIndex].color = grey;
                 globalVariables.magpieSkinsIndex = 0;
                 Debug.Log("!!!! SKIN IS LOCKED !!!!! " + currentIndex);

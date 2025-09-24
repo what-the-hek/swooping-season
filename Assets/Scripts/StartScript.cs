@@ -54,7 +54,6 @@ public class StartScript : MonoBehaviour
 	void TaskOnClickPlay()
 	{
 		GameDataManager.SaveSkinChoice();
-
 		SceneManager.LoadScene(playScene);
 		Debug.Log("You have clicked Play!");
 	}
