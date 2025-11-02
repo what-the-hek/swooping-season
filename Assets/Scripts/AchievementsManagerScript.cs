@@ -24,6 +24,8 @@ public class AchievementsManagerScript : MonoBehaviour
 
     public void UpdateTopScores()
     {
+        Debug.Log("UPDATE TOP SCORE");
+        Debug.Log("GB last game name - update top score:" + globalVariables.lastGameName);
         // update top scores 
         if (globalVariables.finalScore > globalVariables.highScore)
         {
@@ -34,6 +36,8 @@ public class AchievementsManagerScript : MonoBehaviour
             globalVariables.highTargetHits = globalVariables.targetHits;
             globalVariables.highTime = globalVariables.lastTime;
             globalVariables.highScoreName = globalVariables.lastGameName;
+            Debug.Log("GB high score name - update top score:" + globalVariables.highScoreName);
+            // Debug.Log("UPDATE TOP SCORES!!!!!!! high score name: " + globalVariables.highScoreName);
         }
 
         if (globalVariables.finalScore < -10)
@@ -47,6 +51,7 @@ public class AchievementsManagerScript : MonoBehaviour
 
     public void UpdateAchievements()
     {
+        Debug.Log("UPDATE ACHIEVEMENTS");
         // all 3 cats *skin
         if (globalVariables.cat1Unlocked && globalVariables.cat2Unlocked && globalVariables.cat3Unlocked)
         {

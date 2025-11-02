@@ -124,14 +124,14 @@ public class CollisionDetectionScript : MonoBehaviour
     //     if (blinkCoroutine == null)
     //     {
     //         blinkCoroutine = StartCoroutine(PlayerBlink(newColor, duration));
-    //         Debug.Log("blink coroutine is not null");
+    //         // Debug.Log("blink coroutine is not null");
     //     }
     //     StopCoroutine(blinkCoroutine);
-    //     Debug.Log("coroutine already going!!!");
+    //     // Debug.Log("coroutine already going!!!");
 
     //     // else if (blinkCoroutine != null)
     //     // {
-    //     //     Debug.Log("coroutine already going!!!");
+    //     //     // Debug.Log("coroutine already going!!!");
     //     // }
     //     // Debug.Log("start blink coroutine");
     //     // blinkCoroutine = StartCoroutine(PlayerBlink(newColor, duration));

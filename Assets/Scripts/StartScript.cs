@@ -21,14 +21,14 @@ public class StartScript : MonoBehaviour
 
 	void Start()
 	{
-		Debug.Log("catSkinUnlocked START 1 = " + globalVariables.catSkinUnlocked);
-		Debug.Log("dogSkinUnlocked START 1 = " + globalVariables.dogSkinUnlocked);
+		// Debug.Log("catSkinUnlocked START 1 = " + globalVariables.catSkinUnlocked);
+		// Debug.Log("dogSkinUnlocked START 1 = " + globalVariables.dogSkinUnlocked);
 
 		GameDataManager.LoadGameData();
-		Debug.Log("--- Loading game data ---");
+		// Debug.Log("--- Loading game data ---");
 
-		Debug.Log("catSkinUnlocked START 2 = " + globalVariables.catSkinUnlocked);
-		Debug.Log("dogSkinUnlocked START 2 = " + globalVariables.dogSkinUnlocked);
+		// Debug.Log("catSkinUnlocked START 2 = " + globalVariables.catSkinUnlocked);
+		// Debug.Log("dogSkinUnlocked START 2 = " + globalVariables.dogSkinUnlocked);
 		// Debug.Log("GAME START");
 
 		Button playBtn = playButton.GetComponent<Button>();
@@ -55,31 +55,31 @@ public class StartScript : MonoBehaviour
 	{
 		GameDataManager.SaveSkinChoice();
 		SceneManager.LoadScene(playScene);
-		Debug.Log("You have clicked Play!");
+		// Debug.Log("You have clicked Play!");
 	}
 
 	void TaskOnClickExit()
 	{
 		Application.Quit();
-		Debug.Log("You have clicked the Exit!");
+		// Debug.Log("You have clicked the Exit!");
 	}
 
 	void TaskOnClickScores()
 	{
 		SceneManager.LoadScene(scoresScene);
-		Debug.Log("You have clicked scores!");
+		// Debug.Log("You have clicked scores!");
 	}
 
 	void TaskOnClickAbout()
 	{
 		SceneManager.LoadScene(aboutScene);
-		Debug.Log("You have clicked about!");
+		// Debug.Log("You have clicked about!");
 	}
 
 	void TaskOnClickDelete()
 	{
 		GameDataManager.ResetGameData();
-		Debug.Log("!!!! DELETING GAME DATA !!!!");
+		// Debug.Log("!!!! DELETING GAME DATA !!!!");
 	}
 
 	private void ResetVariables()

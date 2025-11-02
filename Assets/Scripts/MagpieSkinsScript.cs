@@ -28,8 +28,8 @@ public class MagpieSkinsScript : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("catSkinUnlocked SKINS = " + globalVariables.catSkinUnlocked);
-		Debug.Log("dogSkinUnlocked SKINS = " + globalVariables.dogSkinUnlocked);
+        // Debug.Log("catSkinUnlocked SKINS = " + globalVariables.catSkinUnlocked);
+		// Debug.Log("dogSkinUnlocked SKINS = " + globalVariables.dogSkinUnlocked);
 
         originalColors = new Color[magpieSkins.Length];
         for (int index = 0; index < magpieSkins.Length; index++)
@@ -92,13 +92,13 @@ public class MagpieSkinsScript : MonoBehaviour
                 ColorUtility.TryParseHtmlString("#A4A098", out grey);
                 magpieSkins[magpieIndex].color = grey;
                 globalVariables.magpieSkinsIndex = 0;
-                Debug.Log("!!!! SKIN IS LOCKED !!!!! " + currentIndex);
+                // Debug.Log("!!!! SKIN IS LOCKED !!!!! " + currentIndex);
             }
             else
             {
                 globalVariables.magpieSkinsIndex = currentIndex;
                 magpieSkins[magpieIndex].color = magpieColor;
-                Debug.Log("!!!! SKIN IS UNLOCKED !!!!! " + currentIndex);
+                // Debug.Log("!!!! SKIN IS UNLOCKED !!!!! " + currentIndex);
             }
         }
         leftButton.interactable = currentIndex > 0;

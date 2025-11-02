@@ -45,7 +45,7 @@ public class SpawnBoostScript : MonoBehaviour
                 int prefabIndex = Random.Range(0, prefabs.Length);
                 Instantiate(prefabs[prefabIndex], spawnPosition, Quaternion.identity);
                 globalVariables.boostsSpawned++;
-                Debug.Log("BOOSTS SPAWNED: " + globalVariables.boostsSpawned);
+                // Debug.Log("BOOSTS SPAWNED: " + globalVariables.boostsSpawned);
             }
         }
     }

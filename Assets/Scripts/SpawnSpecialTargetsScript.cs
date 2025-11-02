@@ -25,10 +25,10 @@ public class SpawnSpecialTargetsScript : MonoBehaviour
     {
         foreach (SpecialTarget target in specialTargets)
         {
-            Debug.Log("target name: " + target.targetName);
+            // Debug.Log("target name: " + target.targetName);
             if (!target.hasSpawned)
             {
-                Debug.Log("target has not spawned? : " + target.hasSpawned);
+                // Debug.Log("target has not spawned? : " + target.hasSpawned);
                 spawnDelay = Random.Range(target.minSpawnInterval, target.maxSpawnInterval);
                 StartCoroutine(SpawnCatsPrefab(target, spawnDelay));
             }  
@@ -38,13 +38,13 @@ public class SpawnSpecialTargetsScript : MonoBehaviour
     IEnumerator SpawnCatsPrefab(SpecialTarget target, float spawnDelay)
     {
         yield return new WaitForSeconds(spawnDelay);
-        Debug.Log("target is currently in play: " + target.targetName);
+        // Debug.Log("target is currently in play: " + target.targetName);
         int index = Random.Range(0, spawnXPositions.Length);
         Vector3 spawnPosition = new Vector3(spawnXPositions[index], fixedYPosition, 0f);
         Instantiate(target.prefab, spawnPosition, Quaternion.identity);
         target.hasSpawned = true;
-        Debug.Log("target has spawned? : " + target.hasSpawned);
-        Debug.Log("_______________________________________________");
+        // Debug.Log("target has spawned? : " + target.hasSpawned);
+        // Debug.Log("_______________________________________________");
     }
 
 }
