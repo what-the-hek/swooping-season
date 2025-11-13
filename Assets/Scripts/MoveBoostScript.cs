@@ -18,7 +18,7 @@ public class MoveBoostScript : MonoBehaviour
         {
             gameObject.SetActive(false);
             globalVariables.boostsConsumed++;
-            Debug.Log("BOOSTS CONSUMED: " + globalVariables.boostsConsumed);
+            // Debug.Log("BOOSTS CONSUMED: " + globalVariables.boostsConsumed);
 
             // CheckHits();
         }

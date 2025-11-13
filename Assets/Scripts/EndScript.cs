@@ -34,13 +34,14 @@ public class EndScript : MonoBehaviour
         globalVariables.lastTargetHits = globalVariables.targetHits;
         globalVariables.lastTime = gameManager.timer;
         globalVariables.lastGameName = inputField.text;
+        Debug.Log("GB last game name - end game:" + globalVariables.lastGameName);
 
         gameOverBlob.SetActive(true);
 
-        achievementsManager.UpdateAchievements();
-        Debug.Log("--- Updating achievements data ---");
+        // achievementsManager.UpdateAchievements();
+        // Debug.Log("--- Updating achievements data ---");
         achievementsManager.UpdateTopScores();
-        Debug.Log("--- Updating top score data ---");
+        // Debug.Log("--- Updating top score data ---");
         // GameDataManager.SaveGameData();
         // Debug.Log("--- Saving game data ---");
 
@@ -51,10 +52,13 @@ public class EndScript : MonoBehaviour
 
     void TaskOnClickContinue()
     {
+        achievementsManager.UpdateAchievements();
+        // achievementsManager.UpdateTopScores();
         gameOverBlob.SetActive(false);
         GameDataManager.SaveGameData();
-        Debug.Log("--- Saving game data ---");
+        // Debug.Log("--- Saving game data ---");
         SceneManager.LoadScene(sceneName);
+        Debug.Log("GB last game name - onclick:" + globalVariables.lastGameName);
     }
     // IEnumerator returnToStart()
     // {

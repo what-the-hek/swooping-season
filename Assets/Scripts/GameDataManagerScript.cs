@@ -106,7 +106,7 @@ public static class GameDataManager
     {
         PlayerPrefs.SetInt("SelectedMagpieSkin", globalVariables.magpieSkinsIndex);
         PlayerPrefs.Save();
-        Debug.Log("magpieSkins.currentIndex: " + globalVariables.magpieSkinsIndex);
+        // Debug.Log("magpieSkins.currentIndex: " + globalVariables.magpieSkinsIndex);
     }
 
     public static void ResetGameData()

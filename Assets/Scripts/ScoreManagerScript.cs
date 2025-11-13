@@ -7,6 +7,7 @@ public class CollisionDetectionScript : MonoBehaviour
     public globalVariables globalVariables;
     public EndScript endGame;
     public HealthBarScript healthBar;
+    public CameraShakeScript cameraShake;
 
     public TextMeshProUGUI missedScore;
     public TextMeshProUGUI totalScore;
@@ -64,6 +65,8 @@ public class CollisionDetectionScript : MonoBehaviour
             else if (other.CompareTag("npc-front") || other.CompareTag("npc-back") || other.CompareTag("cat1"))
             {
                 AddScore();
+                // shudder camera
+                CameraShakeScript.Instance.Shake(0.25f, 0.5f, 0.10f);
                 // StartCoroutine(PlayerShrink(new Vector3(0.5f, 0.5f, 1f), 0.15f));
             }
         }
@@ -124,14 +127,14 @@ public class CollisionDetectionScript : MonoBehaviour
     //     if (blinkCoroutine == null)
     //     {
     //         blinkCoroutine = StartCoroutine(PlayerBlink(newColor, duration));
-    //         Debug.Log("blink coroutine is not null");
+    //         // Debug.Log("blink coroutine is not null");
     //     }
     //     StopCoroutine(blinkCoroutine);
-    //     Debug.Log("coroutine already going!!!");
+    //     // Debug.Log("coroutine already going!!!");
 
     //     // else if (blinkCoroutine != null)
     //     // {
-    //     //     Debug.Log("coroutine already going!!!");
+    //     //     // Debug.Log("coroutine already going!!!");
     //     // }
     //     // Debug.Log("start blink coroutine");
     //     // blinkCoroutine = StartCoroutine(PlayerBlink(newColor, duration));
