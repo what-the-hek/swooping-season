@@ -20,7 +20,6 @@ public class EndScript : MonoBehaviour
     public void EndGame()
     {
         // Debug.Assert(continueButton != null, "ContinueButton not assigned in Inspector!");
-        globalVariables.playerMovementSpeed = 0f;
         gameOver = true;
 
         // final score

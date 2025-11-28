@@ -98,7 +98,6 @@ public class StartScript : MonoBehaviour
 		globalVariables.uncommonObstacleMovementSpeed = globalVariables.resetUncommonObstacleMovementSpeed;
 		globalVariables.commonBoostMovementSpeed = globalVariables.resetCommonBoostMovementSpeed;
 		globalVariables.uncommonBoostMovementSpeed = globalVariables.resetUncommonBoostMovementSpeed;
-		globalVariables.playerMovementSpeed = globalVariables.resetPlayerMovementSpeed;
 		globalVariables.commonNpcMovementSpeed = globalVariables.resetCommonNpcMovementSpeed;
 		globalVariables.npcFrontMovementSpeed = globalVariables.resetNpcFrontMovementSpeed;
 

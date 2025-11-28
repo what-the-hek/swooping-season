@@ -54,8 +54,6 @@ public class globalVariables
     public static int increaseMilestone = 10;
     public static float increaseScrollSpeed = 0.1f;
     public static float descreaseSpawnInterval = 0.1f;
-    public static float increasePlayerMovementSpeed = 0.2f;
-
 
     // timing variables for increasing difficulty with level manager
     public static float backgroundScrollSpeed;
@@ -82,8 +80,6 @@ public class globalVariables
     public static float resetCarLeftMovementSpeed = 3f;
 
     // other movement speeds
-    public static float playerMovementSpeed;
-    public static float resetPlayerMovementSpeed = 6f;
     public static float commonNpcMovementSpeed;
     public static float resetCommonNpcMovementSpeed = 2.5f;
     public static float npcFrontMovementSpeed;
