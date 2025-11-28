@@ -8,7 +8,6 @@ public class LevelManagerScript : MonoBehaviour
     public SpawnObstacleScript spawnObstacles;
     public SpawnBoostScript spawnBoost;
     public TextMeshProUGUI levelScore;
-    // public float increaseSpawn = 0f;
     public void LevelUp()
     {
         // Debug.Log("total score: " + globalVariables.totalScore + "greater than milestone: " + globalVariables.scoreMilestone);
@@ -29,7 +28,7 @@ public class LevelManagerScript : MonoBehaviour
         }
         // Debug.Log("LEVEL UP: " + increaseSpawn);
 
-        globalVariables.playerMovementSpeed += globalVariables.increasePlayerMovementSpeed;
+        PlayerScript.Instance.IncreasePlayerSpeed();
 
         globalVariables.backgroundScrollSpeed += globalVariables.increaseScrollSpeed;
         globalVariables.commonObstacleMovementSpeed += globalVariables.increaseScrollSpeed;

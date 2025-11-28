@@ -1,10 +1,14 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
+    public static PlayerScript Instance;
     private Rigidbody2D magpie;
     public globalVariables globalVariables;
     private Animator animator;
+    private float playerMovementSpeed = 6f;
+    public float increaseSpeed = 0f;
+    void Awake() { Instance = this; }
 
     void Start()
     {
@@ -59,7 +63,7 @@ public class Player : MonoBehaviour
         // this prevents faster diagonal movement
         direction.Normalize();
 
-        float baseSpeed = globalVariables.playerMovementSpeed;
+        float baseSpeed = playerMovementSpeed + increaseSpeed;
         float finalSpeed = isDodging ? baseSpeed + dodgeBoost : baseSpeed;
 
         Vector3 newPosition = transform.position + direction * finalSpeed * Time.deltaTime;
@@ -74,6 +78,13 @@ public class Player : MonoBehaviour
 
         // update player position
         transform.position = newPosition;
+        // Debug.Log("INCREASE SPEED!!" + increaseSpeed);
+    }
+
+    public void IncreasePlayerSpeed()
+    {
+        increaseSpeed += 0.2f;
+        Debug.Log("INCREASE SPEED!!" + increaseSpeed);
     }
 
 }
