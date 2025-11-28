@@ -20,6 +20,7 @@ public class EndScript : MonoBehaviour
     public void EndGame()
     {
         // Debug.Assert(continueButton != null, "ContinueButton not assigned in Inspector!");
+        PlayerScript.Instance.StopPlayerMovement();
         gameOver = true;
 
         // final score

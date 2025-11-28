@@ -84,7 +84,12 @@ public class PlayerScript : MonoBehaviour
     public void IncreasePlayerSpeed()
     {
         increaseSpeed += 0.2f;
-        Debug.Log("INCREASE SPEED!!" + increaseSpeed);
+    }
+
+    public void StopPlayerMovement()
+    {
+        playerMovementSpeed = 0f;
+        increaseSpeed = 0f;
     }
 
 }

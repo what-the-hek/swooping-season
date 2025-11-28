@@ -2559,6 +2559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dbed81b852087745a42d3a6ac64618c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgroundScroll: {fileID: 2056101219}
   spawnNpc: {fileID: 518179367}
   spawnObstacles: {fileID: 1891429176}
   spawnBoost: {fileID: 737631473}
