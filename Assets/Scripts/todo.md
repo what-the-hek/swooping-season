@@ -132,17 +132,18 @@ AUDIO
 - [ ] missed npc (hehe or phew)
 - [ ] end game
 
----- BUGS  ----  
-- [X] score continues to count when game over
-- [ ] stop npcs running in same spot as obstacles
-- [X] change the deli collision to box not edge
-- [ ] npc spawns are ignoring the delay start from game manager
-- [ ] npcs / boosts overlap especially with animation
-
 STRETCH GOALS
 - [ ] player collision with obstacle, pause movement and give small immunity for x seconds
 - [ ] player controller with mouse
  
+ ---- BUGS  ----  
+- [X] score continues to count when game over
+- [ ] stop npcs running in same spot as obstacles
+- [X] change the deli collision to box not edge
+- [X] npc spawns are ignoring the delay start from game manager
+- [ ] npcs / boosts overlap especially with animation
+- [ ] remove boost until animation can be added
+
 
 
 ------ TROPHIES --------
