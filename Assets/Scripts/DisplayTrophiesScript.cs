@@ -10,39 +10,53 @@ public class DisplayTrophiesScript : MonoBehaviour
     public Image[] dogTrophies;
     public MoveSpecialTargetsScript targetsScript;
 
-    public void UpdateCats(string tag)
+public void UpdateCats(string tag)
+{
+    switch (tag)
     {
-        if (tag == "cat1")
-        {
+        case "cat1":
             Debug.Log("!!!!!!!!!!!!! hit cat 1!");
-        }
-        else if (tag == "cat2")
-        {
+            catTrophies[0].gameObject.SetActive(true);
+            break;
+
+        case "cat2":
             Debug.Log("!!!!!!!!!!!!! hit cat 2!");
-        }
-        else if (tag == "cat3")
-        {
-            Debug.Log("!!!!!!!!!!!!! hit cat 3!");
-        }
-        else
-        Debug.Log("!!!!!!!!!!!!! hit an unknown cat!");
+            catTrophies[1].gameObject.SetActive(true);
+            break;
+
+        case "cat3":
+        Debug.Log("!!!!!!!!!!!!! hit cat 3!");
+            catTrophies[2].gameObject.SetActive(true);
+            break;
+
+        default:
+            Debug.Log("!!!!!!!!!!!!! hit an unknown cat!" + tag);
+            break;
     }
+}
 
     public void UpdateDogs(string tag)
     {
-        if (tag == "dog1")
+        switch (tag)
         {
-            Debug.Log("!!!!!!!!!!!!! hit dog 1!");
-        }
-        else if (tag == "dog2")
-        {
-            Debug.Log("!!!!!!!!!!!!! hit dog 2!");
-        }
-        else if (tag == "dog3")
-        {
+            case "dog1":
+                Debug.Log("!!!!!!!!!!!!! hit dog 1!");
+                dogTrophies[0].gameObject.SetActive(true);
+                break;
+
+            case "dog2":
+                Debug.Log("!!!!!!!!!!!!! hit dog 2!");
+                dogTrophies[1].gameObject.SetActive(true);
+                break;
+
+            case "dog3":
             Debug.Log("!!!!!!!!!!!!! hit dog 3!");
+                dogTrophies[2].gameObject.SetActive(true);
+                break;
+
+            default:
+                Debug.Log("!!!!!!!!!!!!! hit an unknown dog!" + tag);
+                break;
         }
-        else
-        Debug.Log("!!!!!!!!!!!!! hit an unknown dog!");
     }
 }
