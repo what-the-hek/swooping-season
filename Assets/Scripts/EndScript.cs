@@ -12,7 +12,7 @@ public class EndScript : MonoBehaviour
     public GameManagerScript gameManager;
     public AchievementsManagerScript achievementsManager;
     public GameObject gameOverBlob;
-    public Button continueButton;
+    // public Button continueButton;
     public TMP_InputField inputField;
     public string sceneName = "";
     public bool gameOver = false;
@@ -45,21 +45,21 @@ public class EndScript : MonoBehaviour
         // GameDataManager.SaveGameData();
         // Debug.Log("--- Saving game data ---");
 
-        // StartCoroutine(returnToStart());
-        Button continueBtn = continueButton.GetComponent<Button>();
-        continueBtn.onClick.AddListener(TaskOnClickContinue);
+        StartCoroutine(returnToStart());
+        // Button continueBtn = continueButton.GetComponent<Button>();
+        // continueBtn.onClick.AddListener(TaskOnClickContinue);
     }
 
-    void TaskOnClickContinue()
-    {
-        achievementsManager.UpdateAchievements();
-        // achievementsManager.UpdateTopScores();
-        gameOverBlob.SetActive(false);
-        GameDataManager.SaveGameData();
-        // Debug.Log("--- Saving game data ---");
-        SceneManager.LoadScene(sceneName);
-        // Debug.Log("GB last game name - onclick:" + globalVariables.lastGameName);
-    }
+    // void TaskOnClickContinue()
+    // {
+    //     achievementsManager.UpdateAchievements();
+    //     // achievementsManager.UpdateTopScores();
+    //     gameOverBlob.SetActive(false);
+    //     GameDataManager.SaveGameData();
+    //     // Debug.Log("--- Saving game data ---");
+    //     SceneManager.LoadScene(sceneName);
+    //     // Debug.Log("GB last game name - onclick:" + globalVariables.lastGameName);
+    // }
     // IEnumerator returnToStart()
     // {
     //     yield return new WaitForSeconds(globalVariables.returnToStartTimer);
