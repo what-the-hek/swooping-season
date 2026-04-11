@@ -33,6 +33,8 @@ public class ScorePageScript : MonoBehaviour
 
     void Start()
     {
+        // GameDataManager.LoadGameData();
+
         int hMinutes = Mathf.FloorToInt(globalVariables.highTime / 60f);
         int hSeconds = Mathf.FloorToInt(globalVariables.highTime % 60f);
 

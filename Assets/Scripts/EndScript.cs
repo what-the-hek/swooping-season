@@ -38,11 +38,11 @@ public class EndScript : MonoBehaviour
 
         gameOverBlob.SetActive(true);
 
-        // achievementsManager.UpdateAchievements();
+        achievementsManager.UpdateAchievements();
         // Debug.Log("--- Updating achievements data ---");
         achievementsManager.UpdateTopScores();
         // Debug.Log("--- Updating top score data ---");
-        // GameDataManager.SaveGameData();
+        GameDataManager.SaveGameData();
         // Debug.Log("--- Saving game data ---");
 
         StartCoroutine(returnToStart());
