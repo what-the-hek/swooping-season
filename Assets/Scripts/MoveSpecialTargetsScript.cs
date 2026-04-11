@@ -5,7 +5,13 @@ using TMPro;
 public class MoveSpecialTargetsScript : MonoBehaviour
 {
     public globalVariables globalVariables;
+    public DisplayTrophiesScript trophies;
     // public bool wasCollected = false;
+    private void Awake()
+    {
+        trophies = Object.FindFirstObjectByType<DisplayTrophiesScript>();
+    }
+
     public void Update()
     {
         transform.position += Vector3.down * globalVariables.commonNpcMovementSpeed * Time.deltaTime;
@@ -25,36 +31,42 @@ public class MoveSpecialTargetsScript : MonoBehaviour
             if (tag == "cat1")
             {
                 globalVariables.cat1Unlocked = true;
+                trophies.UpdateCats();
                 // wasCollected = true;
                 // Debug.Log("hit cat1!!!!!! ");
             }
             if (tag == "cat2")
             {
                 globalVariables.cat2Unlocked = true;
+                trophies.UpdateCats();
                 // wasCollected = true;
                 // Debug.Log("hit cat2!!!!!! ");
             }
             if (tag == "cat3")
             {
                 globalVariables.cat3Unlocked = true;
+                trophies.UpdateCats();
                 // wasCollected = true;
                 // Debug.Log("hit cat3!!!!!! ");
             }
             if (tag == "dog1")
             {
                 globalVariables.dog1Unlocked = true;
+                trophies.UpdateDogs();
                 // wasCollected = true;
                 // Debug.Log("hit dog1!!!!!! ");
             }
             if (tag == "dog2")
             {
                 globalVariables.dog2Unlocked = true;
+                trophies.UpdateDogs();
                 // wasCollected = true;
                 // Debug.Log("hit dog2!!!!!! ");
             }
             if (tag == "dog3")
             {
                 globalVariables.dog3Unlocked = true;
+                trophies.UpdateDogs();
                 // wasCollected = true;
                 // Debug.Log("hit dog3!!!!!! ");
             }

@@ -577,8 +577,7 @@ RectTransform:
   - {fileID: 912759887}
   - {fileID: 514448700}
   - {fileID: 1109771894}
-  - {fileID: 2054819655}
-  - {fileID: 390413689}
+  - {fileID: 755458233}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -725,7 +724,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390413688}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -733,11 +732,11 @@ RectTransform:
   - {fileID: 1499600650}
   - {fileID: 401112784}
   - {fileID: 43848280}
-  m_Father: {fileID: 290646786}
+  m_Father: {fileID: 755458233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240.70001, y: 146.9}
+  m_AnchoredPosition: {x: 106.900024, y: 0.000015258789}
   m_SizeDelta: {x: 100, y: 23.0673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &390413690
@@ -752,6 +751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec1f3ed9c2c750458bff005439bbc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetsScript: {fileID: 0}
 --- !u!222 &390413691
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1742,6 +1742,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746311137}
   m_CullTransparentMesh: 1
+--- !u!1 &755458232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 755458233}
+  - component: {fileID: 755458234}
+  m_Layer: 0
+  m_Name: trophiesBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &755458233
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755458232}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2054819655}
+  - {fileID: 390413689}
+  m_Father: {fileID: 290646786}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -347.6, y: 146.89998}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &755458234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755458232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec1f3ed9c2c750458bff005439bbc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetsScript: {fileID: 0}
 --- !u!1 &777028387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,7 +2036,6 @@ MonoBehaviour:
   spawnNpc: {fileID: 518179367}
   spawnObstacles: {fileID: 1891429176}
   spawnBoost: {fileID: 737631473}
-  levelScore: {fileID: 0}
 --- !u!4 &837379446
 Transform:
   m_ObjectHideFlags: 0
@@ -3982,7 +4032,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054819654}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3990,11 +4040,11 @@ RectTransform:
   - {fileID: 1765644163}
   - {fileID: 919693930}
   - {fileID: 399122940}
-  m_Father: {fileID: 290646786}
+  m_Father: {fileID: 755458233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -347.6, y: 146.9}
+  m_AnchoredPosition: {x: 0, y: 0.000015258789}
   m_SizeDelta: {x: 100, y: 23.0673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2054819656
@@ -4017,7 +4067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec1f3ed9c2c750458bff005439bbc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trophy: {fileID: 0}
+  targetsScript: {fileID: 0}
 --- !u!1 &2056101218
 GameObject:
   m_ObjectHideFlags: 0

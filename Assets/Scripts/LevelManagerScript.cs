@@ -7,7 +7,7 @@ public class LevelManagerScript : MonoBehaviour
     public SpawnNpcScript spawnNpc;
     public SpawnObstacleScript spawnObstacles;
     public SpawnBoostScript spawnBoost;
-    public TextMeshProUGUI levelScore;
+    // public TextMeshProUGUI levelScore;
     // public float increaseSpawn = 0f;
     public void LevelUp()
     {
@@ -60,7 +60,7 @@ public class LevelManagerScript : MonoBehaviour
         globalVariables.currentLevel++;
         // Debug.Log("current level: " + globalVariables.currentLevel);
 
-        levelScore.text = $"{globalVariables.currentLevel}";
+        // levelScore.text = $"{globalVariables.currentLevel}";
 
         globalVariables.scoreMilestone += globalVariables.increaseMilestone;
         // Debug.Log("next score milestone: " + globalVariables.scoreMilestone);
