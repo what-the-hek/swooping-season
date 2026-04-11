@@ -2811,7 +2811,6 @@ MonoBehaviour:
   gameManager: {fileID: 1608120612}
   achievementsManager: {fileID: 153970781}
   gameOverBlob: {fileID: 1329840741}
-  continueButton: {fileID: 0}
   inputField: {fileID: 0}
   sceneName: Scores
   gameOver: 0
@@ -2958,7 +2957,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1419486816
 RectTransform:
   m_ObjectHideFlags: 0
