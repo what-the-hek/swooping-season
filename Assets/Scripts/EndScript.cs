@@ -60,10 +60,10 @@ public class EndScript : MonoBehaviour
     //     SceneManager.LoadScene(sceneName);
     //     // Debug.Log("GB last game name - onclick:" + globalVariables.lastGameName);
     // }
-    // IEnumerator returnToStart()
-    // {
-    //     yield return new WaitForSeconds(globalVariables.returnToStartTimer);
-    //     gameOverBlob.SetActive(false);
-    //     SceneManager.LoadScene(sceneName);
-    // }
+    IEnumerator returnToStart()
+    {
+        yield return new WaitForSeconds(globalVariables.returnToStartTimer);
+        gameOverBlob.SetActive(false);
+        SceneManager.LoadScene(sceneName);
+    }
 }
