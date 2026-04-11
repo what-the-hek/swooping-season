@@ -33,8 +33,8 @@ public class EndScript : MonoBehaviour
         globalVariables.lastLevel = globalVariables.currentLevel;
         globalVariables.lastTargetHits = globalVariables.targetHits;
         globalVariables.lastTime = gameManager.timer;
-        globalVariables.lastGameName = inputField.text;
-        Debug.Log("GB last game name - end game:" + globalVariables.lastGameName);
+        // globalVariables.lastGameName = inputField.text;
+        // Debug.Log("GB last game name - end game:" + globalVariables.lastGameName);
 
         gameOverBlob.SetActive(true);
 
@@ -58,7 +58,7 @@ public class EndScript : MonoBehaviour
         GameDataManager.SaveGameData();
         // Debug.Log("--- Saving game data ---");
         SceneManager.LoadScene(sceneName);
-        Debug.Log("GB last game name - onclick:" + globalVariables.lastGameName);
+        // Debug.Log("GB last game name - onclick:" + globalVariables.lastGameName);
     }
     // IEnumerator returnToStart()
     // {

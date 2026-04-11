@@ -14,7 +14,7 @@ public class ScorePageScript : MonoBehaviour
     public TextMeshProUGUI magpieFacts;
 
     // top scores
-    public TextMeshProUGUI nameHScore;
+    // public TextMeshProUGUI nameHScore;
     public TextMeshProUGUI finalHScore;
     public TextMeshProUGUI levelHScore;
     public TextMeshProUGUI missedHScore;
@@ -23,7 +23,7 @@ public class ScorePageScript : MonoBehaviour
     public TextMeshProUGUI lowestHScore;
 
     // last game
-    public TextMeshProUGUI nameFinalScore;
+    // public TextMeshProUGUI nameFinalScore;
     public TextMeshProUGUI lastFinalScore;
     public TextMeshProUGUI lastTotalScore;
     public TextMeshProUGUI lastMissedScore;
@@ -43,7 +43,7 @@ public class ScorePageScript : MonoBehaviour
         backBtn.onClick.AddListener(TaskOnClickReturn);
 
         // top scores
-        nameHScore.text = $"{globalVariables.highScoreName}"; // TODO this one isn't working
+        // nameHScore.text = $"{globalVariables.highScoreName}"; // TODO this one isn't working
         finalHScore.text = $"{globalVariables.highScore}";
         // levelHScore.text = $"{globalVariables.highLevel}";
         levelHScore.text = string.Format("{0:00}:{1:00}", hMinutes, hSeconds);
@@ -53,7 +53,7 @@ public class ScorePageScript : MonoBehaviour
         lowestHScore.text = $"{globalVariables.lowestScore}";
 
         // last game scores
-        nameFinalScore.text = $"{globalVariables.lastGameName}";
+        // nameFinalScore.text = $"{globalVariables.lastGameName}";
         lastFinalScore.text = $"{globalVariables.lastFinalScore}";
         lastTotalScore.text = $"{globalVariables.lastScore}";
         lastMissedScore.text = $"{globalVariables.lastMissed}";
