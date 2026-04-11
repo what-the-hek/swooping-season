@@ -2,11 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
+using UnityEngine.UI;
 
 public class DisplayTrophiesScript : MonoBehaviour
 {
-    // public Image[] catTrophies;
-    // public Image[] dogTrophies;
+    public Image[] catTrophies;
+    public Image[] dogTrophies;
     public MoveSpecialTargetsScript targetsScript;
 
     public void UpdateCats(string tag)
