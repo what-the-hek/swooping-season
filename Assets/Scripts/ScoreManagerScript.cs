@@ -48,6 +48,7 @@ public class CollisionDetectionScript : MonoBehaviour
                     ColorUtility.TryParseHtmlString("#C1440E", out orange);
                     // TODO change TriggerBlink back to coroutine
                     TriggerBlink(orange, 0.1f);
+                    CameraShakeScript.Instance.Shake(0.25f, 0.5f, 0.10f);
                     StartCoroutine(PlayerImmunity());
                 }
             }

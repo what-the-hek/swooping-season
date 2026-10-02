@@ -15,11 +15,13 @@ public class SpawnNpcScript : MonoBehaviour
 
     void Start()
     {
+        GameManagerScript.spawnObjects = false;
         StartCoroutine(DelaySpawn());
     }
 
     IEnumerator DelaySpawn()
     {
+        Debug.Log("!!!!!!!!!!!!!!!!!!!! spawn objects: " + GameManagerScript.spawnObjects);
         yield return new WaitUntil(() => GameManagerScript.spawnObjects);
         StartCoroutine(SpawnNpcPrefab());
     }
