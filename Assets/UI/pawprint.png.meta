@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pawprint_0: -18125006786606216
+      pawprint_1: 8078300372994079120
+      pawprint_2: 7329667643717930233
+      pawprint_3: -5854934281813831138
+      pawprint_4: -7789512274794462221
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
